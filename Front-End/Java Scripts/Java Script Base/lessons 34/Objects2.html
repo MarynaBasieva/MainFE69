@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Objects</title>
+</head>
+
+<body>
+	
+</body>
+	<script>
+		//Значення обєкта і їх створення
+		//let user = new Object();//синтаксис 'конструктора обєктів'
+		//let user = {};//синтиксис 'літерал обєкта'
+		//console.log(user);
+		
+		
+		//Властивостям обєктів: ключ + значення
+		/*let user ={
+			name: "Mary",// Значення обєкта
+			age: 30,//вісяча запята
+			
+		};
+		console.log(user);
+		console.log(user.name);*/
+		
+		
+		
+		//Вичислення любого переданого і'мя
+		/*let user ={
+			name: "Mary",
+			age: 30,
+			
+		};
+		
+		let key = "name";
+		console.log(user[key]);*/
+		
+		
+		
+		
+		//Зарезервовані слова в іменах
+		/*let user = {
+			let: "Mary",
+			for: 30,
+		}
+		console.log(user.let);
+		console.log(user.for);*/
+		
+		
+		
+		//Імена - строки, символи
+		/*let user ={
+			0: "Mary",//0 тож саме що "0"
+		}
+		console.log(user[0]);
+		console.log(user['0']);*/
+		
+		
+		
+		
+		///Тип даних 
+		//Створюємо id з описом імен "id"
+		
+		/*let id = Symbol("id");
+		
+		let user={
+			name: "Mary",
+			age: 30,
+			[id]:"Деяке значення"
+		};
+		console.log(user);*/
+		
+		
+		//вкладеність
+	/*	let user ={
+			name: "Mary",
+			age: 30,
+			adress:{
+				city:'Kiev',
+				street:'Street',
+			}
+		};
+		
+		console.log(user);
+		console.log(user.adress);
+		console.log(user.adress.city);
+		console.log(user.adress.street);*/
+		
+		
+		
+		//Властивості із зміної
+		function makeUser(name,age){
+			return{
+				name:name,
+				age:age,
+			};
+		}
+		let user = makeUser('Mary',30);
+		console.log(user);
+		
+		
+		//Додавання значення
+		let userIn={
+			name:"Valuy",
+		}
+		console.log(userIn);
+		
+		userIn.age = 30;
+		console.log(userIn);
+		userIn['last name']='Petrova';
+		console.log(userIn);
+		
+		userIn.adress={
+		   city:"Kiev",
+			street:"Freedom",
+		};
+		console.log(userIn);
+		
+		
+		//Зміна обєкта і видалення обєкту
+		
+		let userInfo ={
+			name: "Alla",
+			age:30,
+			"last name": "Petrova"
+		}
+		console.log(userInfo);
+		
+		delete userInfo.age;
+		console.log(userInfo);
+		
+		delete userInfo["last name"];
+		console.log(userInfo);
+		
+		
+		//Зміна значень
+		
+		let userNew={
+			name: "Maya",
+			age:30,
+		}
+		console.log(userNew);
+		
+		userNew.age = 18;
+		console.log(userNew);
+		
+		
+		//Копіювання обєкта
+		let userPer={
+			name:"Tanya",
+			age:30
+		}
+		console.log(userPer);
+		
+		let user2 = userPer;
+		console.log(user2);
+		
+		user2.age = 18;
+		console.log(userPer);
+		
+		//Дублювання обєкт (Object.assign)
+		
+		//Object.assign(куда(обєкт), що (значення 1), що (значення 2),....);
+		
+		/*let persone ={
+		  name: "Valentuna",
+		  age:30,
+		};
+		let user3 = Object.assign({},persone);
+		console.log(user3);
+		
+		user3.age = 18;
+		
+		console.log(persone);
+		console.log(user3);*/
+		
+		
+		
+		let persone ={
+		  name: "Valentuna",
+		  age:30,
+		};
+		let user3 = Object.assign(persone,{['last name']:"Petrova", city:"Kiev"}, );
+		console.log(user3);
+		console.log(persone);
+	
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>

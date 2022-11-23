@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Regular Expression 2</title>
+</head>
+
+<body>
+</body>
+	<script>
+		let str = 'продовжуємо вчити про ркгулярні вирази';
+		let pattern = /про/g;
+		
+		/**
+		  Синтаксис
+		  **\d - люба цифра
+		  **\s - пробіл
+		  **\w - слово, буква
+		  **\b - границя слова
+		**/
+		
+		let patternDigit = /\d\g/;//пошук цифри
+		let paternSTR = /HTML\d/;//пошук підходить тільки з цифрою і словом і цифрою HTML5
+		
+		/**
+		  **\D - не цифра
+		  **\S - не пробіл 
+		  **\W -не слово (сюди підходять анг слова)
+		**/
+		
+		/* Спеціальні символи - . () /\ ./\//
+		*/
+		/**
+		**[]
+		**[-]
+		**-^-
+		
+		**/
+		
+		let nameStr = "@gmail test@gmail.com gmail.com basieva@gmail.com";
+		console.log(nameStr.match(/[a-zA-z_09]+@[a-z]+\.\w+/g));
+	</script>
+</html>

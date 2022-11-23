@@ -1,0 +1,51 @@
+@colorRed: red;
+@Fontsize:15px;
+body{
+	background: blue; 
+	font-size: @Fontsize;
+}
+.header{
+	height: 200px;
+	background:@colorRed;
+	font-size: @Fontsize;
+	.flex;
+}
+.top_header{
+	background:@colorRed;
+	font-size: @Fontsize;
+	.border-radius(10px);
+}
+.bottom_header{
+  border-bottom: 1px solid @colorRed;
+  .border-radius;
+} 
+.flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.border-radius(@radius:5px){
+	border-radius: @radius;
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+}
+nav{
+ padding: 0 20px;
+	ul{
+		list-style: none;
+		.flex;
+		li{
+			a{
+				display: block;
+				font-size: 16px;
+				color: #fff;
+				&:hover{
+					color: #000;
+				}
+				&:focus{
+					
+				}
+			}
+		}
+	}	
+}

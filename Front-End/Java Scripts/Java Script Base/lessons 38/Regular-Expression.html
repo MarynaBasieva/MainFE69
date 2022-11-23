@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Regular Expression</title>
+</head>
+
+<body>
+</body>
+	<script>
+	 //let regexp = new RegExp("s $");//з конструктором регуляярні вирази
+	 //let pattern = /s $/;//літерал обєкта регуляярні вирази
+	 //let str = 'Привіт, мене звати Поліна. Мені 20 років.';
+	 //let regexp = /Поліна\./;
+	 //let str = 'Привіт, мене звати Поліна. Мені 20 років.';
+	 //let regexp = /\d\d/;
+		
+	  //let str = 'Привіт, мене звати Поліна. Мені 20 років.';
+	  //let regexp = /\D\D/;
+		
+	  //let str = 'Привіт, мене звати Поліна. Мені 20років.';
+	  //let regexp = /\d\d\S/;
+		
+	  //let str = 'Hello i am happy _.';
+	  //let regexp = /\w\w\w\w/;
+		
+	  //let str = 'Hello i am happy _.';
+	  //let regexp = /\W/;
+		
+	  let str = 'Привіт це Олег, а Маша сказала, що вона крута';
+	  let regexp = /[^О]/;
+		
+	 
+	 let result = str.match(regexp);
+	 console.log(result);
+	
+		// \. - любий символ крім переносу строки /n
+		// \d - число від [0-9]
+		// \D - не число
+		// \s - пробіл
+		// \S - не пробіл між символами
+		// \w - слово [a-zA-Z0-9]
+		// \W - не слово 
+		// [abc] - набор
+		// [^abc] - виключення з набору
+	 
+	</script>
+</html>

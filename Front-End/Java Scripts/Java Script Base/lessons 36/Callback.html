@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Callback</title>
+</head>
+<script>
+	//приготовлення суші. Довгий процес
+	//const SuhiMaster = makeSuhi("Filadelfia");
+	
+	//Читаємо книгу поки готується суші
+	//readBook();
+	
+	//Ми імо суші
+	//eatSuhi(newSuhi);
+	
+	
+	/*let foo = function(){
+		return 'Hello world';
+	}*/
+	//Визиваємо функцію і бачимо результат в консолі
+	//console.log(foo());//Hello World
+	
+	//Вивод функції в консоль без визова
+	//console.log(foo);//{return 'Hello world';}
+	
+	/*let getRun = function(name){
+		return name(); //визвана функція в якості параметра
+	}
+	console.log(getRun(foo));*/
+	
+	
+
+	
+	
+	
+	///////////////////////////////////////////////////
+	
+/*	function call(){
+		setTimeout(function(){
+			console.log('я тобі дзвоню');
+		},2000)
+	}
+	
+	function answerPhone(){
+		console.log('Залиште своє повідомлення');
+	}
+	call();
+	answerPhone();*/
+	
+	
+	/*function callTo(name,callback){
+		console.log(`Привіт ${name}`);
+		callback();
+	}
+	
+	callTo('Oleg', function(){
+		console.log('Після сигналу');
+	});*/
+	///////////////////////////////////////
+	
+	const sushiMaster = function(title,sh){
+		console.log(`Заказ на приготовлення суші ${title} отримана. Починаємо готувати`);
+		setTimeout(sh,3000);
+	}
+	
+	const readBook = function(){
+		console.log('Читаю книгу Гарі Потер');
+	}
+	
+	const eatSushi = function(){
+		console.log('ура! Суші готові, пора підкрипитися');
+	}
+	sushiMaster('Filadelfiy', eatSushi);
+	readBook();
+</script>
+<body>
+	
+	<div class="box">Element 1</div>
+	<div class="box">Element 2</div>
+	<div class="box">Element 3</div>
+</body>
+	<script>
+		let box = document.querySelectorAll('.box');
+		box.forEach(function(item,count,arr){
+			item.style.backgroundColor='pink';
+			item.style.marginBottom ='30px';
+			item.style.padding = '20px';
+		});
+		console.log(box);
+	</script>
+</html>

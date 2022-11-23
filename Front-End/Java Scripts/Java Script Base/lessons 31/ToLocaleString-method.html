@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ToLocaleString () method</title>
+</head>
+
+<body>
+</body>
+	<script>
+		//дата.toLocaleString(мова, опції);
+		
+		document.write(new Date() + "<br/>");
+		let data = new Date().toLocaleString();
+		document.write(data + "<br/>");
+		
+		let d = new Date();
+		document.write("UA:" + d.toLocaleString('ua')+ "<br/>");
+		document.write("EN:" + d.toLocaleString('en')+ "<br/>");
+		document.write("RU:" + d.toLocaleString('ru')+ "<br/>");
+		
+		
+		let local = new Date().toLocaleString("uk",{
+			year: 'numeric',
+			month: 'long',
+			day:'numeric',
+			weekday:'long',
+			timezone:'UTC',
+			hour:'numeric',
+			minute:'numeric',
+			second:'numeric'
+		});
+		document.write(local + "<br/>");
+		
+		
+		let dayNew = new Date();
+		
+		let options = {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+			weekday:'long'
+		}
+		
+document.write("Україна: " + dayNew.toLocaleString('uk',options) + '<br/>');
+document.write("Німечина: " + dayNew.toLocaleString('de',options) + '<br/>');
+document.write("Америка: " + dayNew.toLocaleString('en',options) + '<br/>');
+		
+		
+		
+		
+		
+	</script>
+</html>

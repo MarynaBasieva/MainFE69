@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>animation</title>
+  </head>
+  <style>
+    /*
+animation-iteration-count - Скільки разів повина відбутися анімація
+animation-direction - вказує провести анімацію в перед чі назад в циклі
+animation-timing-function - визначає первую скорость функциЇ
+animation-fill-mode - задає стиль для цільового елемента якщо анімація в даний момент не запускається до початка і завершення  
+animation-delay - вказує затримку початку анімації
+animation-duration - вказує скільки часу повино зайняти для завершення циклу
+animation-name - вказує імя анімації 
+animation-play-state - вказує запущена чи анімація або просто зупинена
+animation: ; - властивість в якій можна прописати всі властивості вище вказані
+*/
+
+    .right {
+      position: relative;
+    }
+    .moving {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      background: rgba(12, 13, 144, 1);
+      animation: moving 7s;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+    }
+    .square {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      background: rgb(12, 144, 12);
+      -webkit-animation: square 7s infinite;
+      -moz-animation: square 7s infinite;
+      -o-animation: square 7s infinite;
+      animation: square 7s infinite;
+    }
+
+    @keyframes moving {
+      from {
+        left: 0;
+        background: rgba(200, 7, 10, 1);
+      }
+      50% {
+        left: 400px;
+        background: rgba(18, 92, 118, 1);
+      }
+      to {
+        left: 0;
+        background: rgba(35, 77, 6, 1);
+      }
+    }
+    @keyframes square {
+      0% {
+        top: 0;
+        left: 0;
+      }
+      50% {
+        top: 200px;
+        left: 400px;
+        background: blue;
+      }
+      100% {
+        top: 0;
+        left: 0;
+        background: red;
+      }
+    }
+  </style>
+  <body>
+    <div class="right">
+      <div class="moving"></div>
+      <div class="square"></div>
+    </div>
+  </body>
+</html>

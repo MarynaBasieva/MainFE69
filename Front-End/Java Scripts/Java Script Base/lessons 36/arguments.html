@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>arguments</title>
+</head>
+
+<body>
+</body>
+	<script>
+		let x = findMax(1,345,500,115,45,99);
+		
+		function findMax(){
+		   let max = -Infinity;
+		   for(let i =0; i<arguments.length; i++){
+			   if(arguments[i]>max){
+				   max = arguments[i];
+			   }
+		   }
+			return max;
+		}
+		console.log(x);
+		
+		
+		function sayHay(){
+			for(let i=0; i<arguments.length; i++){
+				console.log('Hello ' + arguments[i]);
+			}
+		}
+		let person = sayHay('Oleg Petrov', 'Maya Ivanovna');
+		console.log(person);
+		
+		
+		function foo(y){
+			y=5;
+			console.log(arguments[0]);
+		}
+		foo(1);
+	</script>
+</html>

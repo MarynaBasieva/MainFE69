@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>psevdo class</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.nthChild{
+		font-size: 20px;
+		color: #080F98;
+		background: #B9F098;
+		padding: 20px;
+		margin-bottom: 40px;
+	}
+	.nthChild .nthChildItem:first-child{
+		color: #190304;
+	}
+	.nthChild .nthChildItem:last-child{
+		color: #E40552;
+	}
+	.nthChild .nthChildItem:nth-child(2){
+		
+		color: #B3CD1D;
+	}
+	.nthChild .nthChildItem:nth-child(3){
+		color:#DD12E3;
+	}
+	.nthChild .nthChildItem:nth-child(4){
+		color:#715D0C;
+	}
+	.table{
+		border-collapse: collapse;
+		margin-top: 20px;
+	}
+	.table tr td{
+		border:solid 1px #ccc;
+		padding: 10px;
+	}
+	.table tr:nth-child(odd){
+		background: #ccc;
+	}
+	.table tr:nth-child(even){
+		background: #a4c9d7;
+	}
+	.table tr:nth-child(odd):hover{
+		background: #147FF1;
+		cursor: pointer;
+	}
+	.box{
+		width: 200px;
+		height: 200px;
+		background: black;
+	}
+	.box:focus{
+		border:solid 1px #27B000;
+	}
+	
+	ul.psevdoBeforeAfter{
+		font-size: 20px;
+		font-weight: bold;
+		color: #1126BC;
+		list-style: none;
+		width: 209px;
+		margin: 0 auto;
+	}
+	ul.psevdoBeforeAfter li{
+		position: relative;
+		padding-left: 62px;
+	}
+	ul.psevdoBeforeAfter li:after{
+		content: "+";
+		color: #333;
+		position: absolute;
+		right: 0;
+		top:0;
+		cursor: pointer;
+	}
+	ul.psevdoBeforeAfter li:nth-child(1):before{
+		content: "before";
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: #333;
+	}
+	.tel{
+		font-size: 20px;
+		position: relative;
+		padding-left: 25px;
+	}
+	.tel:before{
+		content: "";
+		background: url('img/before.jpeg') no-repeat;
+		width: 14px;
+		height: 14px;
+		position: absolute;
+		left: 6px;
+		top: 5px;
+	}
+	
+	.tel:after{
+	    content: "";
+		background: url('img/after.jpeg') no-repeat;
+		width: 15px;
+		height: 16px;
+		position: absolute;
+		right: -22px;
+		top: 5px;	
+	}
+</style>
+<body>
+	<div class="nthChild">
+		<div class="nthChildItem">Lorem ipsum dolar</div>
+		<div class="nthChildItem">Lorem ipsum dolar</div>
+		<div class="nthChildItem">Lorem ipsum dolar</div>
+		<div class="nthChildItem">Lorem ipsum dolar</div>
+		<div class="nthChildItem">Lorem ipsum dolar</div>
+		<div class="box"></div>
+	</div>
+	
+	
+	<table class="table">
+		<tr>
+			<td>Column1</td>
+			<td>Column1</td>
+			<td>Column1</td>
+		</tr>
+		
+		<tr>
+			<td>Column2</td>
+			<td>Column2</td>
+			<td>Column2</td>
+		</tr>
+		
+		<tr>
+			<td>Column3</td>
+			<td>Column3</td>
+			<td>Column3</td>
+		</tr>
+		
+		<tr>
+			<td>Column4</td>
+			<td>Column4</td>
+			<td>Column4</td>
+		</tr>
+	</table>
+	
+	
+	<ul class="psevdoBeforeAfter">
+		<li>psevdo class1</li>
+		<li>psevdo class2</li>
+		<li>psevdo class3</li>
+		<li>psevdo class4</li>
+		<li>psevdo class5</li>
+	</ul>
+	
+	<a class="tel" href="tel:+380989998989">+380989998989</a>
+	
+	
+</body>
+</html>
