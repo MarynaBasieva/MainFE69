@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HW18-triangle-shadow</title>
+</head>
+<style>
+	div{
+		width: 200px;
+		height: 200px;
+		background: rgb(56, 75, 113);
+		margin-left: 50px;
+		margin-top: 50px;
+	}
+	p{
+	  font-size: 24px;
+	  font-weight: bold;
+	  margin-left: 50px;
+	  margin-top: 50px;
+	}
+	.triangle{
+		height: 0;
+		width: 0;
+		background: transparent;
+		border-left: 150px solid transparent;
+		border-bottom: 200px solid rgb(38, 171, 173);;
+		border-right:  solid transparent;
+		transition: all 0.5s linear;
+	}
+	.triangle:hover{
+		transform: rotate(180deg);
+	}
+
+	.shadow_text1{
+		text-shadow: 15px 18px gray;
+	}
+
+	.shadow_text2{
+		text-shadow: 15px 18px 2px gray;
+	}
+
+	.shadow_text3{
+		text-shadow: 8px 9px 1px blue, -8px -9px 1px yellow;
+	}
+
+	.shadow_text4{
+		text-shadow: -0.5px -0.5px dimgrey, 0px 0.5px  burlywood;
+        color: rgb(120, 206, 74);
+	}
+
+	.shadow_text5{
+		text-shadow: 1px 1px dimgrey, 2px 2px rgb(179, 162, 140);
+        color: rgb(149, 173, 136);
+	}
+
+	.shadow_text6{
+		color: rgb(120, 206, 74, 0.1);
+		-webkit-text-stroke: 0.5px gray;
+	}
+
+	.box-shadow{
+      margin-bottom: 30px;
+      width: 150px;
+      height: 150px;
+      background: white;
+      border: black 1px solid;
+ 	}
+  	.box{
+      box-shadow: 10px 10px grey;
+ 	}
+
+	.box2{
+      box-shadow: 10px 10px 5px grey;
+  	}
+
+  	.box3{
+      box-shadow: inset 2px 2px 5px blue, inset -2px -2px 5px red;
+  	}
+
+	.box-gradient{
+      margin-bottom: 30px;
+      width: 220px;
+      height: 140px;
+      background: white;
+      border: black 1px solid;
+	}
+
+	.gradient{
+		background: linear-gradient( to right, red, blue, white, red);
+	}
+
+	.gradient1{
+		background: linear-gradient(to bottom, #ff0000 33.333%, #ffffff, 33.333%, #ffffff, 66.667%, #ff0000 66.667%);
+	}
+
+	.gradient2{
+		background: radial-gradient(circle, white 1%, #0da9d9 50%, #0da9d9 50%);
+	}
+
+	.gradient3{
+		background: radial-gradient(circle closest-corner at 9% 23%, white, #0da9d9);
+	}
+
+	.gradient4{
+		background: radial-gradient(circle, black, black, white 12%, white 20%, green 30%);
+	}
+	</style>
+<body>
+	<div class="triangle"></div>
+	<p class="shadow_text1">Текст с тенью</p>
+	<p class="shadow_text2">Текст с тенью</p>
+	<p class="shadow_text3">Текст с тенью</p>
+	<p class="shadow_text4">Текст с тенью</p>
+	<p class="shadow_text5">Текст с тенью</p>
+	<p class="shadow_text6">Текст с тенью</p>
+	<div class="box box-shadow"></div>
+	<div class="box2 box-shadow"></div>
+	<div class="box3 box-shadow"></div>
+    <div class="gradient box-gradient"></div>
+    <div class="gradient1 box-gradient"></div>
+    <div class="gradient2 box-gradient"></div>
+    <div class="gradient3 box-gradient"></div>
+    <div class="gradient4 box-gradient"></div>
+
+</body>
+</html>

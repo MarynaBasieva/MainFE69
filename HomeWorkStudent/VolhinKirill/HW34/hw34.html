@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let hw ={
+        name: "Kirill",
+        surname: "Volhin",
+        age: 31,
+    }
+    console.log(hw);
+
+    let key = "pet";
+    hw[key] = "French buldog";
+    console.log(hw);
+    hw.birtday = "05.01.1991";
+    console.log(hw);
+    delete hw.age;
+    console.log(hw);
+    let hw1 = Object.assign({},hw);
+    console.log(hw1);
+    let hw2 = Object.assign({age:31, ["favourite color"]:"blue"},hw);
+    console.log(hw2)
+</script>
+</html>

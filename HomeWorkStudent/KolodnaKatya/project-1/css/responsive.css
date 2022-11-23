@@ -1,0 +1,230 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media(min-width: 1200px){
+	.for_page .container{
+    max-width: 1298px;
+}
+	.for_page .container-sm{
+	max-width: 1176px;
+	}
+}
+
+@media(max-width: 1199px){
+	
+	.baner-img{
+		padding-bottom: 210px;
+	}
+	.item-carousel{
+		max-height: 464px;
+	}
+}
+@media(max-width: 991px){
+	.menu ul.sub-menu{
+		padding-left: 0;
+	}
+	.responsive_menu_bar{
+		display: block;
+	}
+	.parent_mob_content{
+		display: flex;
+		justify-content: space-between;
+	}
+	.responsive_menu_bar i{
+		color: white;
+		font-size: 30px;
+		cursor: pointer;
+		transition: all 0.4s ease;
+	}
+	.closed-menu:hover,
+	.responsive_menu_bar i:hover{
+		color: #018ABE;
+	}
+	.menu{
+		display: none;
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 2;
+	}
+	.menu ul.sub-menu{
+		display: block;
+	}
+	.menu ul.sub-menu li{
+		width: 100%;
+		text-align: center;
+	}
+	.menu ul.sub-menu li a{
+		padding-right: 0;
+		display: block;
+		padding-bottom: 20px;
+	}
+	.closed-menu{
+		color: white;
+		font-size: 30px;
+		position: absolute;
+		top: 5px;
+		right: 20px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+	.baner{
+		padding-bottom: 50px;
+	}
+	.text-sessions{
+		padding-bottom: 50px;
+	}
+	.img-2,
+	.img-1{
+		margin-bottom: 10px;
+	}
+	.img-1 img{
+		height: 258px;
+		
+	}
+	.img-2:nth-child(2),
+	.img-2:nth-child(4){
+		margin-bottom: 10px;
+	}
+	.sessions{
+		padding-bottom: 50px;
+	}
+	
+	.carusel-section{
+		padding-bottom: 50px;
+	}
+	.block_text_1{
+		margin-top: 0px;
+		margin-right: 0;
+    
+	}
+	.img_about_2 img,
+	.img_about_1 img{
+		min-width: 100%;
+	}
+	.wrap_text{
+		flex-direction: column-reverse;
+	}
+	.block_text_2{
+		margin-top: 0;
+	}
+	.img_about_2{
+		margin-top: 0;
+	}
+	.about{
+		padding-bottom: 50px;
+	}
+	.prices{
+		padding-right: 0px;
+    	padding-top: 0px;
+	}
+	.prices ul{
+		padding-left: 0;
+	}
+	.sertificate{
+		padding-left: 0;
+	}
+	.sertificate img{
+		width: 100%;
+	}
+	.price{
+		padding-bottom: 50px;
+	}
+	.last-blocks{
+		padding-left: 0;
+	}
+	.footer{
+		padding-top: 30px;
+	}
+	.map-geolocation iframe{
+		height: 270px;
+	}
+	.workclass{
+		margin-bottom: 7px;
+	}
+}
+@media (max-width: 767px){
+	.baner{
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+	.baner-img{
+		padding-top: 40px;
+		padding-bottom: 30px;
+	}
+	.baner-img .text-baner img{
+		padding: 0;
+	}
+	.baner-img h2{
+		padding-top: 0;
+	}
+	.text-sessions img{
+		padding: 0;
+	}
+	
+	.img-1{
+		margin-bottom: 10px;
+	}
+	.img-2{
+		margin-bottom: 10px;
+	}
+	.img-2:nth-child(2),
+	.img-2:nth-child(4){
+		margin-bottom: 10px;
+	}
+	.owl-dots{
+		margin-top: 20px;
+	}
+	.price,
+	.sessions,
+	.about,
+	.text-sessions,
+	.carusel-section{
+		padding-bottom: 25px;
+	}
+	.text_about_2 h2,
+	.text_about_1 h2{
+		padding-bottom: 10px;
+	}
+	.sertificate .text_sertificate{
+		padding-top: 5px;
+	}
+}
+	
+@media(max-width: 600px){
+	.text-footer-left,
+	.text-footer-right{
+		text-align: center;
+	}
+}
+@media(max-width: 500px){
+	.header .btn-sign{
+		width: 100%;
+	}
+	.baner-img h2{
+		line-height: 100%;
+		font-size: 55px;
+	}
+	.text-sessions{
+		font-size: 35px;
+	}
+	.text_about_2 p, 
+	.text_about_1 p{
+		min-width: auto;
+	}
+	
+}
+@media(max-width: 450px){
+	
+}
+@media(max-width: 400px){
+	.text-sessions{
+		font-size: 29px;
+	}
+}
+@media(max-width: 350px){
+	
+}

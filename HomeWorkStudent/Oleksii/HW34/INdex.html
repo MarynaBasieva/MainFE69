@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        let object = {
+            name: "Norman",
+            surname: "Osborn",
+            age: 54    
+        };
+        console.log(object);
+        
+        let animal = "cat";
+		object[animal] = "Kitty";
+		console.log(object);  
+
+        object.birthday = "02.12.1968";
+        console.log(object.birthday);
+
+        delete object.age;
+        console.log(object);
+
+        let user = Object.assign({},object);
+        console.log(user);
+
+        let user2 = Object.assign({adress:"Pavlika Morozova", street:"Jhon Seena"},object);
+        console.log(user2);
+        console.log(object);
+
+
+    </script>
+</html>

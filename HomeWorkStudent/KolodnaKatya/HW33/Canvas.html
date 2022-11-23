@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas</title>
+</head>
+
+<body>
+	<canvas id="figure_1"></canvas>
+	<canvas id="figure_2"></canvas>
+</body>
+	<script>
+		console.log("===Fill===");
+		let canvasNew = document.getElementById("figure_1");
+		let res = canvasNew.getContext("2d");
+		
+		res.beginPath();
+		res.rect(0,0,100,100);
+		res.fillStyle = "green";
+		res.fill();
+		
+		console.log("===Fill2===");
+		let canvasNew2 = document.getElementById("figure_2");
+		let result = canvasNew2.getContext("2d");
+		
+		result.beginPath();
+		result.moveTo(-50,40);
+		result.lineTo(100,20);
+		result.lineTo(60,80);
+		result.fillStyle = "black";
+		result.fill();
+	</script>
+</html>

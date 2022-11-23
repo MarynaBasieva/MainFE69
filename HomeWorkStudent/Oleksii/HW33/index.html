@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <canvas id="canvas_2"></canvas>
+    <div id="res"></div>
+    <br>
+</body>
+    <script>
+        
+        /*1*/
+
+        console.log("===Fill===");
+        let canvasNew = document.getElementById("canvas");
+        let result = canvasNew.getContext("2d");
+
+        result.beginPath();
+        result.rect(10,10,500,500);
+        result.fillStyle = "pink";
+        result.fill();
+
+        console.log("===Fill2===");
+        let canvas_2New2 = document.getElementById("canvas_2");
+        let result2 = canvas_2New2.getContext("2d");
+
+        result2.beginPath();
+        result2.rect(100,50,100,100);
+        result2.fillStyle = "red";   
+        result2.fill();
+       
+
+        /*2*/  /*3*/
+
+        const salary = [
+            {name:'Поліна', age: 30, salary: 10000},
+			{name:'Микола', age: 19, salary: 8000},
+			{name:'Антон', age: 40, salary: 50000},
+			{name:'Юлія', age: 52, salary: 20000},
+			{name:'Віктор', age: 17, salary: 8000},
+			{name:'Деніс', age: 28, salary: 15000},
+            {name:'Жан', age: 40, salary: 50000},
+			{name:'Ліля', age: 53, salary: 20000},
+			{name:'Соня', age: 16, salary: 8000},
+			{name:'Педро', age: 38, salary: 15000}
+        ]
+        
+        let salarySalary = salary
+		    .filter(person => person.salary > 8000)
+            .forEach(function(salary){
+             document.write('Імя: ' + salary.name + '<br />' +  'Рік: ' + salary.age + '<br />' + 'Зарплата:' + salary.salary + '<br />');
+             });
+
+       /*4*/
+       let res = document.getElementById('res');
+       let arr = [10,34,56,23,34,45," Come on every body"];
+       let arr2 = [];
+       let resultNew = arr.concat(arr2);
+       res.innerHTML = resultNew;
+ 
+
+      /*5*/
+        let duplicate = x => [x];
+        let array = [2,3,4,5,[6,7,9,0]].flat(Infinity);
+        let resultMap = array.flatMap(duplicate);
+        console.log(resultMap);
+
+    </script>
+</html>

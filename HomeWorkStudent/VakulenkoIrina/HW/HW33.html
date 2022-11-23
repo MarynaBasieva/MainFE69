@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HW33</title>
+<meta name="viewport" content="width=device-width, intial-scale=1">
+</head>
+<style>
+    canvas {
+       margin-bottom: 50px;
+    }
+</style>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <canvas id="canvas_1"></canvas>
+    <div id="mass"></div>
+</body>
+<script>
+    /===1===/
+    let canvasNew = document.getElementById("canvas");
+    let result = canvasNew.getContext("2d");
+
+    result.beginPath();
+    result.rect(20,20,300,200);
+    result.fillStyle = "blueviolet";
+    result.fill();
+
+    result.beginPath();
+    result.rect(30,35,100,100);
+    result.fillStyle = "violet";
+    result.fill();
+
+    result.beginPath();
+    result.rect(190,35,100,100);
+    result.fillStyle = "violet";
+    result.fill();
+
+    let canvas2 = document.getElementById("canvas_1");
+    let res = canvas2.getContext("2d");
+
+    res.beginPath();
+    res.rect(170,20,300,300);
+    res.fillStyle = "red";
+    res.fill();
+
+    res.beginPath();
+    res.rect(190,40,200,200);
+    res.fillStyle = "yellow";
+    res.fill();
+
+    res.beginPath();
+    res.rect(210,60,100,100);
+    res.fillStyle = "green";
+    res.fill();
+
+    res.beginPath();
+    res.rect(230,80,50,50);
+    res.fillStyle = "blue";
+    res.fill();
+
+
+    /===2,3===/
+    const collegi = [
+        {firstName: 'Козленко', name: 'Мария', age: 20, post: 'секретарь', budget: 17000},
+        {firstName: 'Овечкина', name: 'Инна', age: 38, post: 'продавец', budget: 14000},
+        {firstName: 'Шумко', name: 'Андрей', age: 40, post: 'водитель', budget: 7500},
+        {firstName: 'Тарасенко', name: 'Алла', age: 28, post: 'менеджер', budget: 18000},
+        {firstName: 'Шевченко', name: 'Анна', age: 28, post: 'кассир', budget: 15000},
+        {firstName: 'Ткаченко',name: 'Николай', age: 30, post: 'охранник', budget: 9000},
+        {firstName: 'Василенко',name: 'Иван', age: 17, post: 'курьер', budget: 6000},
+        {firstName: 'Александрова',name: 'Юлия', age: 18, post: 'консультант', budget: 8000},
+        {firstName: 'Пупкин',name: 'Роман', age: 22, post: 'грузчик', budget: 7000},
+        {firstName: 'Зюзинa',name: 'Наталья', age: 35, post: 'бухгалтер', budget: 25000},
+        {firstName: 'Пупков',name: 'Руслан', age: 37, post: 'директор', budget: 30000}
+        ] 
+
+        let peopleSalary = collegi
+        .filter(persone => persone.budget > 8000)
+        .forEach(function(collegi){
+            document.write('Фамилия: ' + collegi.firstName + ' ' + 'Имя: ' 
+            + collegi.name + ' ' + 'Зарплата: ' + collegi.budget + ' ' + '</br>');
+        });
+
+
+        /===4===/
+        let mass = document.getElementById('mass');
+        let arr = [10,34,56,23,34,45,"Hello"];
+            arr2 = [3,18,39,45, "Bay"];
+        let resualt = arr.concat(arr2);
+        mass.innerHTML = resualt; 
+
+        /===5===/
+        let resMap = [2,3,4,5,[6,7,9,0]].flat(Infinity);
+        let duplicate = x => [x];
+        let resultFlatMap = resMap.flatMap(duplicate);
+		console.log(resultFlatMap);
+    
+
+</script>
+</html>

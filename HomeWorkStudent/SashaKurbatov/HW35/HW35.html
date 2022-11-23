@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let result = document.querySelector(".Result");
+        let userJob = {
+            name: 'kostya',
+            lastname: 'bucow',
+            age: 30,
+            Sulary: {
+                sullary: 9999,
+                worck: 180
+            },
+            vecation: {
+                money: 10000,
+                vecation: 60
+            }
+        };
+        for (let i in userJob) {
+                if (typeof userJob[i] === "object") {
+                    for (let j in userJob[i]) {
+                        result.innerHTML += `<div>${userJob[i][j]}</div>`;
+                    }
+                } else result.innerHTML += (".Result");
+                let userJob = {
+                }
+            }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CW 36</title>
+  </head>
+  <body>
+    <div class="box">Element 1</div>
+    <div class="box">Element 2</div>
+    <div class="box">Element 3</div>
+  </body>
+  <script>
+    /*1) Вам дзвонить людина (функція ставите її на утримання,
+        друга функція(берете трубку через 5 секунд))
+    */
+    const call = function (name, takeCall) {
+      console.log(`Вам звонок от ${name}`);
+      setTimeout(takeCall, 5000);
+    };
+    const utrim = function () {
+      console.log("Звонок на удержании");
+    };
+    const takeCall = function () {
+      console.log("Звонок принят");
+    };
+    call("Sasha", takeCall);
+    utrim();
+    /*2) Елементи через foreach показати через 3 секунди після загрузки*/
+    let box = document.querySelectorAll(".box");
+
+    box.forEach(function (item, count, arr) {
+      setTimeout(function () {
+        item.style.backgroundColor = "green";
+        item.style.marginBottom = "30px";
+        item.style.padding = "20px";
+      }, 3000);
+    });
+    console.log(box);
+  </script>
+</html>

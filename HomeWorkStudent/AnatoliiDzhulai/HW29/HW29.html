@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>hw29</title>
+</head>
+<body>
+	<div id="flag1">
+	<div id="first_color"></div>
+	<div id="second_color"></div>
+	</div>
+	<div id="flag2">
+	<div id="first_flag">
+	<div id="second_flag"></div>
+		</div>
+	</div>
+	
+	
+	<div id="Name"></div>
+	<div id="lastName"></div>
+	<div id="age"></div>
+	<div id="workPlace"></div>
+</body>
+	<script>
+		
+	let first_color = document.getElementById("first_color");
+		first_color.style.background = "red";
+		first_color.style.width = "400px";
+		first_color.style.height = "200px";
+	let second_color = document.getElementById("second_color");
+		second_color.style.background = "black";
+		second_color.style.width = "400px";
+		second_color.style.height = "200px";
+		second_color.style.top = "100px";
+		second_color.style.marginBottom = "20px";
+		
+		let first_flag = document.getElementById("first_flag");
+			first_flag.style.background = "white";
+			first_flag.style.width = "250px";
+			first_flag.style.height = "200px";
+			first_flag.style.border = "solid";
+			
+		let second_flag = document.getElementById("second_flag");
+			second_flag.style.background = "red";
+			second_flag.style.width = "100px";
+			second_flag.style.height = "100px";
+			second_flag.style.borderRadius = "50%";
+			second_flag.style.margin = "0 auto";
+			second_flag.style.marginTop = "50px";
+		
+		
+		
+		let name = document.getElementById("Name");
+		name.innerHTML = "Імя:";
+		name.style.fontWeight ="bold";
+		
+		let lastName = document.getElementById("lastName");
+		lastName.innerHTML = "Прізвище:";
+		lastName.style.fontWeight ="bold";
+		
+		let age = document.getElementById("age");
+		age.innerHTML = "Вік:";
+		age.style.fontWeight ="bold";
+		
+		let workPlace = document.getElementById("workPlace");
+		workPlace.innerHTML = "Місце роботи:";
+		workPlace.style.fontWeight ="bold";
+		
+		
+		let dayNumber = new Date().getDay();
+ 
+		     if (dayNumber === 0){
+				document.write("Неділя");
+			 }  
+			 else if (dayNumber === 1){
+				document.write("Понеділок");
+			 } 
+			 else if (dayNumber === 2){
+				document.write("Вівторок");
+			 }
+			 else if (dayNumber === 3){
+				document.write("Середа");
+			 }
+			 else if (dayNumber === 4){
+				document.write("Четвер");
+			 }
+			 else if (dayNumber === 5){
+				 document.write("Пятниця");
+			 }
+			 else if (dayNumber === 6){
+				 document.write("Субота");
+			 } 
+		     else {
+				 document.write("Немає такого значення");
+			 }
+		
+</script>
+</html>

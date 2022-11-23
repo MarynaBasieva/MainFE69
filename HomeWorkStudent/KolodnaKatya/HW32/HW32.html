@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HW32</title>
+</head>
+
+<body>
+</body>
+	<script>
+		const people = [
+			{name: 'Катя', age: '20'},
+			{name: 'Богдан', age: '45'},
+			{name: 'Назар', age: '22'},
+			{name: 'Аліна', age: '31'},
+			{name: 'Поліна', age: '38'},
+			{name: 'Данило', age: '50'},
+			{name: 'Сергій', age: '51'}
+			];
+		let fillAge = people.filter(person => person.age >30);
+		console.log(fillAge);
+		
+		function work(name, position, salary){
+			document.write("Імя:" + name + " "+ "Посада:" + position +" "+ "Зарплата:" +salary +""+ "</br>");
+		};
+		work('Арсеній', 'програміст', '20000');
+        work('Людмила', 'дизайнер', '14000');
+        work('Володимир', 'адміністратор', '15000');
+		work('Наталія', 'дизайнер', '17000');
+	</script>
+</html>

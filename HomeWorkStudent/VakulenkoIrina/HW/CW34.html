@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<meta name="viewport" content="width=device-width, intial-scale=1">
+</head>
+
+<body>
+    
+</body>
+<script>
+    let user = {
+        name: 'Kety',
+        "last name": 'Shevchenko',
+        age: 25,
+    };
+    console.log(user);
+    console.log(user.name);
+    console.log(user['last name']);
+    console.log(user.age);
+
+    function makUser(name, lastName, age){
+        return{
+            name:name,
+            "last name":lastName,
+            age:age,
+        };
+    }
+    let user1 = makUser('Kety', 'Shevchenko', 25);
+    console.log(user1);
+</script>
+</html>

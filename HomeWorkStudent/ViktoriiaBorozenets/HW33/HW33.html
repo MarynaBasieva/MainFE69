@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW33</title>
+  </head>
+  <body>
+    <div id="obj"></div>
+    <div id="body"></div>
+    <canvas id="canvas" width="578" height="200"></canvas>
+    <canvas id="canvasNew"></canvas>
+  </body>
+  <script>
+    // створити дві любі фігури за допомогою fill на canvas
+    let canvas = document.getElementById("canvas");
+    let context = canvas.getContext("2d");
+    let centerX = canvas.width / 2;
+    let centerY = canvas.height / 2;
+    let radius = 70;
+
+    context.beginPath();
+    context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+    context.fillStyle = "blue";
+    context.fill();
+
+    let canvasNew = document.getElementById("canvasNew");
+    let square = canvasNew.getContext("2d");
+
+    square.beginPath();
+    square.rect(0, 0, 200, 200);
+    square.fillStyle = "red";
+    square.fill();
+    /*Створити масив обєктів - робочих людей компанії і отримати дані по зарплаті у кого більше 8000грн(робочих 10 створить)
+    3) Вивести в документ Прізвище, Ім’я робочого з зарплатою більше 8000грн*/
+    const people = [
+      { name: "Viktor", surname: "ivanov", budget: 2000 },
+      { name: "Boris", surname: "Sanov", budget: 8000 },
+      { name: "Pavel", surname: "Pavlanov", budget: 10000 },
+      { name: "Roman", surname: "Kanov", budget: 12000 },
+      { name: "Alex", asurname: "Pytok", budget: 5000 },
+      { name: "Misha", surname: "Winol", budget: 9000 },
+      { name: "Senya", surname: "Sidoron", budget: 21000 },
+      { name: "Lera", surname: "Midova", budget: 45000 },
+      { name: "Ulya", surname: "Ylond", budget: 30000 },
+      { name: "Mira", surname: "Rslaj", budget: 9000 },
+    ];
+
+    let fillBudget = people.filter((person) => {
+      if (person.budget > 8000) {
+        return true;
+      }
+    });
+    let out_arr = document.getElementById("obj");
+    fillBudget.forEach((e) => (out_arr.innerHTML += "<p>" + e + "</p>"));
+
+    //Створити масив [10,34,56,23,34,45,»Text»] скопіювати масив в другу зміну і вивести за допомогою innerHTML в документ (можна використовувати цикл)
+    let array = [10, 34, 56, 23, 34, 45, "Text"];
+    let newArray = array.slice(0, 7);
+    console.log(newArray);
+    let b = document.getElementById("body");
+
+    newArray.forEach((e) => (b.innerHTML += "<p>" + e + "</p>"));
+
+    // Через flatMap зробити дублікат перед об’єднанням  обєднати в одін масив[2,3,4,5[6,7,9,0]]
+
+    let array1 = [2, 3, 4, 5, [6, 7, 9, 0]].flat(Infinity);
+    for (let i of array1) {
+      console.log(i);
+    }
+    console.log(array1);
+    const duplicate = (x) => [x, x];
+    let flatMap = array1.flatMap(duplicate);
+    console.log(flatMap);
+  </script>
+</html>

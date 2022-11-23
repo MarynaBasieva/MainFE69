@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>hw33</title>
+</head>
+
+<body>
+	<canvas id="canvas"></canvas>
+	<div id="clone"></div>
+</body>
+	<script>
+	let canvasNew = document.getElementById("canvas");
+	let result = canvasNew.getContext("2d");
+		result.beginPath();
+		result.rect(10,10,400,400);
+		result.fillStyle = "blue";
+		result.fill();
+		
+		result.beginPath();
+		result.rect(150,10,400,400);
+		result.fillStyle = "yellow";
+		result.fill();
+		
+		
+	
+		const people = [
+			{name:'Артур', company: 'Tesla', budget: 10000},
+			{name:'Олег', company: 'Ford', budget: 2000},
+			{name:'Катя', company: 'Lanos', budget: 9000},
+			{name:'Юра', company: 'Tesla', budget: 30000},
+			{name:'Михайло', company: 'Ford', budget: 50000},
+			{name:'Світлана', company: 'Lanos', budget: 7500},
+			{name:'Марина', company: 'Tesla', budget: 500},
+			{name:'Андрій', company: 'Lanos', budget: 650},
+			{name:'Віктор', company: 'Ford', budget: 8700},
+			{name:'Ігор', company: 'Tesla', budget: 9500},
+		];
+		
+		let peopleSalary = people
+			.filter(person => person.budget > 8000)
+			.map (person => {
+				return {
+					info:`${person.name} ${person.company}`,
+					salary:person.budget
+				}
+			})
+		console.log(peopleSalary);
+	
+		
+		
+		
+		
+		
+		
+		let clo = document.getElementById("clone");
+		let array = [10,34,56,23,34,45,"Text"],
+		    array2 = [5,8,9];
+		let result2 = array.concat(array2,"text");
+		console.log(result2);
+		clo.innerHTML = result2;
+		
+		
+		
+		
+		
+		
+		let array9 = [2,3,4,5,[6,7,9,0]].flat(Infinity);
+		const duplicate = x => [x];
+		let resultMap = array9.flatMap(duplicate);
+		console.log(resultMap);
+	</script>
+</html>

@@ -1,0 +1,201 @@
+html body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	background-color: #020a18;
+}
+img{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}
+a{
+	transition: all 0.3s ease;
+}
+.header{
+	padding-top: 24px;
+}
+.logo{
+	max-width: 283px;
+	display: block;
+}
+.menu ul.sub-menu{
+	list-style: none;
+	display: flex;
+	padding-top: 15px;
+}
+.menu ul.sub-menu li a{
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 22px;
+	color: #FFFFFF;
+	padding-right: 40px;
+	transition: all 0.3s ease;
+}
+.menu ul.sub-menu li a:hover{
+	color: #00c3cc
+}
+.menu ul.sub-menu li:last-child a{
+	padding-right: 0;
+}
+.header .btn-sing{
+	width: 112px;
+	height: 52px;
+	background: #3a68b8;
+	border-radius: 5px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 22px;
+	color: #FFFFFF;
+	outline: none;
+	border: none;
+	transition: all 0.3s ease;
+
+}
+.header .btn-sing:hover{
+	color: #fff;
+	background: #00c3cc;
+}
+.baner{
+	padding-top: 73px;
+	padding-bottom: 99px;
+}
+.box_baner_first{
+	padding-top: 111px;
+	max-width: 604px;
+}
+.text_top_baner{
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 160%;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	color: #3A68B8;
+}
+.box_baner_first h1{
+	font-style: normal;
+	font-weight: 800;
+	font-size: 55px;
+	line-height: 130%;
+	color: #FFFFFF;
+	margin-bottom: 40px;
+	margin-top: 0;
+}
+.box_baner_first p{
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 160%;
+	color: #FFFFFF;
+	opacity: 0.7;
+	margin-bottom: 35px;
+	max-width: 558px;
+}
+.baner .btn_baner{
+	height: 57px;
+	background: #3A68B8;
+	border-radius: 5px;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 20px;
+	padding: 0 30px;
+	line-height: 54px;
+	color: #FFFFFF;
+	outline: none;
+	border: none;
+}
+.about_btn:hover, 
+.baner .btn_baner:hover{
+	text-decoration: none;
+	color: #000;
+	background: #00c3cc;
+}
+.baner .last_btn_baner:hover svg path{
+	fill: #000;
+}
+.baner .last_btn_baner{
+	margin-left: 20px;
+}
+.youtube{
+	width: 100%;
+	height: 600px;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	transition: all 200ms ease-out;
+	cursor: pointer;
+	background-size: cover;
+}
+.youtube .play{
+	background: url(../img/play.png) no-repeat;
+	background-position: 0 0px;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	transition: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.youtube .play:hover{
+	background-position: 0 -100px;
+}
+.modal-dialog .modal-content iframe{
+	width: 100%;
+	height: 600px;
+}
+.closed_menu,
+.responsive_menu_bar{
+	display: none;
+}
+#carousel_partner{
+	padding-top: 89px;
+}
+.owl-carousel#carousel_partner .owl-item img{
+	width: auto;
+}
+.about{
+	background: #010A18;
+	padding-top: 130px;
+	padding-bottom: 170px;
+}
+.about_box{
+	padding-top: 178px;
+	padding-left: 20px;
+}
+.about_box h2{
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 130%;
+	color: #FFFFFF;
+	margin-bottom: 30px;
+	margin-top: 0;
+}
+.about_box p{
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 160%;
+	color: #FFFFFF;
+	opacity: 0.7;
+	margin-bottom: 50px;
+}
+.about_btn{
+    height: 57px;
+    background: #3A68B8;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 0 30px;
+    line-height: 54px;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+}

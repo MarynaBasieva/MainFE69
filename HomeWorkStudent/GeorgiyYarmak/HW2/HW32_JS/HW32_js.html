@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>hw32</title>
+</head>
+
+<body>
+
+</body>
+
+
+<script>
+
+	const people = [
+		{ name: 'Alina', age: 20, cash: 15000 },
+		{ name: 'Armen', age: 40, cash: 35000 },
+		{ name: 'Vasyan', age: 19, cash: 8000 },
+		{ name: 'Nastusya', age: 59, cash: 6000 },
+		{ name: 'Victor', age: 32, cash: 18000 },
+		{ name: 'Petro', age: 38, cash: 12000 },
+		{ name: 'Mariya', age: 21, cash: 10000 },
+		{ name: 'Vika', age: 35, cash: 15000 },
+		{ name: 'Nazar', age: 28, cash: 22000 },
+		{ name: 'Alxandr', age: 36, cash: 52350 }
+	];
+	console.log(people);
+
+	let countAge = [];
+	for (let i = 0; i < people.length; i++) {
+		if (people[i].age >= 30) {
+			countAge.push(people[i]);
+		}
+	}
+	console.log(countAge);
+
+	let fillAge = people.filter(person => {
+		if (person.age >= 30) {
+			 return true;
+			}
+		});
+	console.log(fillAge);
+
+	function roboPeople (name, job, salary){
+		
+		document.write('<br/>' + 'Ім`я: ' + name + ', ' + 'Посада: ' + job + ',  '+ '<br/>' + 'Заробітна плата: ' + salary + '<br/>');
+	}
+	document.write('Наші працівниики:' + '<br/>');
+	roboPeople('Nastya', 'student', '100 y.e.');
+	roboPeople('Petrik', 'ingeneer', '200 y.e.');
+	roboPeople('Baba Klava', 'cleaner', '72 y.e.');
+	roboPeople('Artem', 'ingeneer', '320 y.e.');
+	roboPeople('Oleg', 'director', '99999 y.e.');
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW35</title>
+  </head>
+  <body>
+    <div class="result"></div>
+    <div class="resultFinish"></div>
+  </body>
+  <script>
+    /*========================== 1 ======================================
+  Создать объект userJob 
+ - name
+-last name
+-age
+Sullary{
+   - зарплата
+   - рабочий дни
+   отпускные{
+     - деньги
+     - сколько дней отпускных 
+}
+Через цикл for in получить все свойства всего объекта и вывести через class="Result"
+(assign) Дублировать этот объект к другой переменной и поменять все значения и вывести в class="ResultFinish"*/
+
+    let userjob = {
+      name: "Ivan",
+      lastname: "Ivanov",
+      age: 30,
+      salary: {
+        pay: 50000,
+        "wokrind days": 5,
+        vacation: {
+          "vacation pay": 10000,
+          "vacation days": 30,
+        },
+      },
+    };
+    for (let key in userjob) {
+      if (userjob.hasOwnProperty(key)) {
+        console.log(userjob[key]);
+        document.querySelector(".result").innerHTML += `${userjob[key]} <br/>`;
+      }
+    }
+    let res = document.querySelector(".resultFinish");
+    let userjob1 = Object.assign(userjob, {
+      name: "Vasya",
+      lastname: "Vasyhjk",
+      age: 45,
+      salary: { pay: 1, ["wokrind days"]: 3 },
+      vacation: { ["vacation pay"]: 3000, ["vacation days"]: 0 },
+    });
+    res.innerHTML += `імʼя: ${userjob1.name} <br/> Прізвище: ${userjob1.lastname}<br/> Вік: ${userjob1.age}<br/> Зарплата: ${userjob1.salary.pay}<br/> Відпускні: ${userjob1.vacation}`;
+    console.log(userjob1);
+    /* ============================ 2 ================================
+Создать функцию конструктора(имя, фамилия, возраст, адрес) передаем в качестве параметра и выводим тоже в документ на 3 человека*/
+
+    function User(firstname, lastname, age, address) {
+      this.firstname = firstname;
+      this.lastname = lastname;
+      this.age = age;
+      this.address = "Kyiv";
+    }
+    let user1 = new User("Oleg", "Bobrov", 23, "Lviv");
+    let user2 = new User("Masha", "Bobrova", 22, "Poltava");
+    let user3 = new User("leha", "Bobrovak", 28, "Kharkiv");
+    console.log(user1);
+    console.log(user2);
+    console.log(user3);
+
+    /* ====================== 3 ======================
+    создать пустой объект user
+    добавить свойство name со значением Марина
+    добавить свойство аде со значением 30
+    изменить значение сойства name на Алена
+    удалить свойство name из объекта */
+    let user = {};
+    user.name = "Maryna";
+    console.log(user.name);
+    user.age = 30;
+
+    user.name = "Alena";
+    console.log(user);
+
+    delete user.name;
+    console.log(user);
+    /* +======================== 4 =======================*/
+
+    let girl = {
+      name: "Valya",
+      age: 25,
+      values: {
+        eyes: "green",
+        hair: "long",
+        language: "english",
+      },
+      toString() {
+        return;
+        {
+          this.name, this.age, this.values;
+        }
+      },
+    };
+    girl.toString();
+    console.log(`${girl}`);
+  </script>
+</html>

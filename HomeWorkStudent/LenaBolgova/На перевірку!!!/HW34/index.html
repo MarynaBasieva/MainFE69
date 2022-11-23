@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>HW34</title>
+</head>
+<body>
+   
+
+   <script>
+      // 1-3
+let userInfo = {
+   name: 'Valera',
+   "last name": "Pupkin",
+   age: 46,
+};
+console.log(userInfo);
+      // 4
+let pet = 'type';
+userInfo[pet] = 'dog';
+console.log(userInfo);
+
+      // 5
+userInfo.brDay = "02.02.1977";
+console.log(userInfo);
+      // 6
+delete userInfo.age;
+console.log(userInfo);
+      // 7-8
+let newObj = Object.assign({}, userInfo, {city:"Kyiv", ['have a car']: true});
+console.log(newObj);
+
+console.log(userInfo);
+
+   </script>
+</body>
+</html>

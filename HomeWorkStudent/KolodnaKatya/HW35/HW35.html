@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HW35</title>
+</head>
+
+<body>
+	<div class="Result"></div>
+	<div class="ResultFinish"></div>
+</body>
+	<script>
+		let result = document.querySelector(".Result");
+        let summary = {
+            name:"Matilda",
+            surname:"Batshow",
+            age:57,
+            salary1: {
+                salary:1000,
+                workingdays:48,
+            },
+            vacation1: {
+                money:500,
+                vacation:12
+            }
+        };
+  
+        for (let i in summary) {
+        if( typeof summary[i] === "object" ) {
+            for (let j in summary[i]) {
+            result.innerHTML += `<div>${summary[i][j]}</div>`;
+            }
+        } else result.innerHTML +=typeof summary[i] === "object";
+        }
+
+    
+        let res = document.querySelector(".ResultFinish");
+        let res1 = Object.assign(summary,{name:"Milana", surname:"Petrova", age:38, salary11: { salary:1200, workingdays: 20,}, vacation1: { money:"1000", vacation:"10"}});
+		
+        res.innerHTML += `Name: ${res1.name} <br/> LastName: ${res1.surname}<br/> Age: ${res1.age}<br/> Зарплата: ${res1.salary1.salary}<br/> Робочі дні: ${res1.salary1.workingdays}<br/> Гроші: ${res1.vacation1.money}<br/> Відпустка: ${res1.vacation1.vacation}`; 
+		
+		
+		
+		
+		let User = function (name, lastname, age, adress){
+			this.name = name;
+			this.lastname = lastname;
+			this.age = age;
+			this.adress = adress;
+		};
+		let user1 = new User('Віталіна ', 'Петрова ', '23 ', 'Lviv');
+		let user2 = new User('Василь ', 'Іванов ', '30 ', 'Lviv');
+		let user3 = new User('Петро ', 'Сидоренко ', '36 ', 'Lviv');
+		
+		document.write(user1.name, user1.lastname, user1.age, user1.adress + '<br/>');
+		document.write(user2.name, user2.lastname, user2.age, user2.adress + '<br/>');
+		document.write(user3.name, user3.lastname, user3.age, user3.adress + '<br/>');
+		
+		let userNew ={
+			
+		};
+		let key = "name";
+		userNew[key] = "Марина";
+		let key1 = "age";
+		userNew[key1] = 30;
+		userNew.name = "Олена";
+		delete userNew.name;
+		console.log(userNew);
+		
+		let userNew1 ={
+			name: "Марина",
+			age: 30,
+			description:{
+				eyecolor: "сірий",
+				haircolor: "чорний",
+				language: "українська",
+			},
+			
+		showFunc: function(){
+			document.write(`Імя: ${userNew1.name}, Вік: ${userNew1.age}, Колір очей: ${userNew1.description.eyecolor}, Колір волосся: ${userNew1.description.haircolor}, Мова: ${userNew1.description.language}`);
+		}
+		};
+		userNew1.showFunc();
+		
+    </script>
+		
+	
+</html>

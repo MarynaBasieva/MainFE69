@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HW33</title>
+</head>
+
+<body>
+	<canvas id="figure_1"></canvas>
+	<canvas id="figure_2"></canvas>
+	<div id="arrayOne"></div>
+</body>
+
+<script>
+
+	/*Figure/canvas*/
+	let canvasNew = document.getElementById("figure_1");
+	let res = canvasNew.getContext("2d");
+
+	res.beginPath();
+	res.rect(20, 20, 500, 200);
+	res.fillStyle = "green";
+	res.fill();
+
+	let canvasNew2 = document.getElementById("figure_2");
+	let result = canvasNew2.getContext("2d");
+
+	result.beginPath();
+	result.moveTo(300, 60);
+	result.lineTo(70, 10);
+	result.lineTo(20, 80);
+	result.fillStyle = "red";
+	result.fill();
+
+	/*Arrays/People*/
+
+	const people = [
+		{ name: 'Alina', lastName: 'Petrova', cash: 15000 },
+		{ name: 'Armen', lastName: 'Vartanyan', cash: 35000 },
+		{ name: 'Vasyan', lastName: 'Batkovich', cash: 7000 },
+		{ name: 'Nastusya', lastName: 'Petrova', cash: 6000 },
+		{ name: 'Victor', lastName: 'Nesterov', cash: 18000 },
+		{ name: 'Petro', lastName: 'Mikolyan', cash: 12000 },
+		{ name: 'Mariya', lastName: 'Luk', cash: 10000 },
+		{ name: 'Vika', lastName: 'Shevchenko', cash: 5000 },
+		{ name: 'Nazar', lastName: 'Franko', cash: 22000 },
+		{ name: 'Alexandr', lastName: 'Ulianov', cash: 52350 }
+	];
+	console.log(people);
+
+	let peopleSalary = people
+		.filter(person => person.cash > 8000)
+		.forEach(function (salary) {
+			document.write("<br/>" + 'Прізвище: ' + salary.lastName + "____" + 'Ім`я: ' + salary.name + "____" + 'Зарплата: ' + salary.cash);
+		});
+
+
+	/*Concat*/
+	let resultNew = document.getElementById('arrayOne');
+	let array = [10, 34, 56, 23, 34, 45, "text"],
+		arr = [];
+	let res1 = array.concat(arr);
+	resultNew.innerHTML = res1;
+
+
+	/*flatMap*/
+	let dup = [2, 3, 4, 5, [6, 7, 9, 0]].flat(Infinity);
+
+	for (let i of dup) {
+		console.log(i);
+	}
+	console.log(dup);
+
+
+	let duplicate = x => [x];
+	let resultArray = dup.flatMap(duplicate);
+	console.log(resultArray);
+
+
+</script>
+
+</html>
