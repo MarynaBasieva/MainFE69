@@ -580,7 +580,7 @@ a{
     letter-spacing: -0.5px;
     text-transform: capitalize;
     color: #282B6D;
-    width: 473px;
+    max-width: 473px;
     padding-bottom: 24px;
     padding-top: 10px;
 }
@@ -1105,6 +1105,157 @@ a{
     top: 25px;
     border-radius: 14px;
 }
+
+.banner_footer {
+    padding-top: 120px;
+}
+
+.b_f h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #282B6D;
+    padding-bottom: 24px;
+}
+
+ul.menu_f li a {
+    text-decoration: none;
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #9AA5B6;
+    padding-bottom: 24px;
+    transition: all 0.3s ease;
+}
+
+ul.menu_f {
+    list-style: none;
+}
+
+ul.menu_f li a:hover {
+    color: #282B6D;
+}
+
+.StayUptodate ul.menu_f li {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #9AA5B6;
+    padding-bottom: 24px;
+    transition: all 0.3s ease;
+    padding-bottom: 32px;
+}
+
+.footer_subscribe {
+    position: relative;
+}
+.footer_form_input {
+    border: 1px solid #E6E6E6;
+    border-radius: 8px;
+    display: block;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #969696; 
+    padding: 17px 42px;   
+}
+.footer_form_button {
+    background: #5735D2;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    right: 29px;
+    top: 6px;
+    transition: all 0.3s linear;
+}
+
+.footer_form_button:hover {
+    transform: scale(1.2);
+}
+
+.footer_form_input::placeholder {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #969696; 
+} 
+
+.footer_subscribe .convert {
+    position: relative;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #9AA5B6;
+}
+
+.footer_subscribe .convert::after {
+    content: '';
+    background: url(../img/convert.svg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 9px;
+    top: 15px;
+    border-radius: 14px;
+}
+
+.border_footer {
+    border-top: 1px solid #F2F2F2;
+    padding: 24px 0;
+}
+
+.social_footer ul{
+    list-style: none;
+    display: flex;
+} 
+
+.social_footer ul li {
+    margin-right: 24px;
+}
+
+.social_footer ul li:last-child {
+    margin-right: 0;
+} 
+
+.social_footer ul li a:hover {
+    transform: scale(1.4);
+}
+
+.social_footer ul li a {
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s linear;
+}
+
+.text_footer {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #9AA5B6;
+}
+
+.social_footer {
+    float: right;
+}
+
+.close_button, 
+.responsive_menu_button {
+    display: none;
+}
+
+
 /*
 fonts
 
