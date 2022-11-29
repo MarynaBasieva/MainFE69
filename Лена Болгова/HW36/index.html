@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CW36</title>
+</head>
+<body>
+   <div class="box"> Elem 1</div>
+   <div class="box"> Elem 2</div>
+   <div class="box"> Elem 3</div>
+   <script>
+let box = document.querySelectorAll('.box');
+box.forEach(function(item,count,arr) {
+   setTimeout(function(){
+   item.style.background ='yellow';
+   item.style.textShadow = '0 5px 0 grey';
+   item.style.marginBottom = '10px';
+   item.style.color = 'red';
+},3000)
+});
+
+
+
+      const collTo = function(name, answer){
+         console.log("Утримувати вхідний дзвінок від " + name);
+         setTimeout(answer, 5000);
+      }
+      const answerTo = function(){
+         console.log('Готові прияняти замовлення!')
+      }
+      collTo('Іван', answerTo);
+
+
+   </script>
+</body>
+</html>
