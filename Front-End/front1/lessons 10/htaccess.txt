@@ -1,4 +1,0 @@
-<IfModule>
-   Redirect 301 /o-nas /pro-nas
-   Redirect 301 /ua/pro-nas /pro-nas
-</IfModule>
