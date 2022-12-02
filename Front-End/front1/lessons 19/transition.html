@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>transition</title>
+</head>
+<style>
+	/*
+	  ease - вказує єфект переходу з повільним початком , а потім швидко , а потім знову закінчується анімація повільно
+	  linear - задається єфект переходу з однаковою швидкістью від початку до кінця
+	  ease-in -  вказує єфект перехода з повільним стартом
+	  ease-out - вказує ефект переходу с повільним кінцем
+	  ease-in-out - вказує ефект переходу з повільним початком і кінцем
+	*/
+	
+	.transition{
+		width: 100px;
+		height: 100px;
+		margin-bottom: 40px;
+		background: rgba(18,87,167,1.00);
+	}
+	.transition1{
+		transition: width 2s;
+	}
+	.transition1:hover{
+		width: 300px;
+	}
+	.transtion2{ 
+		transition: width 2s, height 4s;
+	}
+	.transtion2:hover{
+		width: 300px;
+		height: 300px;
+	}
+	.ease{
+		transition-timing-function:ease;
+	}
+	.linear{
+		transition-timing-function:linear;
+	}
+	.easy-in{
+		transition-timing-function:ease-in
+	}
+	.easy-in-out{
+		transition-timing-function:ease-in-out;
+	}
+	.anim{
+		width: 100px;
+		height: 100px;
+		background: rgba(168,11,203,1.00);
+		margin-bottom: 40px;
+		transition: width 2s;
+	}
+	.anim:hover{
+		width: 300px;
+	}
+	.dealy{
+		width: 100px;
+		height: 100px;
+		background: rgba(19,87,8,1.00);
+		transition: width 2s;
+		margin-bottom: 40px;
+	}
+	.dealy:hover{
+		width: 300px;
+	}
+	.transform_trinsition{
+		width: 100px;
+		height: 100px;
+		background: rgba(19,87,8,1.00);
+		transition: width 2s, height 2s;
+		margin-bottom: 40px;
+	}
+	.transform_trinsition:hover{
+		width: 300px;
+		height: 300px;
+		transform: rotate(100deg);
+	}
+</style>
+<body>
+	<div class="transition1 transition"></div>
+	<div class="transtion2 transition"></div>
+	<div class="ease anim"></div>
+	<div class="linear anim"></div>
+	<div class="easy-in anim"></div>
+	<div class="easy-in-out anim"></div>
+	
+	
+	<div class="dealy"></div>
+	<div class="transform_trinsition"></div>
+	
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+</head>
+	
+<style>
+	/*general style*/
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		html,
+		body{
+			height: 100%;
+		}
+		body{
+			font-family: 'Roboto', sans-serif;
+			font-size: 14px;
+			color: #333;
+		}
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+		}
+		.for_page{
+			min-height: 100%;
+			position: relative;
+		}
+		.page{
+			    padding-bottom: 216px;
+		}
+		.fl{
+		  float: left;
+		}
+		.fr{
+			float: right;
+		}
+		.clear{
+			clear: both;
+		}
+	/*general style*/
+	
+	/*Header*/
+		.header{
+			background:#CDCDCD;	
+    		padding-top: 20px;
+
+		}
+	.container{
+		max-width: 1170px;
+		margin: 0 auto;
+	}
+	.slogon{
+		margin-left: 50px;
+		padding-top: 12px;
+		font-size: 20px;
+	}
+	.contacts_header{
+		
+	}
+	.contacts_header a{
+		display: block;
+		text-decoration: none;
+		color: #242222;
+		transition: all 0.3s linear;
+	}
+	.contacts_header a:hover{
+		color: #0D13A7;
+	}
+	  /*Nav*/
+		.nav{
+			background: #090072;
+		}
+	.nav ul.sub-menu li{
+		transition: all 0.5s linear;
+		list-style: none;
+		display: inline-block;
+		position: relative;
+	}
+	
+	.nav ul.sub-menu > li > a{
+		color: #fff;
+		font-size: 15px;
+		padding: 20px 30px;
+		text-decoration: none;
+		display: inline-block;
+	}
+	.nav ul.sub-menu li a:hover{
+		background: #083661;
+	}
+	.nav ul.sub-menu li ul.sub-menu{
+	    opacity: 0;
+		visibility: hidden; 
+		background: #1154E4;
+		position: absolute;
+		width: 300px;
+		
+	}
+	.nav ul.sub-menu li ul.sub-menu li{
+		display: block;
+	}
+	.nav ul.sub-menu li ul.sub-menu li a{
+		display: block;
+	}
+	.nav ul.sub-menu li:hover ul.sub-menu{
+		opacity: 1;
+		visibility: visible;
+	}
+	  /*Nav*/
+	/*Header*/
+	
+	/*Baner*/
+		.baner{
+			background: url('img/baner.jpg') no-repeat;
+			padding: 200px;
+			background-size: cover;
+		}
+	.baner_text{
+		color: #fff;
+	}
+	.baner_text div:first-child{
+		margin-bottom: 40px;
+		font-size: 30px;
+	}
+	.baner_text div:last-child{
+		font-size: 20px;
+		line-height: 24px;
+	}
+	/*Baner*/
+	
+	/*About*/
+		.about{
+          background: #AF9EEA;
+		  padding: 60px 0;
+		}
+	.about h1{
+		text-align: center;
+		margin-bottom: 20px;
+		font-size: 25px;
+		color: #071778;
+	}
+	.sidebar{
+		background: #333;
+		padding: 10px;
+		width: 30%;
+		display: block;
+		margin-right: 30px;
+	}
+	.sidebar ul{
+		list-style: none;
+	}
+	.sidebar ul li a{
+		padding-top: 8px;
+		padding-left: 5px;
+		display: block;
+		text-decoration: none;
+		color: #fff;
+		border-bottom: solid 1px #fff;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+	.sidebar ul li a:hover{
+		background: #095D14;
+		border-bottom: solid 1px transparent;
+		
+	}
+	.content{
+		width: 65%;
+	}
+	.content figure{
+		width: 500px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+	.content p{
+		font-size: 15px;
+	}
+	/*About*/
+	
+	/*Footer*/
+	.footer{
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		left: 0;
+		background: #333;
+		color: #fff;
+		padding: 100px 0;
+	}
+	/*Footer*/
+</style>
+	
+<body>
+	<div class="for_page">
+		<div class="page">
+			<header class="header">
+				<div class="container">
+					<a href="/" class="logo fl">
+						<img src="img/logo.png" alt="Logo" title="Logo" />
+					</a>
+					
+					<div class="slogon fl">
+						Академія сучасних професій
+					</div>
+					
+					<div class="contacts_header fr">
+						<a href="tel:+380979996789">097 999 67 89</a>
+						<a href="tel:+380449996789">044 999 67 89</a>
+					<a href="mailto:student@mainacad.com">student@mainacad.com</a>
+					</div>
+					<div class="clear"></div>
+					
+				</div>
+				
+				<nav class="nav">
+					<div class="container">
+						<ul class="sub-menu">
+							<li class="item-menu">
+								<a href="#">Home</a>
+							</li>
+							<li class="item-menu">
+								<a href="#">About</a>
+							</li>
+							<li class="item-menu">
+								<a href="#">Catalog</a>
+									<ul class="sub-menu">
+										<li class="item-menu">
+											<a href="#">Catalog 1</a>
+										</li>
+										<li class="item-menu">
+											<a href="#">Catalog 2</a>
+										</li>
+										<li class="item-menu">
+											<a href="#">Catalog 3</a>
+										</li>
+										<li class="item-menu">
+											<a href="#">Catalog 4</a>
+										</li>
+										<li class="item-menu">
+											<a href="#">Catalog 5</a>
+										</li>
+										<li class="item-menu">
+											<a href="#">Catalog 6</a>
+										</li>
+									</ul>
+							</li>
+							<li class="item-menu">
+								<a href="#">Test</a>
+							</li>
+							<li class="item-menu">
+								<a href="#">Garnt</a>
+							</li>
+							<li class="item-menu">
+								<a href="#">Contacts</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+			
+			<section class="baner">
+				<div class="container">
+					<div class="baner_text">
+						<div>Академія сучасних професій</div>
+						<div>
+							Обучаем с нуля<br/>
+							Повышаем квалификацию<br/>
+							Помогаем трудоустроиться<br/>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="about">
+				<div class="container">
+					<h1>About Company</h1>
+				<sidebar class="sidebar fl">
+					<ul class="menu_sidebar">
+						<li class="item-menu">
+							<a href="#">Catalog 1</a>
+						</li>
+						<li class="item-menu">
+							<a href="#">Catalog 2</a>
+						</li>
+						<li class="item-menu">
+							<a href="#">Catalog 3</a>
+						</li>
+						<li class="item-menu">
+							<a href="#">Catalog 4</a>
+						</li>
+						<li class="item-menu">
+							<a href="#">Catalog 5</a>
+						</li>
+						<li class="item-menu">
+							<a href="#">Catalog 6</a>
+						</li>
+					</ul>
+				</sidebar>
+				<div class="content fl">
+					<figure class="fl">
+					  <img src="img/gallery.jpeg" alt="gallery"/>
+					</figure>
+					  <p>Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar</p>
+					
+					<p>Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar</p>
+					
+					<p>Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar</p>
+					
+					<p>Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar</p>
+					
+					<p>Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar</p>
+					
+					<p>Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar Lorem ipsum dolar</p>
+				</div>
+					<div class="clear"></div>
+			</div>
+			</section>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				footer
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>flex parent</title>
+</head>
+<style>
+	/*
+	  flex-derection
+	  flex-wrap
+	  flex-flow
+	  justify-content
+	  align-items
+	  align-content
+	*/
+	.container{
+		width: 700px;
+		background: rgba(13,7,162,1.00);
+		margin-bottom: 40px;
+		display: flex;
+	}
+	.flex-derection{
+		flex-direction: column; /* column вертикально row - горизонтально*/
+	}
+	.flex-container-revers{
+		flex-direction: column-reverse; /*column-reverse зверху вниз, column-row справо на ліво*/
+	}
+	.flex-container-wrap{
+		flex-wrap: wrap; /*wrap - перенос елемента якщо не входить в ширину контейнера, nowrap - по замовчувані не переносить строку wrap-revers -  переноситься при необхідності в зворотньому порядку*/
+	}
+	.flex-container-justify-content{
+		height: 600px;
+		justify-content: space-between; /*justify-content -  використовується для вертикального вирівнювання елементу*/
+	}
+	.flex-container-align-items{
+		height: 300px;
+		align-items: center; /*використовується  для вертикального вирівнювання елемента*/
+	}
+	.flex-flow{
+		flex-flow: row wrap; /*використовується вирівнювані flex лінії*/
+	}
+	.flex-flow > div,
+	.flex-container-align-items > div,
+	.flex-container-justify-content > div,
+	.flex-container-wrap >div,
+	.flex-container-revers > div,
+	.flex-derection > div{
+		background: #0DAC8F;
+		width: 100px;
+		height: 100px;
+		text-align: center;
+		line-height: 75px;
+		font-size: 30px;
+		margin-right: 10px;
+		margin: 5px;
+	}
+	
+</style>
+<body>
+	<!--flex-derection -->
+	<div class="flex-derection container">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<!--flex-derection -->
+	
+	
+	<!--flex-container-revers -->
+	<div class="flex-container-revers container">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+	</div>
+	<!--flex-container-revers -->
+	
+	<!--flex-wrap -->
+	<div class="flex-container-wrap container">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>10</div>
+		<div>11</div>
+		<div>12</div>
+	</div>
+	<!--flex-wrap -->
+	
+	<!--flex-container-justify-content -->
+	<div class="flex-container-justify-content container">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+	<!--flex-container-justify-content -->
+	
+	<!--flex-container-align-items -->
+	<div class="flex-container-align-items container">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+	<!--flex-container-align-items -->
+	
+	<!--flex-container-align-content -->
+	<div class="flex-flow container">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+	<!--flex-container-align-content -->
+	
+</body>
+</html>
