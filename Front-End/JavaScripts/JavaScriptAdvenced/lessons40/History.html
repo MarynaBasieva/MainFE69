@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>History</title>
+</head>
+
+<body>
+	<a href="#btnHistory">btnHistory</a>
+	<button id="btnHistory">Перейти назад</button>
+	<button id="btnForward">Перейти ввперед</button>
+	<button onClick="alert(history.length)">кількість записів в історії вкладки</button>
+	<button onClick="alert(history.go(-2))">Повернутися на дві сторінки назад</button>
+	<button onClick="alert(history.go(-1))">Повернутися на одну сторінку назад</button>
+	<button onClick="alert(history.go(1))">Повернутися назад</button>
+</body>
+	<script>
+		function goBack(){
+			window.history.back();
+		}
+		function goForward(){
+			window.history.forward();
+		}
+		let btnHistory = document.getElementById("btnHistory");
+		let btnForward = document.getElementById("btnForward");
+		
+		btnHistory.addEventListener("click",goBack);
+		btnForward.addEventListener("click",goForward);
+		
+	</script>
+</html>
