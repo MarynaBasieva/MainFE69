@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date Object</title>
+</head>
+
+<body>
+	<div class="test1"></div>
+	<div class="test2"></div>
+	<div class="test3"></div>
+	<div class="test4"></div>
+	<div class="test5"></div>
+	<div class="test6"></div>
+	<div class="test7"></div>
+</body>
+	<script>
+		let d = new Date();
+		document.querySelector('.test1').innerHTML = d.getTime();
+		
+		let d2 = new Date();
+		document.querySelector('.test2').innerHTML = d2.getFullYear();
+		
+		let d3 = new Date();
+		document.querySelector('.test3').innerHTML = d3.getMonth();
+		
+		
+		let d4 = new Date();
+		let months = ["Січень","Лютий","Березень","Квітень","Травень","Червень","Липень","Серпень","Вересень","Жовтень","Листопад","Грудень"];
+		document.querySelector('.test4').innerHTML = months[d4.getMonth()];
+		
+		let d5 = new Date();
+		document.querySelector('.test5').innerHTML = d5.getDate();
+		
+		let d6 = new Date();
+		document.querySelector('.test6').innerHTML = d6.getHours();
+		
+		let d7 = new Date();
+		document.querySelector('.test7').innerHTML = d7.getMinutes();
+	</script>
+</html>

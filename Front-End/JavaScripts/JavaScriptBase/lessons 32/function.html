@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function</title>
+</head>
+
+<body>
+</body>
+	<script>
+		/*function myFunction(p1,p2){
+			return p1 * p2;
+		}*/
+		
+		console.log("==nameFunc");
+		function nameFunc(){
+			console.log("Hello");
+		}
+		nameFunc();
+		nameFunc();
+		
+		console.log("===varabile===");
+		
+		let user = "Maryna";
+		
+		function nameUser(){
+			user = "Dasha";
+			let mess = "Hello, " + user;
+			console.log(mess);
+		}
+		console.log(user);// Maryna
+		nameUser();// Hello, Dasha
+		console.log(user);// Dasha
+		
+		console.log("==Params Function");
+		//params function
+		
+		function nameParams(name, text){
+			console.log(name + ':' + text);
+		}
+		nameParams('Artur', "Hello");
+		nameParams('Dima', "How are you?");
+		
+		
+		
+		function sumResault(a,b){
+			return a+b;
+		}
+		let result = sumResault(1,2);///3
+		console.log(result);
+		
+		function ageFunc(age){
+			
+			if(age>18){
+				return true;
+			}else{
+				return confirm('stop');
+			}
+		}
+		
+	</script>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Class2</title>
+</head>
+
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="circle"></div>
+</body>
+	<script>
+		class Component{
+			constructor(selector){
+				this.$el = document.querySelector(selector);
+			}
+		
+		
+			hide(){
+				this.$el.style.display ="none";
+			}
+			show(){
+				this.$el.style.display="block";
+			}
+		}
+		class Box extends Component{
+			constructor(options){
+				super(options.selector)
+					this.$el.style.width = options.width + "px"
+					this.$el.style.height = options.height + "px"
+					this.$el.style.background = options.background
+				
+			}
+		}
+		
+		class Circle extends Box{
+			constructor(options){
+				super(options)
+				this.$el.style.borderRadius ='50%'
+			}
+		}
+		
+		
+		let box1 = new Box({
+			selector:'.box1',
+			height: 150,
+			width: 500,
+			background:'blue'
+		})
+		
+		let box2 = new Box({
+			selector:'.box2',
+			height: 150,
+			width: 500,
+			background:'yellow'
+		})
+		
+		let circle = new Circle({
+			selector: '.circle',
+			height: 200,
+			width: 200,
+			background:'green'
+		})
+	</script>
+</html>

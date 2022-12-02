@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Yield keyword</title>
+</head>
+
+<body>
+</body>
+	<script>
+		//звичайна функція
+		/*function normalfunction(params){
+			return value; //логіка вашої функції
+		}*/
+		
+		
+		//Функція генератора
+		/*function* generatorFunction(params){
+			//логіка вашої функції 
+			yield value1;
+			
+			//логіка вашої функції 
+			yield value2;
+			
+			
+			//логіка вашої функції
+			 yield valueN;
+		}*/
+		
+	/*	function normalfunction(){
+			console.log('Мене викликали');
+		}
+		normalfunction();*/
+		
+		
+		function* generatorFunction(){
+			
+			console.log('мене викликано');
+			yield 'first value';
+			
+			console.log('відновлення виконано');
+			yield 'second value';
+		}
+		// збереження об'єкта генератора до зміної
+		let gener = generatorFunction();
+		
+		//виконується, поки не отримаємо перше значення
+		console.log(gener.next());
+		
+		//виконується, поки не отримаємо дргуе значення
+		console.log(gener.next());
+		
+		//виконується, до завершення функції
+		console.log(gener.next());
+		
+		
+		/*for i range(3):
+		print(i)*/
+		//0 1 2
+		
+		/*function* range({start =0, end, step=1}){
+			for(let i = start; i<end; i+=step) yield i;
+		}*/ 
+		
+		/*for(let i of range({end:4})) console.log(i);//0 1 2 3 4
+		
+		for(let i of range({start:2, end:4})) console.log(i);//2 3 
+		
+		for(let i of range({start:1, end:8, step:2})) console.log(i);//1 3 5 7*/
+		
+		
+		function* distRandom({limit = 10}){
+			const availValue = [...new Array(limit)].map((val, index) => index);
+			
+			while(availValue.length!== 0){
+				const curentRandom = Math.floor(Math.random() * availValue.length);
+				yield availValue[curentRandom];
+				availValue.splice(curentRandom, 1);
+			}
+		}
+		
+		function* nameGeneration(){
+			yield 1;
+			yield 2;
+			return 3;
+		}
+		let genetator2 = nameGeneration();
+		let oneGen = genetator2.next();
+		let oneGen2 = genetator2.next();
+		let oneGen3 = genetator2.next();
+		console.log(JSON.stringify(oneGen));
+		console.log(JSON.stringify(oneGen2));
+		console.log(JSON.stringify(oneGen3));
+		
+		
+		let result = nameGeneration();
+		for(let value of result){
+			console.log(value);
+		}
+		
+	</script>
+</html>

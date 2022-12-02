@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Working with subarrays</title>
+</head>
+
+<body>
+	<canvas id="canvas"></canvas>
+</body>
+	<script>
+		//fill
+		console.log("===Fill===");
+		let canvasNew = document.getElementById("canvas");
+		let result = canvasNew.getContext("2d");
+		
+		result.beginPath();
+		result.rect(10,10,300,200);
+		result.fillStyle = "blue";
+		result.fill();
+		
+		result.beginPath();
+		result.rect(10,80,300,200);
+		result.fillStyle="yellow";
+		result.fill();
+		
+		
+		//slice
+		let array = [1,2,3, "text", 5.12, true];
+		let newArray = array.slice(0,4);
+		//let newArray = array.slice(-3,-1);
+		console.log(array);
+		console.log(newArray);
+		
+		
+		//copyWithin
+		let colors = ["green", "red", "blue","pink"];
+		colors.copyWithin(2,0);//green, red,green,red
+		console.log(colors);
+		
+		
+		let colors2 = ["green", "red", "blue","pink", "brown"];
+		colors2.copyWithin(2,0,2);//green, red,green,red,brown
+		console.log(colors2);
+		
+		
+		//let arr = [1,2,3,4,5].copyWithin(0,3);//[4, 5, 3, 4, 5]
+		//let arr = [1,2,3,4,5].copyWithin(0,3,4); //[4, 2, 3, 4, 5]
+		let arr = [1,2,3,4,5].copyWithin(0,-2,-1); //[4, 2, 3, 4, 5]
+		
+		//target - Обовязковий  позиція індекса який буде вставлений копійований елемент
+		//start -  Не обовязковий. Позиція індекса для початку копіювання елемента (по замовчуванню 0)
+		//end - Не обовязковий. Позиція останього ідекса для копіювання елемента (по замовчуванню array.length)
+		
+		console.log(arr);
+	
+	</script>
+</html>

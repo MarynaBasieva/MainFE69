@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>recursive function</title>
+</head>
+<style>
+	.container{
+		width: 1170px;
+		margin: 0 auto;
+	}
+	.yellow{
+		width: 400px;
+		height: 200px;
+		position: relative;
+		padding: 5px;
+		box-sizing: border-box;
+		
+	}
+	.child_yellow1{
+		height: 100px;
+		width: 100%;
+		background: blue;
+	}
+	.child_yellow2{
+		height: 100px;
+		width: 100%;
+		background: #F5FB00;
+	}
+	.button{
+		outline: none;
+		cursor: pointer;
+		transition: all 0.3s linear;
+		background: #000000;
+		padding: 10px 0;
+		width: 200px;
+		color: #fff;
+		border: none;
+		margin-bottom: 20px;
+	}
+	.button:hover{
+		background: #000974;
+	}
+</style>
+<body>
+	<div class="container">
+		<button class="button">Move</button>
+		<div class="yellow">
+			<div class="child_yellow1"></div>
+			<div class="child_yellow2"></div>
+		</div>
+	</div>
+</body>
+	
+<script>
+	//animation recursive
+
+	let offset = 0;
+	
+	function move(){
+		document.querySelector('.yellow').style.left = offset + "px";
+		offset = offset + 3;
+		if(offset > 1000){
+			return offset;
+		}
+		setTimeout(move,100);
+	}
+	document.querySelector('.button').onclick = move;
+	
+	
+	
+	//animation recursive
+	let i = 1;
+	
+	function func(){
+		console.log(i);
+		i++;
+		if(i <= 10){
+			func();
+		}
+	}
+	let foo = func();
+	console.log(foo);
+	
+	
+	///звичайна функція
+/*	function func2(arr){
+		console.log(arr.shift());//1
+		console.log(arr);//2,3
+		console.log(arr);//3
+		console.log(arr.shift());//3
+		console.log(arr);//[]
+		
+	}
+	func2([1,2,3])*/
+	
+	///рекурсія функція
+	function func2(arr){
+		console.log(arr.shift(),arr);
+		
+		if(arr.length != 0){
+			func2(arr);
+		}
+		
+	}
+	func2([1,2,3])
+	
+	
+</script>
+</html>

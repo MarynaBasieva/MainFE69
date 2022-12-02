@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bind()</title>
+</head>
+
+<body>
+</body>
+	<script>
+		function prot(position, salary){
+			this.salary = salary;
+			this.position = position;
+			return `${this.position} developers ${this.salary} dolars`;
+		}
+		
+		let junior ={
+			name: "Gery",
+			position: 'junior developers',
+			salary: 1000
+		}
+		
+		let middle ={
+			name: "Maxim",
+			position: 'middle developers',
+			salary: 2000
+		}
+		
+		let senior ={
+			name: "Mary",
+			position: 'senior developers',
+			salary: 3000
+		}
+		
+		let resultAA = prot.bind(junior,1200);
+		let resultBB = prot.bind(middle,2200);
+		let resultCC = prot.bind(senior,3200);
+		
+		console.log(resultAA);
+		console.log(resultBB);
+		console.log(resultCC);
+	</script>
+</html>

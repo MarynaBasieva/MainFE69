@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>toString Object</title>
+</head>
+
+<body>
+	<!--<h2>{course}</h2>-->
+</body>
+	<script>
+		//Object.prototype.toString()
+		/* let person ={
+			 name: "Oleg"
+		 };
+		person.toString();//[object Object]
+		console.log(`I am ${person}`);*/
+		
+		/*let person ={
+			name: "Oleg",
+			toString(){
+				return this.name
+			},
+		};
+		person.toString();//Oleg
+		console.log(`I am ${person}`);*/
+		
+		
+		
+		
+		
+		function Persons(name){
+		  this.name = name;	
+		};
+	
+		Persons.prototype.toString = function toString(){
+			return this.name;
+		}
+		
+		let person1 = new Persons('Polina');
+		
+		console.log(`I am ${person1}`);
+		
+	</script>
+</html>
