@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>createElement</title>
+</head>
+
+<body>
+	<div id="parent">
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+	</div>
+	
+	<ul class="list">
+	</ul>
+	<div class="top_tag">все що вище зробив JS</div>
+	
+	<!--closest-->
+	   <div class="block" title="hello">
+		   <a href="#">Я силка в не куди</a>
+		   <a href="https://ua.sinoptik.ua">Я силка на погоду</a>
+		   <div>
+			   <div id="too_too"></div>
+		   </div>
+	   </div>
+	<!--closest-->
+	
+	<!--remove-->
+	<div class="div1">div1</div>
+	<div class="div2">div2</div>
+	<div class="div3">div3</div>
+	<!--remove-->
+	
+	
+</body>
+	<script>
+		//document.createElement('Імя тега');
+		let parent = document.getElementById("parent");
+		
+		let p = document.createElement('p');
+		p.innerHTML="4";
+		
+		parent.appendChild(p);
+		
+		
+		//list
+		let list = document.querySelector(".list");
+		for(let i=1; i<=8; i++){
+			let li = document.createElement('li');
+			li.innerHTML=i;
+			list.appendChild(li);
+		}
+		//add element
+		document.body.onload = addElement;
+		let newTag;
+		let tag = newTag = null;
+		
+		function addElement(){
+			let newTag = document.createElement('div');
+			newTag.innerHTML="<h1>Hello</h1>";
+			
+			tag = document.querySelector(".top_tag");
+			document.body.insertBefore(newTag,tag);
+		}
+		
+		//closest
+		
+		let too = document.querySelector('#too_too');
+		
+		too.closest('.block');
+		too.closest('div');
+		
+		too.closest('a');
+		too.closest('div[title]');
+		
+		//Element append
+		let elem = document.createElement('div');
+		//let elemchild = document.createElement('p');
+		elem.append('Hello Hello');
+		
+		console.log(elem.textContent);//childNodes
+		
+		//remove
+		let elems = document.querySelector('.div2');
+		elems.remove();
+		
+	</script>
+</html>

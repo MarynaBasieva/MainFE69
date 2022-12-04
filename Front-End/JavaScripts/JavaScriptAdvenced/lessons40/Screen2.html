@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Screen2</title>
+</head>
+
+<body>
+</body>
+	<script>
+		function onChange(){
+			switch(screen.orientation.type){
+				case ('portrait-primary'):
+				case ('portrait-secondary'):
+				document.body.style.backgroundColor = '#f44336';
+				break;
+				case ('landscape-primary'):
+				case ('landscape-secondary'):
+				document.body.style.backgroundColor ='#4caf50';
+				break;
+			}
+			document.body.textContent = screen.orientation.type;
+		}
+		onChange()
+		screen.orientation.addEventListener('change',onChange);
+	</script>
+</html>
