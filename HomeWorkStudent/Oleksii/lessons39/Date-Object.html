@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date Object</title>
+</head>
+
+<body>
+	<div class="test1"></div>
+	<div class="test2"></div>
+	<div class="test3"></div>
+	<div class="test4"></div>
+	<div class="test5"></div>
+	<div class="test6"></div>
+	<div class="test7"></div>
+</body>
+	<script>
+		let d = new Date();
+		document.querySelector('.test1').innerHTML = d.getTime();
+		
+		let d2 = new Date();
+		document.querySelector('.test2').innerHTML = d2.getFullYear();
+		
+		let d3 = new Date();
+		document.querySelector('.test3').innerHTML = d3.getMonth();
+		
+		
+		let d4 = new Date();
+		let months = ["Січень","Лютий","Березень","Квітень","Травень","Червень","Липень","Серпень","Вересень","Жовтень","Листопад","Грудень"];
+		document.querySelector('.test4').innerHTML = months[d4.getMonth()];
+		
+		let d5 = new Date();
+		document.querySelector('.test5').innerHTML = d5.getDate();
+		
+		let d6 = new Date();
+		document.querySelector('.test6').innerHTML = d6.getHours();
+		
+		let d7 = new Date();
+		document.querySelector('.test7').innerHTML = d7.getMinutes();
+		
+		//new Date(рік,місяць,день,часи,хвилини,секунди,мілісикунди)
+		
+		let data = new Date(2025, 10,10,12,5,9,59);
+		let day = data.getDay();
+		let days = ['нд','пн','вт','ср','чт','пт','сб'];
+		console.log(days[day])
+		
+		
+        //методы объекта date get
+		//getFullYear() - получить год в формате четырех цифр
+		//getMonth() - Получить номер месяц (0-11)
+		//getDate() - Получить число месяца(1-31)
+		//getHours() - Получить час (0-23)
+		//getMinutes() - получить минуты (0-59)
+		//getSeconds() - Получить секунды (0-59)
+		//getMilliseconds() - Получить миллисекунды (0-999)
+		//getTime() - Получить время (кличество миллисекунд прошедших с 1 января 1970года)
+		//getDay() -  Получить номер дня недели(0-6)
+		
+		
+		let setYear = new Date();
+		setYear.setFullYear(2021);
+		document.write(setYear + '<br>');
+		
+		let setYear2 = new Date();
+		setYear2.setFullYear(2021, 7, 5);
+		document.write(setYear2 + '<br>');
+		
+		let setMonth = new Date();
+		setMonth.setMonth(11);
+		document.write(setMonth + '<br>');
+		
+		let today,someday,text;
+		today = new Date();
+		someday = new Date();
+		someday.setFullYear(2100,2,15);
+		
+		if(someday > today){
+			text='ЩО 15.03.2100 ще не наступив';
+		}else{
+			text="ЩО 15.03.2100 що вже пройшов";
+		}
+		document.write(text);
+		
+		
+		//методы объекта date Set
+		//setFullYear() - Устанавливает  год можно день и месяц
+		//setMonth() - Устанавливает месяц (0-11)
+		//setDate() - Устанавливает число месяца(1-31)
+		//setHours() - Устанавливает час (0-23)
+		//setMinutes() - Устанавливает минуты (0-59)
+		//setSeconds() - Устанавливает секунды (0-59)
+		//setMilliseconds() - Устанавливает миллисекунды (0-999)
+		//setTime() - Устанавливает время (кличество миллисекунд прошедших с 1 января 1970года)
+	</script>
+</html>
