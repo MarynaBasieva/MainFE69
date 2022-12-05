@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HW35</title>
+</head>
+
+<body>
+	<div class="result"></div>
+	<div class="resultFinish"></div>
+</body>
+
+<script>
+	let result = document.querySelector(".result");
+	let userJob = {
+		name: 'Garik',
+		lastName: 'Kulak',
+		age: 35,
+		budget: {
+			sullary: '2000$',
+			workDays: 5,
+		},
+		vacation: {
+			cash: '1714.29',
+			vacation: 24,
+		}
+	};
+	console.log(userJob);
+
+	for (let i in userJob) {
+		if (typeof userJob[i] === "object") {
+			for (let j in userJob[i]) {
+				result.innerHTML += `<div>${userJob[i][j]}</div>`;
+			}
+		}
+		else result.innerHTML += `<div>${userJob[i]}</div>`;
+	}
+
+	let res = document.querySelector(".resultFinish");
+	let userFinish = Object.assign(userJob, { name: 'Kolya', lastName: 'Kundakov', age: 38, budget: { sullary: '2500$', workDays: 6 }, vacation: { cash: "2316$", vacation: 32 } });
+	console.log(userFinish);
+	res.innerHTML += `Name: ${userFinish.name} <br/> Last name: ${userFinish.lustName}<br/> Age: ${userFinish.age}<br/> Salary: ${userFinish.budget.sallary}<br/> Working days in week: ${userFinish.budget.workDays}<br/> Vacation cash: ${userFinish.vacation.cash}<br/> Vacation days: ${userFinish.vacation.vacation}` 
+
+
+	
+		let person = function (name, lastname, age, adress){
+			this.name = name;
+			this.lastname = lastname;
+			this.age = age;
+			this.adress = adress;
+		}
+		let artur = new person('Artur', 'Nesterov', 42, 'Lviv');
+		let sasha = new person("Olexandr", "Petushenko", 154, "Na Gori");
+		let artem = new person('Atemiy', "Polischuk", 18, "Striy");
+
+		document.write('<br/>' + artur.name + " ", artur.lastname + " ", artur.age + " ", artur.adress + '<br/>');
+		document.write(sasha.name + " ", sasha.lastname + " ", sasha.age + " ", sasha.adress + '<br/>');
+		document.write(artem.name + " ", artem.lastname + " ", artem.age + " ", artem.adress + '<br/>');
+
+</script>
+
+</html>
