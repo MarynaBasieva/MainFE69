@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HW37_callback</title>
+</head>
+
+<body>
+	<div class="elem">Element 1</div>
+	<div class="elem">Element 2</div>
+	<div class="elem">Element 3</div>
+</body>
+
+<script>
+
+	/*---1---*/
+	let callOf = function (abonent, maintenance) {
+		console.log("${abonent} ne mozhet podnyat' trubku, podozhdite pozhaluysta");
+		setTimeout(maintenance, 5000);
+	}
+
+	let callOn = function () {
+		console.log("Govorite pozhalujysta");
+	}
+
+	callOf('Mark', callOn);
+
+
+
+	let elem = document.querySelectorAll('.elem');
+	elem.forEach(function (item, count, arr) {
+		setTimeout(function(){
+		item.style.background = 'green';
+		item.style.marginBottom = '30px';
+		item.style.padding = '20px';
+		}, 3000);
+	});
+	console.log(elem);
+	//setTimeout(function () { console.log(elem) }, 3000);
+
+
+
+
+
+</script>
+
+</html>
