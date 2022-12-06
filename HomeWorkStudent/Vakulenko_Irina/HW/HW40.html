@@ -83,6 +83,7 @@
 	let buttonMultiply = document.getElementById("buttonMultiply");
 	let buttonDevide = document.getElementById("buttonDevide");
     let buttonPercentage = document.getElementById("buttonPercentage");
+	let result2 = document.querySelector(".result");
 	
 		
 	let input1 = document.getElementById('number1');
@@ -107,12 +108,11 @@
 		}else if(operationCode === '/'){
 			result = getNumber1() / getNumber2();
         }else if(operationCode === '%'){
-			result = getNumber1() / 100;
-		}else{
+			result = getNumber1() % getNumber2();
+        }else{
 			console.log('такого параметра не існує');
 		}
-		console.log(result);
-        document.getElementById('result').innerHTML = result;
+		result2.innerHTML +=result + '';
 	}	
 		
 	function buttonClickPlus(){

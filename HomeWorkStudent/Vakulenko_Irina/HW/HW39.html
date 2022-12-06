@@ -61,8 +61,8 @@
         max-width: 100%;
         margin-top: 40px;
     }
-    .result,
-	.message_1{
+    .result1,
+	.result{
         margin-bottom: 25px;
         color: #f3f0ed;
         margin-top: 20px;
@@ -76,7 +76,7 @@
         <h2>Заполните форму</h2>
         <input id="name" type="text" placeholder="name">
         
-        <input id="tel" type="tel" placeholder="phone">
+        <input id="phone" type="phone" placeholder="phone">
        
         <input id="message" type="text" placeholder="message">
         
@@ -97,17 +97,17 @@
 </body>
 <script>
     function myFunction(){
-            let result1,phone,name,message;
+            let result1,name,phone,message;
 			result1 = document.querySelector('.result1');
 			result1.innerHTML = "";
-            phone = document.getElementById("phone").value;
             name = document.getElementById("name").value;
-            message = document.getElementById("messege").value;
+            phone = document.getElementById("phone").value;
+            message = document.getElementById("message").value;
 			
 			try{
 				if(isNaN(phone)) throw "Не число";
                 phone = Number(phone);
-                if(phone == "" || name == "" || mes == "") throw "пусто";
+                if(phone == "" || name == "" || message == "") throw "пусто";
                 
 				
 			}catch(err){
