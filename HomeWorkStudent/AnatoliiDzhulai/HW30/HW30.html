@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>hw30</title>
+</head>
+<style>
+	.block_1 .block_2{
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+        background: blue;
+        display: block;
+        
+    }
+	</style>
+<body>
+	<div class="block_1" onClick="go()">
+		<a class="block_2"></a>
+	</div>
+</body>
+	<script>
+		let year = prompt("Вам 18 років?");
+		
+		if (year < 18) {
+			alert("Тобі рано немає 18 років");
+		}else if (year >= 60){
+			alert("Піздно для вас");
+		}
+		else {
+			alert("Ласкаво просимо");
+		}
+		
+		function go() {
+			 elemblock_1 = document.querySelector('.block_2');
+			elemblock_1.style.borderRadius= "100%";
+			elemblock_1.style.background = "blueviolet";
+		}
+		
+		
+	</script>
+</html>
