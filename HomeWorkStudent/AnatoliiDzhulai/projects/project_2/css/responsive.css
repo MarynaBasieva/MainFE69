@@ -1,0 +1,223 @@
+@media (min-width: 1200px){
+	.for_page .container {
+		max-width: 1198px;
+	}
+}
+@media (max-width: 1199px){
+	.baner h1 {
+		font-size: 50px;
+	}
+	.calendar_one {
+		padding-left: 50px;
+	}
+	.calendar_two {
+		padding-left: 125px;
+	}
+	.footer p {
+		text-align: center;
+	}
+	.logo_footer {
+		padding-bottom: 20px;
+	}
+	.footer_menu_1 ul {
+		display: none;
+	}
+	.footer_menu_2 ul {
+		display: none;
+	}
+	.footer_menu_3 ul {
+		display: none;
+	}
+	.footer_menu_4 ul {
+		display: none;
+	}
+	.footer_menu_5 ul {
+		display: none;
+	}
+	.socials {
+		margin: 0 auto;
+	}
+}
+@media (max-width: 991px){
+	.header {
+		padding-bottom: 30px;
+	}
+	.logo_block {
+		text-align: center;
+	}
+	html .btn-sing {
+		padding: 5px 40px;
+	}
+	.baner h1 {
+		font-size: 35px;
+	}
+	.baner p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.055em;
+    color: #FFFFFF;
+    padding-top: 20px;
+}
+	.going_one,
+	.going_two {
+		width: 100%;
+	}
+	.calendar_one {
+		padding-left: 20px;
+	}
+	.calendar_two {
+		padding-left: 15px;
+	}
+	.radio_block_one label {
+		padding-right: 12px;
+		font-size: 12px;
+		cursor: pointer;
+	}
+	.radio_block_one .circle {
+    width: 20px;
+    height: 14px;
+	}
+	.single_three,
+	.single_four {
+	width: 100%;
+    
+	}
+	.button_search {
+    margin-left: 250px;
+}
+	.calendar_one,
+	.calendar_two{
+    padding-top: 20px;
+}
+	.btn_white_board button {
+    padding: 20px 60px;
+	}
+	.single_five,
+	.single_six {
+	width: 100%;
+    
+	}
+	.Popular_destinations {
+		padding-top: 50px;
+	}
+	.Popular_destinations h2 {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+	.table_pictures {
+    padding-bottom: 50px;
+}
+	.socials {
+		padding-left: 25px;
+	}
+	.responsive_menu_button {
+		display: none;
+	}
+@media (max-width: 767px){
+	.logo_block {
+		text-align: start;
+		display: flex;
+		justify-content: space-between;
+	}
+	.closed_menu,
+	.responsive_menu_button {
+		display: block;
+	}
+	.responsive_menu_button i {
+		color: white;
+		font-size: 30px;
+		cursor: pointer;
+		transition: 0.4s all ease;
+	}
+	.responsive_menu_button i:hover {
+		color: black;
+	}
+	.closed_menu:hover{
+		color: gold;
+	}
+	.main_menu {
+		display: none;
+	}
+	.btn-sing {
+		margin-top: 15px;
+	}
+	.menu {
+    display: block;
+	text-align: center;
+}
+	.main_menu {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0, 0.7);
+	z-index: 99;
+	}
+	.sub_menu {
+		padding-top: 10px;
+	}
+	.closed_menu {
+		color: white;
+		font-size: 30px;
+		position: absolute;
+		right: 50px;
+		top: 10px;
+		cursor: pointer;
+	}
+	.button_search {
+		margin-left: 165px;
+	}
+	.calendar_one {
+		padding-left: 0;
+	}
+	.button_google,
+	.button_apple {
+		padding: 0;
+	}
+
+@media (max-width: 500px){
+	.baner h1 {
+    font-size: 20px;
+}
+	.baner p {
+		padding-top: 0px;
+	}
+	.button_search {
+    margin-left: 130px;
+}
+	.button_apple h2 {
+        font-size: 18px;
+    padding-left: 63px;
+    padding-top: 10px;
+    padding-right: 9px;
+}
+	.button_apple:before {
+    left: 9px;
+    top: 8px;
+   
+}
+	.button_google h2 {
+       font-size: 18px;
+    padding-left: 63px;
+    padding-top: 10px;
+    padding-right: 9px;
+	}
+	.button_google:before {
+    left: 10px;
+    top: 11px;
+	}
+@media (max-width: 450px){
+	
+}
+@media (max-width: 400px){
+	
+}
+@media (max-width: 350px) {
+		
+	}

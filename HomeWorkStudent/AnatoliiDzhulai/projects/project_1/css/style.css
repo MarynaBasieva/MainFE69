@@ -13,8 +13,8 @@ a {
 }
 /*Logo*/
 .header {
-	box-shadow: 10px 31px 59px -29px rgba(0,0,0,0.75);
-	padding: 25px 0;
+	box-shadow: 10px 31px 59px -50px rgba(0,0,0,0.75);
+	padding-top: 25px;
 }
 .logo_block {
 	
@@ -82,9 +82,6 @@ a {
 .header .btn-sign {
 	width: 172px;
 	height: 40px;
-	left: 0%;
-	right: 0%;
-	top: 0px;
 	background: #222222;
 	border-radius: 4px;
 	outline: none;
@@ -92,7 +89,6 @@ a {
     transition: all 0.4s ease;
 	margin: 25px;
 	text-transform: uppercase;
-	padding: 8px 25px 10px 25px;
 	letter-spacing: 1px;
 	margin-top: 35px;
 	color: white;
@@ -106,6 +102,7 @@ a {
 /*baner*/
 .baner {
 	padding: 100px 0;
+	padding-bottom: 0;
 	margin-bottom: 0;
 }
 
@@ -139,7 +136,6 @@ a {
 }
 .top_baner_first .btn-sign {
 	width:148px;
-	height:40px;
 	font-family: 'Poppins';
 	font-style: normal;
 	font-weight: 400;
@@ -152,14 +148,13 @@ a {
 	background-color: black;
 	text-decoration: none;
 	cursor: pointer;
-	display: inline-block;
     outline: none;
     border: none;
-	margin: 10px 25px;
 	border-radius: 6px;
 	padding-top: 10px;
 	transition: 0.3s all ease;
-	margin-left: 2px;
+	margin-left: 16px;
+	padding: 10px;
 }
 .btn-sign:hover {
 	background-color: cornflowerblue;
@@ -174,7 +169,7 @@ a {
 /*Features*/
 .features {
 	background: #222222;
-	padding: 100px 120px;	
+	padding: 100px 0;	
 }
 .features_box{
 	display: flex;
@@ -323,7 +318,7 @@ a {
 /*Discount*/
 .discounts {
 	background: #FF5437;
-	padding: 100px 136px;
+	padding: 100px 0;
 	
 }
 .parent_box_discount{
@@ -363,8 +358,8 @@ a {
 /*Discount*/
 /*INFO*/
 .info {
-	margin: 100px 136px;
-	margin-bottom: 0;
+	padding: 100px 0;
+	padding-bottom: 0;
 }
 .info_one {
 	    padding: 77px 78px;
@@ -444,7 +439,7 @@ a {
 	color: #222222;
 }
 .info_two {
-	padding: 100px 136px;
+	padding: 100px 0;
 	background: #F2F2F2;
 	padding-bottom: 0;
 	
@@ -462,7 +457,7 @@ a {
 .dark_mode {
 	background: #222222;
 	color: white;
-	padding: 100px 420px 139px 420px;
+	padding: 100px 0;
 	text-align: center;
 	
 }
@@ -534,7 +529,7 @@ a {
 
 /*Pricing*/
 .payment_plans {
-	padding: 100px 120px;
+	padding: 100px 0;
 	text-align: center;
 }
 .plans_title {
@@ -775,7 +770,7 @@ a {
 
 /*Comments*/
 .comments {
-	padding: 100px 120px;
+	padding: 100px 0;
 	background: #F2F2F2;
 }
 .comments_box_parent {
@@ -884,7 +879,7 @@ a {
 
 /*Download*/
 .download {
-	padding: 100px 120px 140px 120px;
+	padding: 100px 0;
 }
 .download_box_parent {
 	text-align: center;
@@ -954,7 +949,7 @@ background: black;
 
 /*FAQ*/
 .questions {
-	padding: 110px 120px 100px 120px;
+	padding: 110px 0;
 	background: #E5E5E5;
 }
 .questions h2 {
@@ -988,7 +983,7 @@ background: black;
 /*FAQ*/
 /*Footer*/
 .footer {
-	padding: 100px 136px;
+	padding: 100px 0;
 	text-align: center;
 }
 .footer_title {
@@ -1010,6 +1005,15 @@ background: black;
 	line-height: 24px;
 	text-align: center;
 	color: #666666;
+}
+.twitter:hover {
+	transform: scale(1.2, 1.4);
+}
+.instagram:hover {
+	transform: scale(1.2, 1.4);
+}
+.facebook:hover {
+	transform: scale(1.2, 1.4);
 }
 /*Footer*/
 
