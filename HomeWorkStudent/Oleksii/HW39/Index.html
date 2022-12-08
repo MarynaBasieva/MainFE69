@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		background: url(../HW39/img/pred.jpeg) no-repeat;
+        background-size: cover;
+	}
+	.container{
+        padding-top: 50px;
+        padding-bottom: 100px;
+		max-width:300px;
+		margin: 0 auto;
+	}
+	
+	input{
+		border: none;
+		padding:5px 10px;
+		display: block;
+		outline: none;
+		color: #ccc;
+		font-size: 14px;
+		margin-bottom: 20px;
+		width: 200px;
+		
+	}
+	input::placeholder{
+		background: transparent;
+		color: #ccc;
+	}
+	button{
+		background: #333;
+		color: #fff;
+		display: block;
+		width: 222px;
+		transition: all 0.3s ease;
+		outline: none;
+		padding: 10px 0;
+		text-align: center;
+		border:none;
+		cursor: pointer;
+	}
+	button:hover{
+		background: #003370;
+	}
+
+    .result,
+	.message{
+        margin-bottom: 20px;
+		color: red;
+		margin-top: 20px;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;	
+	}
+
+    .container h2 {
+        color: white;
+        text-align: left;
+        font-size: large;
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h2>HW39</h2>
+        <input id="name" type="text" placeholder="name">
+        
+        <input id="phone" type="tel" placeholder="phone">
+       
+        <input id="mes" type="text" placeholder="message">
+        
+        <button onclick="formValidation()">Push</button>
+
+        <div class="message"></div>
+
+        <h2>L.B.W.1.1.7</h2>
+        <input type="tel" id="tel" placeholder="Phone" />
+        <button onclick="formValidationTel()">Push tel</button>
+        <div class="result"></div>
+    </div>    
+</body>
+    <script>
+        function formValidation(){
+            let message,phone,name,mes;
+			message = document.querySelector('.message');
+			message.innerHTML = "";
+			phone = document.getElementById("phone").value;
+            name = document.getElementById("name").value;
+            mes = document.getElementById("mes").value;
+			
+			try{
+				if(isNaN(phone)) throw "Не число";
+                phone = Number(phone);
+                if(phone == "" || name == "" || mes == "") throw "пусто";
+                
+				
+			}catch(err){
+				message.innerHTML = "Ви ввели" + " " + err; 
+			}
+        }
+
+        //L.W 1.1.7
+
+        function formValidationTel(){
+            let result,tel;
+			result = document.querySelector('.result');
+			result.innerHTML = "";
+			tel = document.getElementById("tel").value;
+			
+			try{
+                if(isNaN(tel)) throw "Ви ввели Не число";
+                if(tel == "") throw "Ви  не ввели нічого";
+                tel = Number(tel);
+                if(tel[0] != '+') throw "Введіть будьласка номер в формати +380";
+                tel.length;
+                if(tel > 13) throw "Ви ввели забагато символів";
+				if(tel < 13) throw "Ви ввели мало символів";
+                
+                
+				
+			}catch(err){
+				result.innerHTML = " " + err; 
+			}
+        }
+
+
+
+    </script>
+</html>

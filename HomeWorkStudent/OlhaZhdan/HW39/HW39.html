@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW39</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		background: khaki;
+	}
+	.form{
+        padding-top: 100px;
+        padding-bottom: 100px;
+		max-width: 200px;
+		margin: 0 auto;
+	}
+	.name, .phone, .text{
+		border: none;
+		padding: 10px;
+		display: block;
+		outline: none;
+		color: gray;
+		font-size: 14px;
+		margin-bottom: 20px;
+		width: 200px;
+		border-radius: 25px;
+		-webkit-border-radius: 25px;
+		-moz-border-radius: 25px;
+		-ms-border-radius: 25px;
+		-o-border-radius: 25px;
+	}
+	input::placeholder{
+		background: transparent;
+		color: gray;
+	}
+	.text{
+		height: 100px;
+	}
+	.btn{
+		background: black;
+		color: #fff;
+		display: block;
+		width: 220px;
+		transform: translate(-50%, 0);
+    	animation: anim1 8s linear infinite;
+		outline: none;
+		padding: 10px 5px;
+		text-align: center;
+		border:none;
+		cursor: pointer;
+		margin-left: 110px;
+		border-radius: 25px;
+		-webkit-border-radius: 25px;
+		-moz-border-radius: 25px;
+		-ms-border-radius: 25px;
+		-o-border-radius: 25px;
+		margin-bottom: 20px;
+    }
+    @keyframes anim1{
+      0%{background: white;}
+      50%{background: darkgray}
+      100%{background: black}
+    }
+	.error{
+		text-align: center;
+		font-size: 18px;
+		color: red;
+	}
+
+</style>
+<body>
+    <div class="form">
+        <input class= "name" id="name" type="text" placeholder=" Your name">
+        <input class= "phone"  id="phone" type="tel" placeholder="Your phone">
+        <input class="text" id="text" type="text" placeholder="Your message">
+        <button class="btn" onclick="formValidation()">Send</button>
+		<div class="error"></div>
+    </div>    
+</body>
+    <script>
+        function formValidation(){
+            let error,phone,name,text;
+			error = document.querySelector('.error');
+			error.innerHTML = "";
+			phone = document.getElementById("phone").value;
+            name = document.getElementById("name").value;
+           	text = document.getElementById("text").value;
+			
+			try{
+				if(isNaN(phone)) throw "Тільки цифри";
+                phone = Number(phone);
+                if(phone == "" || name == "" || text == "") throw "Відсутні дані";
+			}
+			catch(err){
+				error.innerHTML = "Помилка!" + " " + err; 
+			}
+        }
+    </script>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>try...catch</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		background: #752C7C;
+	}
+	.container{
+		max-width:300px;
+		margin: 0 auto;
+	}
+	p{
+		color: #fff;
+		font-size: 25px;
+		margin-bottom: 20px;
+		padding-top: 100px;
+	}
+	input{
+		border: none;
+		padding:5px 10px;
+		display: block;
+		outline: none;
+		color: #ccc;
+		font-size: 14px;
+		margin-bottom: 20px;
+		width: 200px;
+		
+	}
+	input::placeholder{
+		background: transparent;
+		color: #ccc;
+	}
+	button{
+		background: #333;
+		color: #fff;
+		display: block;
+		width: 222px;
+		transition: all 0.3s ease;
+		outline: none;
+		padding: 10px 0;
+		text-align: center;
+		border:none;
+		cursor: pointer;
+	}
+	button:hover{
+		background: #003370;
+	}
+	.resault{
+		color: red;
+		margin-top: 20px;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+		
+		
+	}
+</style>
+<body>
+	<div id="demo"></div>
+	<div class="container">
+		<p>введіть число від 3 до 10:</p>
+		<input id="myInput" type="text" placeholder="Введіть число" />
+		<button onClick="myFunction()">Перевірка ввода даних</button>
+		<div class="resault"></div>
+		
+	</div>
+</body>
+	<script>
+		function myFunction(){
+			let message,x;
+			message = document.querySelector('.resault');
+			message.innerHTML = "";
+			x = document.getElementById("myInput").value;
+			
+			try{
+				if(x == "") throw "пусто";
+				if(isNaN(x)) throw "Не число";
+				x = Number(x);
+				if(x < 3) throw "Дуже мало";
+				if(x > 10) throw "Занато багато";
+			}catch(err){
+				message.innerHTML = "Ви ввели" + " " + err; 
+			}
+		}
+		
+		
+		/*try{
+			console.llllllog('Раді вітати Вас');
+		}catch(err){
+			document.getElementById('demo').innerHTML = err.message;
+		}
+		*/
+		/*try{
+			//провіряє блок коду
+		}catch(err){
+			//блок кода для обробки  помилок
+		}*/
+		
+		
+	</script>
+</html>

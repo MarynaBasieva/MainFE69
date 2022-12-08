@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW 39 and LW 1.1.7</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      background: #aed6b6;
+    }
+    .container {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+    form {
+      margin-top: 50px;
+      padding: 20px;
+      border: #368b5c 1px solid;
+      background: #368b5c;
+      text-align: center;
+    }
+    p {
+      color: #fff;
+      font-size: 25px;
+      margin-bottom: 20px;
+      padding-top: 10px;
+    }
+    input,
+    textarea {
+      border: none;
+      padding: 10px 10px;
+      display: block;
+      outline: none;
+      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 20px;
+      width: 200px;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      background: transparent;
+      color: #ccc;
+    }
+    button {
+      background: #333;
+      color: #fff;
+      display: block;
+      width: 222px;
+      transition: all 0.3s ease;
+      outline: none;
+      padding: 10px 0;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #003370;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <form action="action.php" target="_blank" method="post">
+        <p>
+          <input
+            id="myInput"
+            type="text"
+            name="first name"
+            placeholder="Your name"
+            required
+            maxlength="20"
+          />
+        </p>
+
+        <p>
+          <input
+            id="myInputTel"
+            type="tel"
+            name="tel"
+            placeholder="Your phone"
+            maxlength="20"
+            required
+          />
+        </p>
+
+        <p>
+          <textarea
+            id="myInputMessage"
+            name="textarea"
+            placeholder="Your message"
+          ></textarea>
+        </p>
+        <p>
+          <button onClick="myFunction()">Send</button>
+        </p>
+      </form>
+      <div class="result"></div>
+    </div>
+  </body>
+  <script>
+    /* HW39
+try_catch
+1) перевірка форми(поля і’мя,телефон,повідомлення)
+зробити форму гарною за допомогою css*/
+    function myFunction() {
+      let message, x, y, z;
+      message = document.querySelector(".result");
+      message.innerHTML = "";
+      x = document.getElementById("myInput").value;
+      y = document.getElementById("myInputTel").value;
+      z = document.getElementById("myInputMessage").value;
+
+      try {
+        if (x == "" || z == "") throw "is empty";
+        if (y == "") throw "did not enter a number";
+        if (isNaN(y)) throw " entered not a number";
+        y = Number(y);
+        if (y.length < 10) throw "too few numbers for the number";
+        if (y.length > 13) throw "entered a lot of numbers in the room";
+      } catch (err) {
+        message.innerHTML = "Error: " + err + ".";
+      }
+    }
+  </script>
+</html>
