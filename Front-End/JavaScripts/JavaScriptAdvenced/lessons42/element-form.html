@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>element form</title>
+</head>
+
+<body>
+	<form name="form1">
+		<!--<input name="one" value="1" />
+		<input name="two" value="2" />-->
+		<input type="radio" name="age" value="20" />
+		<input type="radio" name="age" value="30" />
+	</form>
+</body>
+	<script>
+		//document.forms.form1 -- форма по імені form1
+		//document.form[0] --перша форма в документі
+		
+	/*	let form1 = document.forms.form1;//можна document.form[0]
+		let elem = form.elements.one; //можна form.elements[0]
+		console.log(elem.value);//1*/
+		
+		let form = document.forms[0];
+		let elem = form.elements.age;
+		console.log(elem[0].value);//20
+		
+		
+	</script>
+</html>
+
+
+

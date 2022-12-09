@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Drag-and-drop</title>
+</head>
+<style>
+	.elem{
+		width: 150px;
+		height: 150px;
+		background: #A36EFE;
+		margin: 40px auto;
+		text-align: center;
+		line-height: 150px;
+	}
+	.area{
+		width: 200px;
+		height: 200px;
+		border: 10px solid #A36EFE;
+		margin: 50px auto;
+		padding: 10px;
+		text-align: center;
+	}
+</style>
+<body>
+	<div class="elem" draggable="true">тягни</div>
+	<div class="area">кидай</div>
+</body>
+	<script>
+		let elem = document.querySelector('.elem');
+		let area = document.querySelector('.area');
+		
+		elem.addEventListener('dragstart', function(){
+			console.log('Start');
+		});/*dragstart-виникає в момент захвата елемента*/
+		
+		elem.addEventListener('dragend', function(){
+			console.log('End');
+		});/*dragend-виникає в момент відпускання елемента*/
+		
+		elem.addEventListener('drag', function(){
+			console.log('drag');
+			/*drag-виникає в момент перетягування мишкою елемента, навіть якщо нім не рухаємо*/
+		});
+		
+		area.addEventListener('dragenter', function(){
+			console.log('Enter');
+			/*dragenter-виникає в момент захват курсором елемента, в той елемент який ми перетаскуємо*/
+		});
+		
+		area.addEventListener('dragleave', function(){
+			console.log('Leave');
+			/*dragleave-наступає коли елемент покидає цільовий блок*/
+		});
+		
+		area.addEventListener('dragover', function(){
+			event.preventDefault();
+			console.log('Over');
+			/*dragover-наступає в процесі руху перетаскування елемента внутрі цільового блока*/
+		});
+		
+		area.addEventListener('drop', function(){
+			console.log('Drop');
+			this.appendChild(elem);
+			/*drop-наступає коли ми відпускаємо елемент, але буде працювати при умові якщо в dragover буде прописан event.preventDefault(); За допомогою метода appendChild() добавляємо один елемент в кінець другого*/
+		});
+		
+		
+	</script>
+	
+</html>

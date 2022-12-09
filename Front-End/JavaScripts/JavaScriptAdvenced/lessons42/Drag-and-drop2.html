@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Drag-and-drop2</title>
+</head>
+<style>
+	.exeample-parent{
+		border: 2px solid #1E55F2;
+		color: #000;
+		display: flex;
+		font-weight: bold;
+	}
+	.exeample-origin{
+		flex-basis: 100%;
+		flex-grow: 1;
+		padding: 10px;
+	}
+	.exeample-draggable{
+		background: #0783AC;
+		font-weight: normal;
+		margin:10px 0;
+		padding: 10px;
+		
+	}
+	.exeample-dropzone{
+		background: #004B98;
+		flex-basis: 100%;
+		flex-grow: 1;
+		padding: 10px;
+	}
+</style>
+<body>
+	<h1>To-do-list</h1>
+	<div class="exeample-parent">
+		<div class="exeample-origin">
+			<div id="draggable-1" 
+				 class="exeample-draggable" 
+				 draggable="true" 
+				 ondragstart="onDragStart(event);">
+				task1
+			</div>
+			
+			<div id="draggable-2" 
+				 class="exeample-draggable" 
+				 draggable="true" 
+				 ondragstart="onDragStart(event);">
+				task2
+			</div>
+			
+			
+			<div id="draggable-3" 
+				 class="exeample-draggable" 
+				 draggable="true" 
+				 ondragstart="onDragStart(event);">
+				task3
+			</div>
+			
+			<div id="draggable-4" 
+				 class="exeample-draggable" 
+				 draggable="true" 
+				 ondragstart="onDragStart(event);">
+				task4
+			</div>
+		</div>
+		
+		<div class="exeample-dropzone" 
+			 ondragover="onDragOver(event);"
+			 ondrop="onDrop(event);">
+			   done
+		</div>
+	</div>
+</body>
+	<script>
+		function onDragStart(event){
+			event
+			  .dataTransfer
+			  .setData('text/plain', event.target.id);
+			
+			 event
+			   .currentTarget
+			   .style
+			   .backgroundColor='pink';	    
+		}
+		function onDragOver(event){
+			event.preventDefault();
+		}
+		function onDrop(event){
+			let id = event.dataTransfer.getData('text');
+			let draggableElement = document.getElementById(id);
+			let dropzone = event.target;
+			dropzone.appendChild(draggableElement);
+			event.dataTransfer.clearData();
+		}
+	</script>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onmouserover</title>
+</head>
+<style>
+	.mouse{
+		width: 200px;
+		height: 200px;
+		background: #286C7F;
+	}
+	img{
+		width: 400px;
+	}
+</style>
+<body>
+	<p class="mouse" onMouseMove='this.style.color="yellow"' onMouseOut='this.style.color="blue"'>наведи на текст</p>
+	
+	<img src="https://estore.com.ua/files/resized/products/f2006.1800x1800w.jpg" alt="flag" title="flag" id="flag" />
+</body>
+	<script>
+		flag.onmouseover = function(){
+			this.src = "https://vsim.ua/img/cache/reference/news_fb_og/0028/68/2767865-den-prapora-ukrayini-istoriya-svyata-simvolika-tsikavi-fakti.jpeg";
+			this.alt = this.title = "Flag Ukraine";
+			console.log(flag);	
+		}
+		
+		flag.onmouseout = function(){
+			this.src = "https://img.pravda.com/images/doc/9/e/9e744c1-gerb-kozak-divchynonka.jpg";
+			this.alt = this.title = "Gerb";
+			console.log(flag);
+		}
+	</script>
+</html>

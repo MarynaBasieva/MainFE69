@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>validation Form</title>
+</head>
+
+<body>
+	<form name="myForm" action="action_page.php" onSubmit="return validateForm()" method="post">
+		<label>Ім`я</label>
+		<input type="text" name="Inputname" />
+		<input type="submit" value="Submit" />
+		<div class="message"></div>
+ 	</form>
+	
+	<div>
+		<input id="MyInput" type="number" min="100" max="300" required/>
+		<button onClick="myFunck()">Відправити</button>
+		
+		<div id="result"></div>
+	</div>
+</body>
+	<script>
+		//let message = document.querySelector('.message');
+		function validateForm(){
+			let x = document.forms["myForm"]['Inputname'].value;
+			if(x == ""){
+				console.log('введіть І`мя' );
+				return false;
+			}
+		}
+		
+		function myFunck(){
+			let MyInput = document.getElementById("MyInput");
+			if(!MyInput.checkValidity()){
+				document.getElementById('result').innerHTML = MyInput.validationMessage;
+			}
+		}
+	</script>
+</html>
