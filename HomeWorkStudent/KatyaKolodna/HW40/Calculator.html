@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+</head>
+<style>
+	.main-calculator{
+		width: 500px;
+		margin: 0 auto;
+		text-align: center;
+		background:#007246;
+		padding: 20px;
+		border: solid 2px #000;
+		margin-top: 100px;
+	}
+	.operation-block button{
+		width: 40px;
+		height: 40px;
+		margin: 20px;
+		border: none;
+		outline: none;
+		transition: all 0.4s ease;
+		background: #000;
+		color: #fff;
+		font-size: 20px;
+		text-align: center;
+		cursor: pointer;
+	}
+	.operation-block button:hover{
+		background: #000E80;
+	}
+	.input-block{
+		display: inline-block;
+		padding: 10px;
+	}
+	.input-block input{
+		outline: none;
+		padding: 10px;
+	}
+	.input-block label{
+		display: block;
+		color: #fff;
+		margin-bottom: 6px;
+	}
+</style>
+<body>
+	<div class="main-calculator">
+		<div class="operation-block">
+			<button id="buttonPlus">+</button>
+			<button id="buttonMinus">-</button>
+			<button id="buttonMultiply">*</button>
+			<button id="buttonDevide">/</button>
+			<button id="buttonProcent">%</button>
+		</div>
+		<hr/>
+		<div class="form-input">
+			<form>
+				<div class="input-block">
+					<label>Number 1</label>
+					<input type="number" id="number1" value="10" />
+				</div>
+				
+				<div class="input-block">
+					<label>Number 2</label>
+					<input type="number" id="number2" value="10" />
+				</div>
+				<div class="res"></div>
+			</form>
+		</div>
+	</div>
+	<div class="parent"></div>
+</body>
+	<script>
+	let buttonPlus = document.getElementById("buttonPlus");
+	let buttonMinus = document.getElementById("buttonMinus");
+	let buttonMultiply = document.getElementById("buttonMultiply");
+	let buttonDevide = document.getElementById("buttonDevide");
+	let buttonProcent = document.getElementById("buttonProcent");
+	let res1 = document.querySelector(".res");
+		
+	let input1 = document.getElementById('number1');
+	let input2 = document.getElementById('number2');
+		
+		
+	function getNumber1(){
+		return Number(input1.value);
+	}
+	function getNumber2(){
+		return Number(input2.value);
+	}
+		
+	function makeOperation(operationCode){
+		let result;
+		if(operationCode === '+'){
+			result = getNumber1() + getNumber2();
+		}else if(operationCode === '-'){
+			result = getNumber1() - getNumber2();
+		}else if(operationCode === '*'){
+			result = getNumber1() * getNumber2();
+		}else if(operationCode === '/'){
+			result = getNumber1() / getNumber2();
+		}
+		else if(operationCode === '%'){
+			result = getNumber1() % getNumber2();
+		}
+		else{
+			console.log('такого параметра не існує');
+		}
+		res1.innerHTML +=result + '';
+	}	
+		
+	function buttonClickPlus(){
+	    makeOperation('+');
+		
+	}
+		
+	function buttonClickMinus(){
+		makeOperation('-');
+	}
+		
+	function buttonClickMultiply(){
+		makeOperation('*');
+	}
+		
+	function buttonClickDevide(){
+		makeOperation('/');
+	}
+	
+	function buttonClickProcent(){
+		makeOperation('%');
+	}
+		
+	buttonPlus.addEventListener('click',buttonClickPlus);
+	buttonMinus.addEventListener('click',buttonClickMinus);
+	buttonMultiply.addEventListener('click',buttonClickMultiply);
+	buttonDevide.addEventListener('click',buttonClickDevide);
+	buttonDevide.addEventListener('click',buttonClickProcent);
+		
+		
+			
+	let list = document.querySelector(".parent");
+	let array = ['One','Two','Three','Four','Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
+		for(let i=0; i<=9; i++){
+			let li = document.createElement('li');
+			li.innerHTML=array[i];
+			list.appendChild(li);
+		}
+		let list1 = document.querySelector('.parent li:nth-child(4)');
+        list1.remove();
+	</script>
+</html>
