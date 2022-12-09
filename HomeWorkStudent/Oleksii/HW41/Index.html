@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+	    }
+        body {
+            background: url(../HW41/img/Incredible_Hulk_Vol_3_1_Textless.webp) no-repeat;
+            background-size: cover;	
+            overflow: hidden;
+            background-position: center -500px;
+        }
+
+        .container {
+            width: 1170px;
+		    margin: 0 auto;
+        }
+
+        .menu {
+            margin-top: 50px;
+        }
+
+        .menu ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu ul li{
+            list-style: none;
+            margin-right: 25px;
+        }
+
+        .menu ul li:last-child {
+            margin-right: 0;
+        }
+
+        .menu ul li a{
+            text-decoration: none; 
+            color: white; 
+            padding:5px; 
+            transition: all 0.3s ease; 
+            font-size: 20px;
+            outline: none;  
+            display: block;  
+               
+        }
+
+        .menu ul li a:hover {
+            background: #152268;
+            color:aqua;
+            border-radius: 5px;   
+        }
+
+        .menu ul li a.chmyak2 {
+            color: red;
+        }
+        
+    </style>
+<body>
+    <div class="main_menu">
+        <div class="container">
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a href="https://www.marvel.com/comics?&options%5Boffset%5D=0&totalcount=12">Click</a>
+                    </li>
+                    <li>
+                        <a href="https://www.marvel.com/comics?&options%5Boffset%5D=0&totalcount=12">Push</a>
+                    </li>
+                    <li>
+                        <a class="chmyak" href="https://www.marvel.com/comics?&options%5Boffset%5D=0&totalcount=12">ChmyaK</a>
+                    </li>
+                    <li>
+                        <a href="https://www.marvel.com/comics?&options%5Boffset%5D=0&totalcount=12">Submit</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+
+    <script>
+        let chmyak = document.querySelector('.chmyak');
+        chmyak.onclick = function(event){
+            event.preventDefault();
+            chmyak.classList.add('chmyak2');
+        };
+
+
+    </script>
+</html>
