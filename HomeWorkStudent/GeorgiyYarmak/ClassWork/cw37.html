@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CW37</title>
+</head>
+
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="circle"></div>
+</body>
+
+<script>
+
+	class Component {
+		constructor(selector) {
+			this.$el = document.querySelector(selector);
+		}
+	}
+
+	class Box extends Component {
+		constructor(options) {
+			super(options.selector)
+			this.$el.style.width = options.width + "px"
+			this.$el.style.height = options.height + "px"
+			this.$el.style.background = options.background
+		}
+	}
+
+	let box1 = new Box({
+		selector: '.box1',
+		height: 150,
+		width: 500,
+		background: 'blue'
+	})
+
+	let box2 = new Box({
+		selector: '.box2',
+		height: 150,
+		width: 500,
+		background: 'yellow'
+	})
+
+	class Circle extends Box {
+		constructor(options) {
+			super(options)
+			this.$el.style.borderRadius =  options.borderRadius + '%'
+			this.$el.style.borderRadius = '50%'
+		}
+	}
+
+	let circle = new Circle({
+		selector: '.circle',
+		background: 'green',
+		height: 150,
+		width: 150,
+		borderRadius: 50
+	})
+
+
+
+	/*Practika*/
+	function User(name){
+		this.name = name;
+		this.work = false;
+	}
+	let user = new User('Valera');
+	console.log(user.name, user.work);
+
+	/* let user = {
+		name: 'Valera',
+		work: false
+	} */
+
+	let Man = function(name){
+		this.name = name;
+		this.speak = true;
+
+		let age = '34';
+		this.sayHay = function(){
+			return `Hello my name is ${this.name}. Me ${age} years`;
+		}
+	}
+	let valera = new Man('Valera');
+	let vera = new Man('Vera');
+
+	console.log(valera);
+	console.log(valera.name);
+	console.log(valera.speak);
+	console.log(valera.sayHay());
+
+	let myApp = {
+		Man: function(name){
+			this.name = name;
+			this.speak = true;
+		}
+	};
+	let gosha = new myApp.Man('Gosha');
+	console.log(gosha);
+
+</script>
+
+</html>
