@@ -1,0 +1,48 @@
+body{
+    background-color: blueviolet;
+
+}
+.myfunc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inp{
+    margin-bottom: 10px;
+    outline: none;
+    border-radius: 0px 30px;
+    text-align: center;
+    width: 200px;
+    height: 35px;
+    
+
+}
+input::placeholder {
+    background: transparent;
+    color: #ccc;
+    
+}
+.mesage{
+    padding: 30px;
+    text-align: start;
+    background-image: url(maxresdefault.jpg);
+    background-size: cover;
+    
+}
+.btn{
+    width: 250px;
+    color: black;
+    background-color: aliceblue;
+    outline: none;
+    cursor: pointer;
+    transition: 1s linear;
+    border-radius: 0px 30px;
+    
+
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+    
+}
