@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery animation</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<style>
+	.cub{
+		width: 200px;
+		height: 200px;
+		background: #1DB4D5;
+	}
+</style>
+<body>
+	<button class="btnShow">Send Show</button>
+	<button class="btnHide">Send Hide</button>
+	<button class="toogle">toogle</button>
+	<div class="cub"></div>
+</body>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery('.btnHide').on('click',function(){
+				jQuery('.cub').hide('slow');
+			});
+			
+			/*jQuery('.btnShow').on('click',function(){
+				jQuery('.cub').show('fast');
+			});
+			jQuery('.toogle').on('click',function(){
+				jQuery('.cub').toggle('slow');
+			});*/
+			
+			/*jQuery('.toogle').on('click',function(){
+				jQuery('.cub').fadeIn();
+				//jQuery('.cub').fadeIn('slow');
+				//jQuery('.cub').fadeIn(3000);
+			});*/
+			
+			/*jQuery('.toogle').on('click',function(){
+				jQuery('.cub').fadeOut();
+			});*/
+			
+			/*jQuery('.toogle').on('click',function(){
+				jQuery('.cub').fadeToggle();
+			});*/
+			
+			/*jQuery('.toogle').on('click',function(){
+				jQuery('.cub').fadeTo();
+			});*/
+			
+			/*jQuery('.toogle').on('click',function(){
+				jQuery('.cub').slideDown();
+			});*/
+			/*jQuery('.toogle').on('click',function(){
+				jQuery('.cub').slideUp();
+			});*/
+			
+			jQuery('.toogle').on('click',function(){
+				jQuery('.cub').slideToggle();
+			});
+			
+			
+		});
+	</script>
+</html>

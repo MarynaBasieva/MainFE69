@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>oninput</title>
+</head>
+
+<body>
+	<!--oninput-->
+	<input type="text" class="inputMy">oninput:
+	<span class="resault"></span>
+	<!--oninput-->
+	
+	<input type="text" id="mess">кількість символів:
+	<span class="resultMess"></span>
+	
+</body>
+	<script>
+		let mess = document.getElementById('mess');
+		let resultMess = document.querySelector('.resultMess');
+		function showCount(){
+			resultMess.innerHTML = mess.value.length;
+		}
+		
+		mess.onkeyup = mess.oninput = showCount;
+		mess.onpropertychange = function(){
+			if(event.propertyName == "value") showCount();
+		}
+		mess.oncut = function(){
+			setTimeout(showCount, 0);//на момент oncut значення ще старе
+		}
+		
+		
+		
+		/*oninput*/
+		let input = document.querySelector('.inputMy');
+		let result = document.querySelector('.resault');
+		
+		input.oninput = function(){
+			result.innerHTML = input.value;
+		}
+		/*oninput*/
+	</script>
+</html>

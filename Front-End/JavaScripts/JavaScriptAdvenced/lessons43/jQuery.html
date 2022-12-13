@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<style>
+	.cub{
+		width: 200px;
+		height: 200px;
+		background: #0370AF;
+	}
+</style>
+<body>
+	<button>Send Hide Text</button>
+	<p class="test">Text Hide</p>
+	<div class="cub"></div>
+</body>
+	<script>
+		jQuery(document).ready(function () {
+			
+			
+			/*jQuery('button').click(function(){
+				jQuery('p').hide();
+			});*/
+			
+			/*jQuery('button').on('click',function(){
+				jQuery('.test').hide('slow');
+			});
+			
+			jQuery("p").on('click',function(){
+				jQuery(this).hide('slow');
+			});*/
+			
+			/*jQuery("p").dblclick(function(){
+				jQuery(this).hide('slow');
+			});*/
+			
+			
+			
+			
+			/******/
+			/*jQuery('p.test')
+			jQuery('p:first-child')
+			jQuery('ul li:first-child')
+			jQuery('[href]')
+			jQuery("a[target='_blank']")
+			jQuery(":button")
+			jQuery("tr:even")*/
+			
+			
+			
+			//mouseenter
+			/*jQuery('.cub').mouseenter(function(){
+				console.log('Ви зайшли на елемент');
+			});*/
+			//mousedown
+			/*jQuery('.cub').mousedown(function(){
+				console.log('Кнопка миші нажата на куб');
+			});*/
+			//mouseup
+			/*jQuery('.cub').mouseup(function(){
+				console.log('Відпущена люба із клавіш');
+			});*/
+			
+			//hover
+			/*jQuery('.cub').hover(function(){
+				console.log('Ви зайшли на куб');
+			},
+		    function(){
+				console.log("ви вийшли з куба");
+			});*/
+			
+			jQuery('.cub').on({
+			mouseenter: function(){
+				jQuery(this).css("background-color","pink");
+			},
+		    mouseleave: function(){
+				jQuery(this).css("background-color","yellow");
+			},
+			click: function(){
+				jQuery(this).css("background-color","black");
+			}
+			});
+			
+			
+			
+		});
+	</script>
+</html>

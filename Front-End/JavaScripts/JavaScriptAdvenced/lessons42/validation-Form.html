@@ -19,8 +19,30 @@
 		
 		<div id="result"></div>
 	</div>
+	
+	<input id="inputForm" type="number" min="100" />
+	<button class="btN">Send</button>
+	<div id="resaultMess"></div>
+	
 </body>
 	<script>
+		/*validity input form*/
+		let inputForm =document.getElementById("inputForm");
+		let resaultMess = document.getElementById("resaultMess");
+		let btN = document.querySelector(".btN");
+		function myMessage(){
+			let txt = "";
+			if(inputForm.validity.rangeUnderflow){
+				txt = "Значення дуже маленьке";
+			}
+			resaultMess.innerHTML=txt;
+		}
+		
+		btN.addEventListener('click',myMessage);
+		/*validity input form*/
+		
+		
+		
 		//let message = document.querySelector('.message');
 		function validateForm(){
 			let x = document.forms["myForm"]['Inputname'].value;
@@ -36,5 +58,7 @@
 				document.getElementById('result').innerHTML = MyInput.validationMessage;
 			}
 		}
+		
+		
 	</script>
 </html>
