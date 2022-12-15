@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery animation</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<style>
+	.cub{
+		width: 200px;
+		height: 200px;
+		background: #1DB4D5;
+	}
+</style>
+<body>
+	<button class="btnAnim">Send Anim</button>
+	<button class="btnHide">Send Hide</button>
+	<button class="toogle">toogle</button>
+	<div class="cub">jQuery</div>
+</body>
+	<script>
+		jQuery(document).ready(function(){
+				
+			//jQuery(selector).animate({params}, callback)
+			
+			/*jQuery(".btnAnim").click(function(){
+				jQuery('.cub').animate({
+					right:'250px',
+					opacity:'0.5',
+					height:'150px',
+					width:'150px'
+				});
+			});*/
+			
+			/*jQuery(".btnAnim").click(function(){
+				jQuery('.cub').animate({
+			  height: 'toggle' 
+		   });*/
+				
+			/*jQuery(".btnAnim").click(function(){
+				let cub =  jQuery('.cub');
+				cub.animate({height:'300px', opacity:'0.4'}, 'slow');
+				cub.animate({width:'300px', opacity:'0.9'}, 'slow');
+				cub.animate({height:'100px', opacity:'0.4'}, 'slow');
+				cub.animate({width:'100px', opacity:'0.9'}, 'slow');
+		    });*/
+			
+			jQuery(".btnAnim").click(function(){
+				let cub =  jQuery('.cub');
+				cub.animate({left:'200px'}, 'slow');
+				cub.animate({fontSize:'50px'}, 'slow');
+		    });
+				
+				
+			
+			
+			
+			
+			
+		});
+	</script>
+</html>

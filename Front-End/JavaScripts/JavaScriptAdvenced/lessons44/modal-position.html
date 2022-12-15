@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Modal-position</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	header{
+		background: #198770;
+		padding: 100px 0;
+	}
+	footer{
+		background: #000;
+		padding: 100px 0;
+		margin-top: 60px;
+	}
+.wraper_modal{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal{
+    z-index: 9999;
+    background: #dcdcdc;
+    position: absolute;
+    left: 50%;
+    margin-left: -131px;
+    top: 50%;
+    margin-top: -164px;
+    width: 262px;
+    height: 328px;
+}
+/*или margin (left, top) или  transform: translate(-50%, -50%);*/
+.closed {
+    z-index: 999999;
+    position: absolute;
+        right: 9px;
+    top: 5px;
+    cursor: pointer;
+	color:#E81115;
+	font-weight:bold;
+}
+.closed:hover{
+	color:#000;
+	}
+.input{
+    font-size: 15px;
+    color: #808080;
+    border: none;
+    width: 100%;
+    padding: 8px 0px 8px 15px;
+    outline: none;
+	margin-bottom: 15px;
+}
+#form1{
+	    width: 200px;
+    padding: 25px;
+	}
+#button{
+	    font-size: 15px;
+    color: #fff;
+    outline: none;
+    border: none;
+    width: 214px;
+    background: #ca574d;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+	cursor:pointer;
+	}
+.modal h2{
+	font-size: 20px;
+    color: #ca574d;
+    text-align: center;
+    margin-top: 26px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+	}
+#form1 input{
+	display:block;
+	width:100%;
+	}
+	.btnCall{
+		display: block;
+		margin: 0 auto;
+		width: 150px;
+		height: 50px;
+		background: #000;
+		color: #fff;
+		text-align: center;
+		line-height: 150%;
+		line-height: 48px;
+		font-size: 16px;
+		transition: 0.3s ease;
+		cursor: pointer;
+	}
+	.btnCall:hover{
+		opacity: 0.6;
+	}
+</style>
+
+<body>
+<header>
+</header>
+<main>
+	<img src="img/img.jpeg" alt="img" />
+	<div class="btnCall">Call back</div>
+</main>
+<footer>
+</footer>
+		<div class="wraper_modal" >
+			<div class="modal">
+				<h2>Ваш вопрос</h2>
+				<span class="closed">X</span> 
+					<form  id="form1" name="form1"> 
+					<input type="text" name="name" id="name" class="input" placeholder="ИМЯ" />
+					<input type="email" name="email" id="email" class="input" required placeholder="E-MAIL"  />
+					<input type="textarea" name="textarea" id="textarea"  class="input" placeholder="КОММЕНТАРИЙ"  />
+					<button id="button">Заказать</button>
+					</form>		                        
+			</div>
+		</div>
+	
+</body>
+	<script>
+	    jQuery(document).ready(function(){
+		  jQuery('.btnCall').on('click',function(){
+			  jQuery('.wraper_modal').fadeIn();
+			  jQuery('.wraper_modal').toggleClass('activeModal');
+		  });
+			
+		jQuery('.closed').on('click',function(){
+			jQuery('.wraper_modal').fadeOut();
+			jQuery('.wraper_modal').toggleClass('activeModal');
+		});
+			
+		jQuery('.wraper_modal').on('click',function(){
+			jQuery(this).fadeOut();
+		});
+		  
+		});
+	</script>
+</html>
