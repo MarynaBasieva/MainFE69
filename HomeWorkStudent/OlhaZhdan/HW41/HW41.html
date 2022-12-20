@@ -67,10 +67,12 @@
     </div>
 </body>
 	<script>
-		let click = document.querySelector('.click');
-        click.onclick = function(event){
-            event.preventDefault();
-            click.classList.add('click2');
-        };
+		let item = document.querySelector('.click1');
+            let content = document.querySelector('.menu');
+            item.onclick = function (event) {
+                event.preventDefault();
+
+                content.classList.add('show');
+            };
 	</script>
 </html>
