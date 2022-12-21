@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HW44</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<style>
+    .button_open{
+        width: 100px;
+		height: 30px;
+		background:darkolivegreen;
+		text-decoration: none;
+		color: white;
+		cursor: pointer;
+		font-size: 14px;
+    }
+    .button_close{
+        width: 100px;
+		height: 30px;
+		background:darkolivegreen;
+		text-decoration: none;
+		color: white;
+		cursor: pointer;
+		font-size: 14px;
+    }
+    .text2{
+        display: none;
+    }
+    .square{
+        margin-top: 100px;
+		width: 300px;
+		height: 300px;
+		background: orangered;
+	}
+</style>
+<body>
+    <div class="text1">
+        <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+        <button class="button_open">More...</button>
+    </div>
+    <div class="text2">
+        <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+        <button class="button_close">More...</button>
+    </div>
+    <div class="square"></div>
+</body>
+<script>
+    /*---1---*/
+    $(document).ready(function(){
+			$(".button_open").on('click',function(){
+				$(".text2").show('slow'),
+				$(".button_open").hide('slow');
+			});
+			$(".button_close").on('click',function(){
+				$(".text2").hide('slow'),
+				$(".button_open").show('slow');
+			})
+    });
+    /*---2---*/
+    $(".square").click(function(){
+				$(this).animate({borderRadius: "100%"}, 'slow'),
+				$(this).animate({borderRadius: "0%"}, 'slow'),
+				$(this).animate({borderRadius: "100%"}, 'slow')
+
+	});
+</script>
+	
+</html>

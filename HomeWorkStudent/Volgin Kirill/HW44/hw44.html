@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<style>
+	.buttOpen{
+		width: 150px;
+		height: 50px;
+		background-color: #3A68B8;
+		text-decoration: none;
+		color: aliceblue;
+		cursor: pointer;
+		border-radius: 8%;
+		font-size: 16px;
+
+	}
+	.par2{
+		display: none;
+	}
+	.buttClose{
+		
+		width: 150px;
+		height: 50px;
+		background-color: #3A68B8;
+		text-decoration: none;
+		color: aliceblue;
+		cursor: pointer;
+		border-radius: 8%;
+		font-size: 16px;
+	}
+	.cube{
+		width: 300px;
+		height: 300px;
+		background-color: black;
+		
+	}
+</style>
+<body>
+	<div class="cube"></div>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quam repellat quisquam, unde reprehenderit fugit in libero at nemo explicabo?</p>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quam repellat quisquam, unde reprehenderit fugit in libero at nemo explicabo?</p>
+	<button class="buttOpen">More</button>
+	<div class="par2">
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quam repellat quisquam, unde reprehenderit fugit in libero at nemo explicabo?</p>
+	<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quam repellat quisquam, unde reprehenderit fugit in libero at nemo explicabo?</p>
+	<button class="buttClose">Close</button>
+</div>
+</body>
+	<script>
+		$(document).ready(function(){
+			$(".buttOpen").on('click',function(){
+				$(".par2").show('slow'),
+				$(".buttOpen").hide('slow');
+			});
+			$(".buttClose").on('click',function(){
+				$(".par2").hide('slow'),
+				$(".buttOpen").show('slow');
+			});
+			$(".cube").click(function(){
+				$(this).animate({borderRadius: "50%"}, 'slow'),
+				$(this).animate({borderRadius: "0%"}, 'slow'),
+				$(this).animate({borderRadius: "50%"}, 'slow')
+				
+			})
+			
+			});
+			
+	</script>
+</html>
