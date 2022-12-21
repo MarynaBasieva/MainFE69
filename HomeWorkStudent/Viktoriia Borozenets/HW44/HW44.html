@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW44</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <style>
+    .paragraf1 {
+      color: green;
+    }
+    .btn {
+      padding: 10px 20px;
+      background: rgb(157, 185, 212);
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    .btn1 {
+      padding: 10px 20px;
+      background: rgb(187, 150, 199);
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .square {
+      cursor: pointer;
+      width: 100px;
+      height: 200px;
+      background: rgb(74, 74, 134);
+    }
+  </style>
+  <body>
+    <div class="square">блок</div>
+  </body>
+  <script>
+    /*   HW44
+       1) додати текст два параграфи після неї поставити кнопку детальніше
+       По нажатю на кнопку відкривається ще два параграфа і з’являється кнопка закрити,
+        детальніше зникає.
+       Якщо нажати на кнопку закрити параграф з кнопкою закривається.
+        І знову з’являється кнопка детальніше з параграфами*/
+    jQuery(document).ready(function () {
+      let paragraf = document.createElement("p");
+      paragraf.className = "paragraf1";
+      paragraf.innerHTML =
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat magni deleniti, fugit ipsam delectus pariatur accusamus, at nostrum harum eum nesciunt. Animi itaque consequatur dicta ullam autem dolorem recusandae unde. ";
+      document.body.append(paragraf);
+
+      let paragraf1 = document.createElement("p");
+      paragraf1.className = "paragraf2";
+      paragraf1.innerHTML =
+        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat magni deleniti, fugit ipsam delectus pariatur accusamus, at nostrum harum eum nesciunt. Animi itaque consequatur dicta ullam autem dolorem recusandae unde. ";
+      document.body.append(paragraf1);
+
+      let btn = document.createElement("button");
+      btn.className = "btn";
+      btn.innerHTML = "Детальніше";
+      document.body.append(btn);
+
+      jQuery(".btn").click(function () {
+        $("p").append(
+          " <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat magni deleniti, fugit ipsam delectus pariatur accusamus, at nostrum harum eum nesciunt. Animi itaque consequatur dicta ullam autem dolorem recusandae unde. </br>"
+        );
+        $("p").last().addClass("selected");
+        let btn1 = document.createElement("button");
+        btn1.className = "btn1";
+        btn1.innerHTML = "Закрити";
+        document.body.append(btn1);
+        jQuery(".btn").hide("slow");
+        $(".btn1").click(function () {
+          $("this").hide("slow", "linear");
+          $(".selected").hide("slow", "linear");
+          $(".btn").show("slow", "linear");
+        });
+      });
+
+      /*2) Зробити анімацію на блок щоб був кавадрат,
+           натискаєш на квадрат стає кругом,
+        потім знов квадрат і потім знов круг*/
+
+      jQuery(".square").click(function () {
+        let cub = jQuery(".square");
+        cub.animate({ height: "100px", opacity: "0.4" }, "slow");
+        cub.animate({ borderRadius: "50", opacity: "0.9" }, "slow");
+        cub.animate(
+          { height: "100px", borderRadius: "0", opacity: "0.4" },
+          "slow"
+        );
+        cub.animate({ borderRadius: "50", opacity: "0.9" }, "slow");
+      });
+    });
+  </script>
+</html>
