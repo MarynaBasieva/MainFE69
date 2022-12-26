@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <style>
+    .main-calculator {
+      width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      background: #007246;
+      padding: 20px;
+      border: solid 2px #000;
+      margin-top: 100px;
+    }
+    .operation-block button {
+      width: 40px;
+      height: 40px;
+      margin: 20px;
+      border: none;
+      outline: none;
+      transition: all 0.4s ease;
+      background: #000;
+      color: #fff;
+      font-size: 20px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .operation-block button:hover {
+      background: #000e80;
+    }
+    .input-block {
+      display: inline-block;
+      padding: 10px;
+    }
+    .input-block input {
+      outline: none;
+      padding: 10px;
+    }
+    .input-block label {
+      display: block;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+  </style>
+  <body>
+    <div class="main-calculator">
+      <div class="operation-block">
+        <button id="buttonPlus">+</button>
+        <button id="buttonMinus">-</button>
+        <button id="buttonMultiply">*</button>
+        <button id="buttonDevide">/</button>
+        <button id="buttonPercentage">%</button>
+      </div>
+      <hr />
+      <div class="form-input">
+        <form>
+          <div class="input-block">
+            <label>Number 1</label>
+            <input type="number" id="number1" value="" />
+          </div>
+
+          <div class="input-block">
+            <label>Number 2</label>
+            <input type="number" id="number2" value="" />
+          </div>
+          <div>
+            Result:
+            <span id="result"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="parent"></div>
+  </body>
+  <script>
+    let buttonPlus = document.getElementById("buttonPlus");
+    let buttonMinus = document.getElementById("buttonMinus");
+    let buttonMultiply = document.getElementById("buttonMultiply");
+    let buttonDevide = document.getElementById("buttonDevide");
+    let buttonPercentage = document.getElementById("buttonPercentage");
+
+    let input1 = document.getElementById("number1");
+    let input2 = document.getElementById("number2");
+    //let result = document.getElementById("number3");
+
+    function getNumber1() {
+      return Number(input1.value);
+    }
+    function getNumber2() {
+      return Number(input2.value);
+    }
+
+    function makeOperation(operationCode) {
+      let result;
+      if (operationCode === "+") {
+        result = getNumber1() + getNumber2();
+      } else if (operationCode === "-") {
+        result = getNumber1() - getNumber2();
+      } else if (operationCode === "*") {
+        result = getNumber1() * getNumber2();
+      } else if (operationCode === "/") {
+        result = getNumber1() / getNumber2();
+      } else if (operationCode === "%") {
+        result = getNumber1() / 100;
+      } else {
+        console.log("такого параметра не існує");
+      }
+      document.getElementById("result").innerHTML = result;
+    }
+
+    function buttonClickPlus() {
+      makeOperation("+");
+    }
+
+    function buttonClickMinus() {
+      makeOperation("-");
+    }
+
+    function buttonClickMultiply() {
+      makeOperation("*");
+    }
+
+    function buttonClickDevide() {
+      makeOperation("/");
+    }
+    function buttonClickPercentage() {
+      makeOperation("%");
+    }
+
+    buttonPlus.addEventListener("click", buttonClickPlus);
+    buttonMinus.addEventListener("click", buttonClickMinus);
+    buttonMultiply.addEventListener("click", buttonClickMultiply);
+    buttonDevide.addEventListener("click", buttonClickDevide);
+    buttonPercentage.addEventListener("click", buttonClickPercentage);
+
+    /* 3) У Вас є div class=«parent»
+    Вивести туди ul спочатку потім через js додати li в. кожен li якийсь текст
+
+        /*  ===== OPTION 1 ======
+        let ul = document.createElement("ul");
+        let li1 = document.createElement("li");
+        let li2 = document.createElement("li");
+        let li3 = document.createElement("li");
+        let li4 = document.createElement("li");
+        let li5 = document.createElement("li");
+        li1.innerText = "home";
+        li2.innerText = "list";
+        li3.innerText = "products";
+        li4.innerText = "reviews";
+        li5.innerText = "contacts";
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        ul.appendChild(li3);
+        ul.appendChild(li4);
+        ul.appendChild(li5);
+        document.body.appendChild(ul);*/
+
+    /*  ===== OPTION 2 ======*/
+    let ul = document.createElement("ul");
+    ul.setAttribute("id", "items");
+    for (let i = 1; i < 2; i++) {
+      let li = document.createElement("li");
+      li.innerHTML = "products";
+      ul.appendChild(li);
+      let li_1 = document.createElement("li");
+      li_1.innerHTML = "home";
+      ul.prepend(li_1);
+      let li_2 = document.createElement("li");
+      li_2.innerHTML = "contacts";
+      ul.append(li_2);
+      let li_3 = document.createElement("li");
+      li_3.innerHTML = "list";
+      ul.append(li_3);
+      let li_4 = document.createElement("li");
+      li_4.innerHTML = "article";
+      ul.append(li_4);
+    }
+
+    document.getElementById("parent").appendChild(ul);
+    // 4) Видалити 4 li
+    let items = document.getElementById("items");
+    items.removeChild(items.children[4]);
+  </script>
+</html>
