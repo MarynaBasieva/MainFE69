@@ -1,0 +1,145 @@
+@media (min-width: 1200px){
+    .for_page .container{
+        max-width: 1300px;
+    }
+   
+}
+@media (max-width: 1199px){
+    .best_watch_text p {
+        padding-top: 14px;
+    }
+    .btn_play {
+        margin-top: 0;
+    }
+    .banner_best_watch {
+        padding-bottom: 50px;
+    }
+    .banner_example {
+        padding-bottom: 80px;
+    }
+    .banner_product {
+        padding-bottom: 50px;
+    }
+    .banner_product_watch {
+        display: flex;
+        padding-top: 0px
+    }
+}
+@media(max-width:991px){
+    .box_menu {
+        margin-bottom: 50px;
+    }
+    .box_banner2 {
+        padding-top: 50px;
+    }
+    .header {
+        padding-bottom: 50px;
+    }
+    .banner_picture_menu {
+        margin-top: 30px;
+    }
+    .box_banner_service {
+        padding-bottom: 0;
+    }
+    .video_pause img,
+    .banner_product_watch img {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .best_watch_text p,
+    .best_watch_text h2 {
+        max-width: 100%;
+    }
+
+    .banner_best_watch {
+        padding-bottom: 30px;
+    }
+    .banner_example h2 {
+        padding: 30px;
+    }
+    .banner_example2{
+      padding-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .responsive_menu {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+
+    .box_menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .box_banner .banner_text {
+        font-size: 45px;
+        line-height: 94%;
+    }
+    .banner_buttons {
+        margin-top: 0px;
+        display: flex;
+    }
+
+    .banner_footer {
+        margin-top: 15px;
+    }
+    .banner_footer h2 {
+        padding-bottom: 0px;
+    }
+    .banner_footer ul li {
+        padding-bottom: 10px;
+    }
+    .main_banner_footer .banner_footer{
+        flex: 50%;
+    }
+
+    .main_banner_footer {
+        padding: 20px 0;
+    }
+
+    .second_clock img {
+        display: none;
+    }
+}
+
+@media(max-width:600px) {
+    .box_banner_service {
+        padding-top: 40px;
+    }   
+}
+
+@media(max-width:400px) {
+    .banner_buttons {
+        display: block;
+    }
+    .banner_buttons a {
+        display: block;
+        
+     }
+     .banner_buttons .get_started,
+     .banner_buttons .galerry{
+        margin-top: 15px;
+     }
+     .text_service h2 {
+        font-size: 40px;
+        line-height: 104%;
+     }
+     .text_service p{
+        padding-top: 0;
+    }
+}
+
+@media(max-width:350px) {
+    .service_text {
+        font-size: 16px;
+    }
+    .feature_text {
+        font-size: 15px;
+    }
+    
+}
