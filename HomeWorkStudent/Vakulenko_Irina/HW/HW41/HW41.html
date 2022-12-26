@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW41</title>
+</head>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+	    }
+        body {
+            background: url(img/1402257292-oboi-1920h1080.-sirenevyj-perlamutr-19.jpg) no-repeat;
+            background-size: cover;	
+            overflow: hidden;
+        }
+
+        .container {
+            width: 1170px;
+		    margin: 0 auto;
+        }
+
+        .menu {
+            margin-top: 50px;
+        }
+
+        .menu ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu ul li{
+            list-style: none;
+            margin-right: 25px;
+        }
+
+        .menu ul li:last-child {
+            margin-right: 0;
+        }
+
+        .menu ul li a{
+            text-decoration: none; 
+            color: #2c04f7; 
+            padding:10px; 
+            transition: all 0.3s ease; 
+            font-size: 25px;
+            outline: none;  
+            display: block;  
+               
+        }
+
+        .menu ul li a:hover {
+            background: #c062f5;
+            color:aqua;
+            border-radius: 10px;   
+        }
+
+        .menu ul li a.contacts2 {
+            color: rgb(229, 255, 0);
+        }
+        
+    </style>
+<body>
+        <div class="container">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="https://wakula.com.ua/">Blog</a>
+                    </li>
+                    <li>
+                        <a href="https://wakula.com.ua/">About</a>
+                    </li>
+                    <li>
+                        <a class="contacts" href="https://wakula.com.ua/">Contacts</a>
+                    </li>
+                    <li>
+                        <a href="https://wakula.com.ua/">Catalog</a>
+                    </li>
+                    <li>
+                        <a href="https://wakula.com.ua/">Menu</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</body>
+
+    <script>
+        
+        let contacts = document.querySelector('.contacts');
+        contacts.onclick = function(event){
+            event.preventDefault();
+            contacts.classList.add('contacts2');
+        };
+
+    </script>
+</html>

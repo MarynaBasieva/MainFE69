@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>keypress</title>
+</head>
+
+<body>
+	<input id="onlyInput" type="text" />
+</body>
+	
+	<script>
+		let onlyInput = document.getElementById("onlyInput");
+		
+		onlyInput.onkeypress = function(e){
+			if(e.ctrlKey || e.altKey|| e.metaKey) return;
+			
+			let char = getChar(e);
+			
+			if(!char) return;//спец символи не опрацьовуються
+			
+			this.value = char.toUpperCase();
+			return false;
+		}
+	</script>
+</html>

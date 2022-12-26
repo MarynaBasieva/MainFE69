@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Work in form</title>
+</head>
+
+<body>
+	<form name="search">
+		<input type="text" name="key" />
+		<input type="submit" name="send" />
+	</form>
+</body>
+	<script>
+		//let searchForm = document.search;
+		//let searchForm = document.getElementsByTagName('form');
+		
+		
+		/*let searchForm;
+		for(let i =0; i<document.forms.length; i++){
+			searchForm = document.forms[i];
+		}
+		document.write(searchForm.name);*/
+		
+		
+		let searchForm = document.forms["search"];
+		//searchForm.submit();
+		//searchForm.reset();
+		for(let i =0; i<searchForm.elements.length; i++){
+			document.write(searchForm.elements[i].name + "<br/>")
+		}
+		//отримати по імені текстове поле
+		let keyBox = searchForm.elements['key'];
+		keyBox.focus();
+		keyBox.blur();
+		document.write(keyBox.name);
+		//установка значення
+		keyBox.value = "Hello";
+		document.write(keyBox.form.name);//search отримати і'мя батьківської форми
+		
+	</script>
+</html>

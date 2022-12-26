@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Lab</title>
+</head>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			background: #E0AE50;
+		}
+		.form{
+			max-width:300px;
+			margin: 0 auto;
+			padding-top: 150px;
+		}
+		input{
+		border: none;
+		padding:5px 10px;
+		display: block;
+		outline: none;
+		color: #ccc;
+		font-size: 14px;
+		margin-bottom: 20px;
+		width: 200px;
+		border-radius: 25px 0;
+		
+	}
+	input::placeholder{
+		background: transparent;
+		color: #ccc;
+	}
+		
+		button{
+		background: orange;
+		color: #fff;
+		display: block;
+		width: 222px;
+		font-size: 20px;
+		transition: all 0.3s ease;
+		outline: none;
+		padding: 10px 0;
+		text-align: center;
+		border: 2px solid orange;
+		cursor: pointer;
+		border-radius: 25px 0; 
+	}
+	button:hover{
+		background: transparent;
+		
+	}
+	.resault{
+		color: red;
+		margin-top: 20px;
+		font-size: 18px;
+		font-weight: bold;
+		
+		
+	}
+	</style>
+
+<body>
+	<div class="form">
+		<input id="phone" class="phone" type="tel" placeholder="Введдіть ваш телефон"/>
+		<button onClick="myFunction()">Відправити</button>
+		<div class="resault"></div>
+	</div>
+</body>
+	<script>
+		function myFunction(){
+			let resault, phone;
+			resaulte = document.querySelector('.resault');
+			resaulte.innerHTML = "";
+			phone= document.getElementById("phone").value;
+			
+			try{
+				if(isNaN(phone)) throw "Тільки цифри";//коли ввели не число;
+				phone = Number(phone);//коли вводимо номер телефону;
+				
+				if(name == "" || phone == "" ||  == messege "") throw "неправильні дані";
+			}catch(err){
+				message.innerHTML = "Ви ввели" + " " + err; 
+			}
+		}
+	</script>
+</html>

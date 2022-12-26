@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1170px;
+      background-color: #7099ac;
+      color: #fff;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .menu {
+      padding: 20px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      outline: none;
+      list-style: none;
+    }
+    .menu .items_menu a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      outline: none;
+      font-size: 20px;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .menu .items_menu a:hover {
+      color: #cbd4d8;
+      box-shadow: 2px 2px 5px #504e4e;
+      border-radius: 5px;
+    }
+    .yellow {
+      border: 1px solid yellow;
+      border-radius: 5px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <nav class="nav_menu">
+        <ul class="menu">
+          <li class="items_menu"><a href="#"> Home</a></li>
+          <li class="items_menu"><a href="#">About us</a></li>
+          <li class="items_menu"><a href="#">List</a></li>
+          <li class="items_menu"><a href="#">Product</a></li>
+          <li class="items_menu"><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+  <script>
+    /*HW41
+      1) Створити гарне меню і на елемент заборонити переход, і при натискані на цей єлемент додати клас. І зробити на цей клас інший колір текста*/
+    let menu = document.querySelector(".menu");
+
+    menu.addEventListener("click", (event) => {
+      let target = event.target;
+      target.classList.add("yellow");
+      event.stopPropagation();
+    });
+
+    // 2) В слайдері лабораторної хзамінити колір слайдів і забражень на свої
+  </script>
+</html>

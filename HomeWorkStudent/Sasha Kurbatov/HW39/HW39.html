@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="myfunc">
+        <h1>Введіть...</h1>
+        <input type="text" id="field" placeholder="phone!" class="inp">
+        <input type="text" id="field2" placeholder="Why are you ?" class="inp">
+        <input type="text" id="field3" placeholder="just do IT!" class="inp mesage">
+        <button onclick="func()" class="btn">Чек</button>
+        <div class="resoult"></div>
+    </div>
+    <script>
+        function func (){
+            let message,x,y,z;
+            message = document.querySelector('resoult');
+            message = innerHTML = "";
+            x = document.getElementById("filed").value;
+            y = document.getElementById("filed2").value;
+            z = document.getElementById("filed3").value;
+            
+            try{
+                if(x == "") throw "???";
+                if(isNaN(x)) throw "some numbers!!!";
+                if(x < 0) throw "somting aint right";
+                x = Number(x);
+                if(y === "") throw "English m*** f*** do you speak English?";
+                if(y === Number) throw "???";
+                if(z == "") throw "sey somting";
+
+            }
+            catch (err) {
+                message.innerHTML = "You write" + " " + err;
+            }
+        }
+    </script>
+</body>
+</html>

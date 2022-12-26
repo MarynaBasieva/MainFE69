@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chat</title>
+</head>
+<style>
+	#messageBox{
+		width: 80%;
+	}
+	#messageBox p{
+		border:2px solid blue;
+		padding: 15px;
+		border-radius: 15px;
+	}
+</style>
+<body>
+	<p>Введіть повідомлення:</p>
+	<p><input id="message" type="text" /></p>
+	<div id="messageBox"></div>
+</body>
+	<script>
+		let message = document.getElementById('message');
+		let messageBox = document.getElementById('messageBox');
+		
+message.addEventListener('keyup', function(chat){
+	if(chat.keyCode == 13){
+		let newLine = document.createElement("p");
+		newLine.appendChild(document.createTextNode(this.value));
+		messageBox.appendChild(newLine);
+		this.value="";
+	}
+});
+	</script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LW 1.1.7</title>
+</head>
+
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+
+	.container{
+		max-width: 300px;
+		margin: 0 auto;
+	}
+	p{
+		font-size: 25px;
+		margin-bottom: 20px;
+		padding-top: 100px;
+	}
+	.result {
+		color: red;
+		margin-top: 20px;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+	}
+</style>
+
+<body>
+	<div class="container">
+		<p>Введіть номер телефону</p>
+		<input id="tel" type="tel" placeholder="Phone number">
+
+		<button onclick="telValidation()">Перевірка</button>
+
+		<div class="result"></div>
+	</div>
+</body>
+
+<script>
+	function telValidation() {
+		let tel, message;
+		message = document.querySelector(".result");
+		message.innerHTML = "";
+		tel = document.getElementById("tel").value;
+
+		try {
+			if (isNaN(tel)) throw "не число";
+			if (tel == "") throw "пусто";
+			if (tel[0] != '+') throw "Не в форматі +380";
+			if (tel.length > 13) throw "більше ніж потрібно";
+			if (tel.length < 13) throw  "менше ніж потрібно";
+		} catch (err) {
+			message.innerHTML = "Ви ввели" + " " + err;
+		}
+
+	}
+
+</script>
+
+</html>

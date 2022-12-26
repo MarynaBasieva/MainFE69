@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HW39-try-catch</title>
+</head>
+
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+	}
+
+	body {
+		background: url(C:/MainFE69/HomeWork/HW39_JS/img/photo.jpg) no-repeat;
+		background-size: cover;
+	}
+
+	.container {
+		max-width: 300px;
+		margin: 0 auto;
+		padding-top: 30px;
+		padding-bottom: 60px;
+	}
+
+	h2 {
+		color: chartreuse;
+		margin-bottom: 20px;
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+
+	p{
+		font-size: 18px;
+		margin-left: 42px;
+		margin-bottom: 10px;
+	}
+	#mes{
+		height: 50px;
+	}
+	input {
+		border: none;
+		padding: 5px 10px;
+		display: block;
+		outline: none;
+		color: #0f9165;
+		font-size: 14px;
+		margin-bottom: 20px;
+		width: 200px;
+
+	}
+
+	input::placeholder {
+		background: transparent;
+		color: #ccc;
+	}
+
+	
+	button {
+		text-align: center;
+		cursor: pointer;
+		border: none;
+		outline: none;
+		display: block;
+		width: 222px;
+		color: rgb(88, 85, 85);
+		transition: all 0.3s linear;
+		background: rgb(180, 102, 204);
+		padding: 10px 0;
+		letter-spacing: 10px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 14px;
+	}
+
+	button:hover {
+		background: rgb(88, 85, 85);
+		color: rgb(180, 102, 204);
+	}
+
+	.result {
+		color: red;
+		margin-top: 45px;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+		margin-right: 71px;
+	}
+</style>
+
+<body>
+	<div class="container">
+		<h2>HW39-try-catch</h2>
+		<p>Введіт свої данні</p>
+		<input id="name" type="text" placeholder="Name">
+		<input id="tel" type="tel" placeholder="Your phone number">
+		<input id="mes" type="text" placeholder="message">
+
+		<button onclick="myValidation()">send</button>
+
+		<div class="result"></div>
+	</div>
+</body>
+
+<script>
+
+	function myValidation() {
+		let mes, name, tel, message;
+		message = document.querySelector('.result');
+		message.innerHTML = "";
+		mes = document.getElementById("mes").value;
+		name = document.getElementById("name").value;
+		tel = document.getElementById("tel").value;
+
+		try {
+			if (isNaN(tel)) throw "Is not number";
+			tel = Number(tel);
+			if (tel == "" || name == "" || mes == "") throw "empty"
+
+
+
+		}catch (err) {
+			message.innerHTML = "Ви ввели" + " " + err;
+		}
+	}
+
+</script>
+
+</html>
