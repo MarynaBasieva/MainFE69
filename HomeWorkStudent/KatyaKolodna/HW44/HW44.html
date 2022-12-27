@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HW44</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+	<style>
+		.btnShow{
+			font-size: 20px;
+			width: 150px;
+			height: 50px;
+			background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,100,112,1) 45%, rgba(0,212,255,1) 100%);
+			cursor: pointer;
+			transition: all 0.3s linear;
+			text-align: center;
+			border: none;
+			border-radius: 10px;
+			color: #fff;
+		}
+		.btnShow:hover{
+			background: linear-gradient(-90deg, rgba(2,0,36,1) 0%, rgba(0,100,112,1) 45%, rgba(0,212,255,1) 100%);
+		}
+		.btnClosed{
+			font-size: 20px;
+			width: 150px;
+			height: 50px;
+			background: linear-gradient(290deg, rgba(2,0,36,1) 0%, rgba(167,109,6,1) 40%, rgba(255,0,48,1) 100%);
+			cursor: pointer;
+			transition: all 0.3s linear;
+			text-align: center;
+			border: none;
+			border-radius: 10px;
+			color: #fff;
+		}
+		.btnClosed:hover{
+			background: linear-gradient(-290deg, rgba(2,0,36,1) 0%, rgba(167,109,6,1) 40%, rgba(255,0,48,1) 100%);
+		}
+		.part2{
+			display: none;
+		}
+		p{
+			color: #000;
+			font-size: 22px;
+		}
+		.cub{
+			width: 200px;
+			height: 200px;
+			background: green;
+			margin-top: 20px;
+		}
+	</style>
+
+<body>
+	<p>lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar</p>
+	<p>lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar</p>
+	<button class="btnShow">More</button>
+	
+	<div class="part2">
+		<p>lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar</p>
+		<p>lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar lorem ipsum dolar</p>
+		<button class="btnClosed">Close</button>
+	</div>
+	<div class="cub"></div>
+</body>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery(".btnShow").on('click', function(){
+				jQuery(".part2").show('slow'),
+				jQuery(".btnShow").hide('slow');
+			});
+			jQuery(".btnClosed").on('click', function(){
+				jQuery(".part2").hide('slow'),
+				jQuery(".btnShow").show('slow');
+			});
+			jQuery(".cub").on('click', function(){
+				jQuery(this).animate({borderRadius: "50%"}, 'slow'),
+				jQuery(this).animate({borderRadius: "0%"}, 'slow'),
+				jQuery(this).animate({borderRadius: "50%"}, 'slow');
+			});
+		});
+	</script>
+</html>
