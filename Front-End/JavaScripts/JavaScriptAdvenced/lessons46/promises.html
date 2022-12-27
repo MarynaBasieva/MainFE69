@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>promises</title>
+</head>
+
+<body>
+	
+</body>
+	<script> 
+		/*let done = true;
+		
+		let p = new Promise((resolve,reject)=>{
+			if(done){
+				resolve('виконано успішно');
+			}else{
+				reject('виконано з помилкою');
+			}
+		});*/
+		
+		/*let done = true;
+		
+		let p = new Promise((resolve,reject)=>{
+			resolve('Main is cool');
+		});
+		
+		p.then(data=>{
+			console.log(data);
+		})*/
+		
+		
+		/*let done = true;
+		
+		let p = new Promise((resolve,reject)=>{
+			setTimeout(() =>{
+				resolve('Main is cool');
+			},1000);
+			
+		});
+		
+		p.then(data=>{
+			console.log(data);//з'явиться через секунду
+		})*/
+		
+		
+		
+		/*let done = true;
+		
+		let p = new Promise((resolve,reject)=>{
+			setTimeout(() =>{
+				reject(Error('Error Main is  not cool'));
+			},1000);
+			
+		});
+		
+		p.then(data=>{
+			console.log(data);
+		}).catch(err =>{
+			console.log(err);
+		});*/
+		
+		
+		const status = response => {
+			if(response.status >= 200 && response.status < 300){
+				return
+				Promise.resolve(response);
+			}
+			return
+			Promise.reject(Error(response.statusText));
+		};
+		
+		const json = response => response.json();
+		
+		fetch('')
+		.then(status)
+		.then(json)
+		.then(data =>{
+			console.log('Hello Api', data);
+		}).catch(error =>{
+			console.log('error Api', error);
+		});
+	</script>
+</html>

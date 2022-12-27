@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>IndexDB</title>
+</head>
+
+<body>
+	<div id="base">IndexDB</div>
+</body>
+	<script>
+		let db;
+		let dbreg = indexedDB.open('Mainacad',1);
+		
+		dbreg.onuqgradeneeded = (event) =>{
+			db = event.target.result;
+		let notes = db.createObjectStore('notes',{autoIncrement: true});
+			}
+		dbreg.onsuccess = (event) =>{
+			db = event.target.resault;
+			
+			addStickyNote(db, 'Hello i am first');
+			addStickyNote(db, 'Hello i am second');
+			addStickyNote(db, 'Hello i am last'); 
+		} 
+		
+		dbreg.onerror = (event) =>{
+			console.log('error opening database' + event.target.errorCode);
+		}
+		
+		
+		let addStickyNote = (db, message)=>{
+			let tx = db.transaction(['notes'],'readwrite');
+			let store = tx.objectStore('notes');
+			
+			let note(text:message, timetamp: Date.now());
+			store.add(note);
+			
+			tx.oncomplete =()=>{
+				console.log('stored note!')
+			}
+			tx.onerror = (event) =>{
+			console.log('error opening database' + event.target.errorCode);
+		}
+		}
+		
+		
+	</script>
+</html>

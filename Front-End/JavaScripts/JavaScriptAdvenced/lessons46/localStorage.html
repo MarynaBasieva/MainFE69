@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>localStorage</title>
+</head>
+
+<body>
+</body>
+	<script>
+		//Збереження значення
+		//localStorage.setItem('ключ', 'значення');
+		
+		//Отримання значення
+		//let value = localStorage.getItem('ключ');
+		
+		//видалення значення
+		//localStorage.removeItem('ключ');
+		
+		//Очистка всього сховище
+		//localStorage.clear();
+		
+		//save localStorage
+		localStorage.setItem('mykey','myValue');
+		
+		//console value
+		let localValue = localStorage.getItem('mykey','myValue');
+		console.log(localValue);
+		
+		//delete
+		//localStorage.removeItem('mykey');
+		
+		//clear localstorage all
+		//localStorage.clear();
+		
+		let person ={
+			name: 'Polina',
+			lasName:'Voronova',
+			age:30,
+			adress:'City Kiev'
+		}
+		
+		let obj = JSON.stringify(person);
+		
+		localStorage.setItem('mykey', obj);
+		
+		let returnObj = JSON.parse(localStorage.getItem('mykey'));
+		
+		
+		
+		/*setItem(key,value) - зберегти елемент як пару ключ значення
+		getItem(key,value) - отримати значення по ключу
+		removeItem(key) - видалити елемент
+		clear() - очистити і видалити все
+		key(index) - отримати ключ на основі його індексу
+		length - повертає загальну кількість збережених елементів*/
+		
+		//sessionStorage
+		
+		let sen = sessionStorage.setItem('sessionStorage', 'valS');
+		console.log(sen);
+	</script>
+</html>

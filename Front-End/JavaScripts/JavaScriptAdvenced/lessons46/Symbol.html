@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Symbol()</title>
+</head>
+
+<body>
+</body>
+	<script>
+		//let id = Symbol();
+		//const symbol = Symbol("Basieva Maryna");
+		//console.log(symbol);
+		//console.log(Symbol("Basieva Maryna") === Symbol("Basieva Maryna"));
+		
+		let foo = Symbol('foo');
+		let myObj={};
+		
+		myObj['foo'] = 'bar';
+		myObj[foo] = 'bar2';
+		
+		myObj.foo;
+		Object.keys(myObj);
+		Object.getOwnPropertyNames(myObj);
+		
+		for(let key in myObj){
+			console.log(`${key} = ${myObj[key]}`);
+		}
+		console.log(myObj);
+		/////////////////////////////////////////////
+		let user ={
+			name: 'Maryna'
+		};
+		
+		let id = Symbol('id');
+		
+		user[id] = 1;
+		console.log(user);// ми можемо отримати доступ до даних по ключу  сімволу
+		
+		
+	</script>
+</html>
