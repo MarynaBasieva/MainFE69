@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HW40_Create</title>
+</head>
+
+<body>
+	<div class="parent">
+		<p>My brain bo-bo</p>
+	</div>
+	
+</body>
+
+<script>
+
+	/*створюемо ul*/
+	let parent = document.querySelector(".parent");
+
+	let ul = document.createElement('ul');
+	parent.appendChild(ul);
+
+	/*додаемо li*/
+	let list = document.querySelector('ul');
+	for (let i = 1; i <= 6; i++) {
+		let li = document.createElement('li');
+		li.innerHTML = i + '   Number';
+		list.appendChild(li);
+	}
+
+	/*видаляємо 4 li*/
+	let elems = document.querySelector('.parent ul li:nth-child(4)');
+	elems.remove();
+
+
+	
+</script>
+
+</html>
