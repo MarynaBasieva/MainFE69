@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CW39</title>
+ 
+</head>
+<body>
+   <button onClick="OpenW()">Відкрити вікно</button>
+   <script>
+      function OpenW(){
+			let win = window.open("https://ua.sinoptik.ua/","","width=700, height=500, top=200, left=500");
+			// win.document.write("Текст нового вікна");
+			win.opener.document.write('<img src="https://peterburg.center/sites/default/files/weather_saint_peterburg.jpg">');
+         
+		}
+    
+   </script>
+</body>
+</html>
