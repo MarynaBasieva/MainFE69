@@ -6,44 +6,46 @@
 </head>
 
 <body>
-	<div id="base">IndexDB</div>
+	<div id="app">IndexDB notes</div>
 </body>
 	<script>
-		let db;
-		let dbreg = indexedDB.open('Mainacad',1);
+		let indexDB;
+		let indexDBReq = indexedDB.open('Mainacad', 1);
 		
-		dbreg.onuqgradeneeded = (event) =>{
-			db = event.target.result;
-		let notes = db.createObjectStore('notes',{autoIncrement: true});
-			}
-		dbreg.onsuccess = (event) =>{
-			db = event.target.resault;
+		indexDBReq.onupgradenneded = (event) =>{
+			indexDB = event.target.result;
 			
-			addStickyNote(db, 'Hello i am first');
-			addStickyNote(db, 'Hello i am second');
-			addStickyNote(db, 'Hello i am last'); 
-		} 
+			let notes = indexDB.createObjectStore('notes', {autoIncrement: true});
+		}
 		
-		dbreg.onerror = (event) =>{
+		indexDBReq.onsuccess = (event) =>{
+			indexDB = event.target.result;
+			
+			addStickyNote(indexDB, 'Hello world first time');
+			addStickyNote(indexDB, 'Hello world second time');
+			addStickyNote(indexDB, 'Hello world third time');
+		}
+		
+		indexDBReq.onerror = (event) =>{
 			console.log('error opening database' + event.target.errorCode);
 		}
 		
 		
-		let addStickyNote = (db, message)=>{
-			let tx = db.transaction(['notes'],'readwrite');
+		const addStickyNote = (indexDB, massage)=>{
+			let tx = indexDB.transaction(['notes'], 'readwrite');
 			let store = tx.objectStore('notes');
 			
-			let note(text:message, timetamp: Date.now());
+			let note = {text: message, timestamp: Date.now()};
 			store.add(note);
 			
-			tx.oncomplete =()=>{
-				console.log('stored note!')
+			tx.oncomplete = () =>{
+				console.log('stored note!');
 			}
+			
 			tx.onerror = (event) =>{
-			console.log('error opening database' + event.target.errorCode);
-		}
-		}
-		
-		
+				console.log('error stored note!' + event.target.errorCode);
+			}
+			
+		} 
 	</script>
 </html>

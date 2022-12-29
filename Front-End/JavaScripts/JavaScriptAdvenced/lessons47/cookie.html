@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cookie</title>
+</head>
+
+<body>
+</body>
+	<script>
+		/*let name = "your name";
+		let value = "Basieva Maryna"
+		
+		document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
+		
+		console.log(document.cookie);*/
+		
+		/*let coo = document.cookie;
+		coo = "username=Maryna; lastname=Basieva";
+		coo = "expires=username=Maryna; path=/;";
+		console.log(coo);*/
+		//01
+		/*function SetCookie(cname, cvalue, exday){
+			let date = new Date();
+			date.setTime(date.getTime() + (exday*10));
+			let expires = "expires" + date.toUTCString();
+			document.cookie = cname + '=' + ':' + expires + ";path=/";
+		}*/
+		
+		let date = new Date();
+		date.setDate(date.getDate()+1);
+		date = date.toUTCString();
+		document.cookie = "name=Mary; path/";
+		expires=+date;
+	</script>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animation</title>
+</head>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	progress{
+		margin-left: 20px;
+		position: relative;
+		top: 5;
+	}
+	button{
+		background: #1A7454;
+		color: #fff;
+		margin: 5px;
+		padding: 10px;
+		border: none;
+		outline: none;
+		width: 200px;
+		height: 40px;
+		display: block;
+		padding: 5px 0;
+	}
+	button:hover{
+		background: #235CAD;
+	}
+</style>
+<body>
+</body>
+	<div id="anim">
+	 <progress value="0" max="100"></progress>
+	</div>
+	<div class="controls">
+		<button class="play-progress">Animate progress</button>
+	</div>
+	<script>
+		let animateProgress = animate({
+			targets: 'progress',
+			value:100,
+			easing:'linear',
+			autoplay:false
+		});
+		
+		document.querySelector('.play-progress').onclick = animateProgress.restart;
+	</script>
+</html>
