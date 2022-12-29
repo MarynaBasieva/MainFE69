@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>HW39</title>
+</head>
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+   	*{
+		padding: 0;
+		margin: 0;
+	}
+   body{
+      font-family: 'Roboto', sans-serif;
+   }
+   form{
+    
+      max-width: 400px;
+      margin: 0 auto;
+      /* border: 1px solid red; */
+      box-shadow: 3px 4px 4px rebeccapurple;
+      background: rgb(178, 142, 214);
+      border-radius: 4px;
+      padding: 20px 0 50px 0;
+      
+   }
+   div:not(:last-child){
+      margin-bottom: 10px;
+   }
+      label, input, textarea{
+         display: block;
+         margin: 0 auto;
+      }
+      label{
+         padding-left: 50px;
+         margin-bottom: 5px;
+      }
+      input, textarea{
+         outline: none;
+         border: none;
+         border-radius: 4px;
+         padding: 10px 5px;
+         width: 300px;
+      }
+    
+      button{
+         background: rgb(7, 174, 216);
+         color: white;
+         font-size: 20px;
+         border: none;
+         padding: 10px 30px;
+         display: block;
+         cursor: pointer;
+         margin: 0 auto;
+         border-radius: 5px;
+         box-shadow: 0 3px 4px rgb(32, 32, 32);
+      }
+      button:hover{
+         background: rgb(31, 14, 48);
+      }
+      .phone-error,
+      .name-error{
+         color: red;
+         font-size: 18px;
+         text-align: center;
+         padding: 10px 0;
+      }
+
+     
+</style>
+<body>
+ <!-- можливо погано працює з method='post'  -->
+   <form action="#" method="get">
+<div>
+   <label for="userName">Your Name:*</label>
+   <!-- чомусь try ... catch погано працює з атрибутом name в input -->
+   <input id="userName" type="text"  placeholder="Name">
+   <p class="name-error"></p>
+</div>
+<div>
+   <label for="userPhone">Your Phone:*</label>
+   <input id="userPhone" type="tel"  placeholder="Phone" maxlength="13" >
+ <div class="phone-error"></div>
+</div>
+<!-- <div>
+   <label for="userEmail">Your Email:*</label>
+   <input id="userEmail" type="email"  placeholder="Email" >
+</div> -->
+
+<div>
+   <label for="messagge">Yuor message:</label>
+   <textarea id="messagge"  cols="30" rows="10" maxlength="220"></textarea>
+</div>
+<button  type="submit" >Send</button>
+
+   </form>
+  
+
+   <script>
+	
+document.querySelector('button').onclick = myFn;
+      
+function myFn(){
+   let message = document.querySelector('.phone-error');
+
+   message.innerHTML = ""; //потрібно щоб прибирати повідомлення про помилку
+   let userName = document.getElementById('userName').value; 
+   let userPhone = document.getElementById('userPhone').value; 
+
+   try{
+      if(userPhone == "" || userName == "") throw "Поле ведення не може бути пусте.";
+      if(isNaN(userPhone)) throw "Можна використовувати лише цифри";
+      // userPhone = Number(userPhone);
+      if(userPhone[0] != '+') throw "Приклад: +380634576388";
+      userPhone = userPhone.length;
+      if(userPhone < 13) throw "Приклад: +380634576388";
+   } catch(err){
+      message.innerHTML = "Помилка." + " " + err;
+     
+   }
+
+}
+   </script>
+</body>
+</html>

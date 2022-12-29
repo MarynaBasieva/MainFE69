@@ -1,0 +1,249 @@
+@media (min-width: 1200px) {
+    .for-page .container {
+        max-width: 1146px;
+    }
+}
+
+@media (max-width: 1199px) {
+
+    .baner-first-info,
+    .baner-second-info {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 991px) {
+    .media-menu {
+        display: block;
+    }
+
+
+
+    .for-media-menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .media-menu i {
+        font-size: 40px;
+        color: white;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: all 0.3s linear;
+    }
+
+    .media-menu i:hover {
+        color: #acedf2;
+        transform: rotate(180deg);
+    }
+
+    .header .header-btn {
+        display: block;
+        margin-top: 5%;
+
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        background: rgba(0, 0, 0, 0.9);
+        padding-top: 50px;
+
+    }
+
+    .menu .menu-list {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu .menu-list li a {
+        display: block;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .menu-list li {
+        margin-right: 0;
+    }
+
+
+    .btn-baner-first {
+        display: flex;
+    }
+
+    .baner-first .btn-baner {
+        margin: 0 auto;
+    }
+
+    .baner-first-info,
+    .baner-second-info,
+    .baner-third-info {
+        margin: 0 auto;
+    }
+
+    .baner-first-img,
+    .baner-second-img,
+    .baner-third-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .baner-second-img {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .baner-first {
+        padding-top: 30px;
+    }
+
+    .baner-second {
+        padding: 20px 0;
+    }
+
+    .row-baner-mb {
+        margin-bottom: 30px;
+    }
+
+    .carousel2 {
+        padding: 20px 0;
+    }
+
+
+    .baner-third {
+        padding: 20px 0;
+    }
+
+    /* footer */
+    .footer {
+        padding: 20px 0;
+    }
+
+    /* footer accordion*/
+    .footer-info {
+        display: none;
+    }
+
+    #accordion {
+        display: block;
+    }
+
+    .footer .card {
+        background: transparent;
+        border: none;
+    }
+
+    .footer .card-header {
+        background: transparent;
+        border: none;
+        padding: 0;
+        color: white;
+
+    }
+
+    .footer .card-header h4 {
+        display: inline-block;
+    }
+
+    .footer .card-header h4::after {
+        content: '+';
+    }
+
+    .footer .card-body {
+        padding: 0;
+
+    }
+
+    /* .......................... */
+    .footer .footer-text {
+        display: none;
+    }
+
+}
+
+
+
+@media (max-width: 600px) {
+    .baner-first .top-text {
+        font-size: 16px;
+    }
+
+    .baner-first h1,
+    .baner-second h2,
+    .baner-third h2 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+
+    .baner-first .text,
+    .baner-second .text2,
+    .baner-third .text3 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    /* .for-page .container {
+        max-width: 1146px;
+    } */
+}
+
+@media (max-width: 480px) {
+
+    .baner-second,
+    .baner-third {
+        padding: 30px 0;
+    }
+
+    .baner-first .top-text {
+        font-size: 14px;
+    }
+
+    .baner-first h1,
+    .baner-second h2,
+    .baner-third h2 {
+        font-size: 35px;
+    }
+
+    .baner-first .text,
+    .baner-second .text2,
+    .baner-third .text3 {
+        font-size: 16px;
+    }
+
+    .btn-baner-first,
+    .btn-baner-second {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .baner-first .btn-baner,
+    .baner-second .btn-baner {
+        text-align: center;
+        margin: 0;
+    }
+
+    .baner-first .btn-baner:not(:last-child) {
+        margin: 0 0 10px 0;
+    }
+
+
+}
+
+@media (max-width: 400px) {}
+
+
+@media (max-width: 350px) {
+    /* .for-page .container {
+        max-width: 1146px;
+    } */
+}

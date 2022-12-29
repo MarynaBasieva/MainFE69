@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HW39</title>
+</head>
+<style>
+*{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		background:#27C658;
+	}
+	.container{
+		max-width:300px;
+		margin: 0 auto;
+	}
+	p{
+		color: #fff;
+		font-size: 25px;
+		margin-bottom: 20px;
+		padding-top: 100px;
+	}
+	input{
+		border: none;
+		padding:5px 10px;
+		display: block;
+		outline: none;
+		color: #ccc;
+		font-size: 14px;
+		margin-bottom: 20px;
+		width: 200px;
+		
+	}
+	input::placeholder{
+		background: transparent;
+		color: #ccc;
+	}
+	button{
+		background: #333;
+		color: #fff;
+		display: block;
+		width: 222px;
+		transition: all 0.3s ease;
+		outline: none;
+		padding: 10px 0;
+		text-align: center;
+		border:none;
+		cursor: pointer;
+	}
+	button:hover{
+		background: #003370;
+	}
+	.result{
+		color: red;
+		margin-top: 20px;
+		font-size: 18px;
+		font-weight: bold;
+		text-align: center;
+		
+		
+	}	
+</style>
+<body>
+	<div id="demo">
+		<div class="container">
+			<p>введіть число від 3 до 10:</p>
+			<input id="myInput" type="text" placeholder="Ім'я"/>
+			<input id="myInput2" type="tel" name="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" maxlength="13" placeholder="Телефон"/>
+			<input id="myInput3" type="text" placeholder="Повідомлення"/>
+			<button onClick="myFunction()">Перевірка</button>
+			<div class="result"></div>
+		</div>
+	</div>
+</body>
+	<script>
+		function myFunction(){
+			let name,numbr,text,result;
+			result = document.querySelector('.result');
+			result.innerHTML = " ";
+			name = document.getElementById('myInput').value;
+			numbr = document.getElementById("myInput2").value;
+			text = document.getElementById("myInput3").value;
+			
+			try{
+				if(numbr == "")throw "пусто";
+				if(text == "")throw "нема повідомлення";
+				if(name == "")throw "нема імені";
+				if(isNaN(numbr)) throw "не число";
+				numbr = Number(numbr);
+				 if(numbr[0] != '+') throw "Введіть будьласка номер в формати +380";
+                
+                if(numbr > 13) throw "Ви ввели забагато символів";
+				if(numbr < 3) throw "Ви ввели мало символів";
+				if (numbr < 3) throw "Дуже мало";
+				if (numbr > 10) throw "Занадто багато";
+			}catch(err){
+				result.innerHTML = "Ви ввели" + " " + err;
+			}
+		}
+	</script>
+</html>
