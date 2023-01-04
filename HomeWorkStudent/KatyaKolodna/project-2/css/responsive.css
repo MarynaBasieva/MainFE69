@@ -1,0 +1,263 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media(min-width: 1440px){
+	.for_page .container{
+		max-width: 1080px;
+	}
+}
+
+@media(max-width: 1199px){
+	.desc-baner1{
+		padding-top: 0;
+		padding-left: 0;
+		padding-bottom: 0;
+		min-width: auto;
+	}
+	.desc-baner1 h1{
+		padding-top: 64px;
+		font-size: 39px;
+	}
+	.baner-second{
+		padding-bottom: 0;
+	}
+	.desc-baner2{
+		padding-top: 30px;
+		padding-bottom: 0;
+	}
+	.desc-baner2 h2,
+	.desc-baner2 p{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.baner-third{
+		padding-bottom: 0;
+	}
+	.desc-baner3{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.text-blog{
+		max-width: 220px;
+	}
+	.blog{
+		padding-bottom: 25px;
+	}
+	.desc-search{
+		padding-left: 0;
+	}
+	.search-section{
+		padding: 0;
+	}
+}
+@media(max-width: 991px){
+	.desc-baner1 h1{
+		padding-top: 35px;
+		text-align: center;
+	}
+	.desc-baner1 p{
+		padding-bottom: 10px;
+		text-align: center;
+	}
+	.baner3-img img,
+	.baner2-img img,
+	.baner1-img img{
+		min-width: 100%;
+	}
+	.reverse-text{
+		
+		flex-direction: column-reverse;
+	}
+	.desc-baner2 h2,
+	.desc-baner3 h2{
+		padding-top: 10px;
+		padding-right: 0;
+		padding-left: 0;
+		text-align: center;
+	}
+	.desc-baner2 p,
+	.desc-baner3 p{
+		text-align: center;
+		padding: 0px;
+    }
+	.desc-baner3 .btn-start,
+	.desc-baner2 .btn-view{
+		margin: 0 auto;
+		
+	}
+	.blog{
+		padding-bottom: 0;
+	}
+	.desc-search h2{
+		text-align: center;
+		padding: 30px 0 0 0;
+	}
+	.desc-search p{
+		text-align: center;
+		padding-bottom: 0px;
+	}
+	.form-search{
+		padding-top: 5px;
+		justify-content: center;
+		padding-bottom: 30px;
+	}
+	.form-search .btn-input{
+		margin-right: 0;
+	}
+	.works li, 
+	.from-footer li, 
+	.know-us li, 
+	.academy li{
+		text-align: center;
+	}
+	.footer h2{
+		text-align: center;
+	}
+	.know_us_footer::after{
+		left: 76px;
+	}
+	.social-networks{
+		display: flex;
+		justify-content: space-around;
+	}
+@media (max-width: 767px){
+	.menu ul.sub-menu{
+     	flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		padding-top: 36px;
+	}
+	.closed-menu,
+	.responsive_menu_bar{
+		display: block;
+	}
+	.parent_mob_content{
+		display: flex;
+		justify-content: space-between;
+	}
+	.responsive_menu_bar i{
+		color: #000;
+		font-size: 30px;
+		cursor: pointer;
+		transition: all 0.4s ease;
+	}
+	.closed-menu i:hover,
+	.responsive_menu_bar i:hover{
+		color: #1D6CEC;
+	}
+	.menu{
+		display: none;
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		background: rgba(0,0,0,0.9);
+		z-index: 2;
+		
+	}
+	.menu ul.sub-menu li{
+		width: 100%;
+		text-align: center;
+	}
+	.menu ul.sub-menu li a{
+		padding-right: 0;
+		display: block;
+		padding-bottom: 20px;
+	}
+	.closed-menu{
+		color: white;
+		font-size: 30px;
+		position: absolute;
+		top: 5px;
+		right: 20px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+	.desc-baner1 h1{
+		padding: 10px 0;
+	}
+	.desc-baner2{
+		padding-top: 10px;
+    }
+	.desc-baner2 h2, 
+	.desc-baner3 h2{
+		padding-bottom: 0px;
+	}
+	.heading-blog h2{
+		padding-top: 0;
+		text-align: center;
+	}
+	.blog-article{
+		padding-right: 0;
+	}
+	.article-block{
+		flex-direction: column-reverse;
+		flex-wrap: wrap;
+		padding-bottom: 10px;
+	}
+	.text-blog{
+		max-width: 300px;
+	}
+	.know_us_footer::after {
+    	left: 120px;
+	}
+	.article-block {
+    align-items: center;
+    flex-direction: row;
+    }
+	
+@media(max-width: 600px){
+	.desc-baner3 .btn-start, 
+	.desc-baner2 .btn-view{
+		width: 100%;
+	}
+	.desc-baner2 p, 
+	.desc-baner3 p{
+		margin-bottom: 5px;
+	}
+
+	
+@media(max-width: 500px){
+	.know_us_footer::after{
+		display: none;
+	}
+	.info_footer,
+	.works_footer,
+	.blog_footer,
+	.know_us_footer{
+		display: none;
+	}
+	.footer-heading1,
+	.footer-heading2,
+	.footer-heading3,
+	.footer-heading4{
+		cursor: pointer;
+	}
+}
+@media(max-width: 450px){
+	.desc-baner1 h1{
+		font-size: 35px;
+		line-height: 50px;
+		padding: 0;
+	}
+}
+@media(max-width: 400px){
+	.desc-baner3 h2,
+	.desc-baner2 h2,
+	.desc-baner1 h1{
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.article-block{
+		text-align: center;
+	}
+	
+}
+@media(max-width: 350px){
+	.desc-search h2,
+	.desc-baner3 h2,
+	.desc-baner2 h2,
+	.desc-baner1 h1{
+		font-size: 26px;
+	}
+}
