@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HW44</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<style>
+	.btn {
+		background-color: darkblue;
+		color: white;
+		border-radius: 5px;
+		padding: 10px;
+		cursor: pointer;
+		border: none;
+	}
+	.btn_close {
+		background-color: firebrick;
+		color: white;
+		border-radius: 5px;
+		padding: 10px;
+		cursor: pointer;
+		border: none;
+	}
+	.block2 {
+		display: none;
+	}
+	.cub{
+			width: 200px;
+			height: 200px;
+			background: gold;
+			margin-top: 20px;
+		}
+</style>
+<body>
+	<p>Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollarLorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar </p>
+	
+	<p>Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollarLorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar </p>
+	<button class="btn">Детальніше</button>
+	
+	<div class="block2">
+		<p>Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollarLorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar</p>
+		<p>Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollarLorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar Lorem ipsum dollar</p>
+		<button class="btn_close">Закрити</button>
+	</div>
+	
+	<div class="cub">
+	</div>
+</body>
+	<script>
+		jQuery(document).ready(function(){
+			jQuery('.btn').on('click', function(){
+				jQuery('.block2').show('slow');
+				jQuery('.btn').hide('slow');
+			});
+			jQuery(".btn_close").on('click', function(){
+				jQuery(".block2").hide('slow'),
+				jQuery(".btn").show('slow');
+			});
+			jQuery(".cub").on('click', function(){
+				jQuery(this).animate({borderRadius: "50%"}, 'slow'),
+				jQuery(this).animate({borderRadius: "0%"}, 'slow'),
+				jQuery(this).animate({borderRadius: "50%"}, 'slow');
+			});
+		});
+	</script>
+</html>

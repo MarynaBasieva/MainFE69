@@ -1,0 +1,786 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>project2</title>
+	<meta name="viewport" content="width=device-width, intial-scale=1" />
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/responsive.css"/>
+	<link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+	<script src="js/jQuery 3.6.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"/>
+	<link href="vendor/select2/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/select2/dist/js/select2.min.js"></script>
+	<script src="js/custom.js"></script>
+	
+</head>
+	
+
+<body>
+	<div class="for_page">
+		<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+						<div class="logo_block">
+							<a href="#" class="logo">
+							<img src="img/logo.svg" alt="Expedia" title="Expedia"/>
+							</a>
+							 <div class="responsive_menu_button">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 col-md-10 col-sm-8 col-xs-12">
+						<nav class="main_menu">
+						<ul class="menu">
+							<li class="sub_menu">
+								<a href="#">Home</a>
+							</li>
+							<li class="sub_menu">
+								<a href="#">Trips</a>
+							</li>
+							<li class="sub_menu">
+								<a href="#">About</a>
+							</li>
+							<li class="sub_menu">
+								<a href="#">Support</a>
+							</li>
+							<li class="sub_menu">
+								<a href="#">Travel</a>
+							</li>
+						</ul>
+							<div class="closed_menu">
+								<i class="fa-regular fa-circle-xmark"></i>
+							</div>
+						</nav>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-1 col-sm-12 col-xs-12">
+						<button type="button" class="btn btn-sing" data-toggle="modal" data-target="#exampleModal">
+						  Sing Up
+						</button>
+					</div>
+					
+				</div>
+			</div>
+		</header>
+			<div class="baner">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<h1>It Matters Who You Travel With</h1>
+							<p>We want you to feel confident in the travel experience you will have with us.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<main class="main">
+			<section class="white_board">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<div class="tabs">
+										<nav class="tabs_items">
+											<a href="#tab_01" class="tabs_item"><span>Stays</span></a>
+											<a href="#tab_02" class="tabs_item"><span>Flight</span></a>
+											<a href="#tab_03" class="tabs_item"><span>Cars</span></a>
+											<a href="#tab_04" class="tabs_item"><span>Packages</span></a>
+											<a href="#tab_05" class="tabs_item"><span>Things to do</span></a>
+										</nav>
+											<div class="tabs_body">
+											<!--Block-1-->
+											<div id="tab_01" class="tabs_block">
+												<div class="container">
+												<div class="row">
+													
+											
+											<div class="col-xl-3 col-lg-5 col-md-12 col-sm-12 col-xs-12">		
+											
+											<div class="search_block_selector_1">
+											
+													<select class="going_one">
+														<option value="Ky">Kyiv</option>
+														<option value="Lv">Lviv</option>
+														<option value="Kh">Kharkiv</option>
+														<option value="Ke">Kherson</option>
+														<option value="Dy">Dnipro</option>
+													</select>
+													</div>
+													</div>
+													
+													<div class="col-xl-1 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+												<div class="search_block_button">
+													<button  class="button_search"></button>
+												</div>
+														
+													</div>
+													
+													<div class="col-xl-4 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+												<div class="search_block_selector_2">
+													<select class="going_two">
+														<option value="Ky">Kyiv</option>
+														<option value="Lv">Lviv</option>
+														<option value="Kh">Kharkiv</option>
+														<option value="Ke">Kherson</option>
+														<option value="Dy">Dnipro</option>
+													</select>
+													</div>
+													</div>	
+													<div class="col-xl-2 col-lg-6 col-md-6 col-sm-6 col-xs-3">
+													<div class="calendar_one">
+														<button class="button_calendar_one">
+														<svg width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.507 14.0398H13.4178V16.4542H10.507V14.0398ZM10.507 18.8685H13.4178V21.2829H10.507V18.8685ZM16.3286 14.0398H19.2394V16.4542H16.3286V14.0398ZM16.3286 18.8685H19.2394V21.2829H16.3286V18.8685ZM22.1502 14.0398H25.061V16.4542H22.1502V14.0398ZM22.1502 18.8685H25.061V21.2829H22.1502V18.8685Z" fill="black"/>
+														<path d="M7.59624 27.3187H27.9718C29.5771 27.3187 30.8826 26.2359 30.8826 24.9044V8.00396C30.8826 6.67245 29.5771 5.58962 27.9718 5.58962H25.061V3.17528H22.1502V5.58962H13.4178V3.17528H10.507V5.58962H7.59624C5.99093 5.58962 4.68544 6.67245 4.68544 8.00396V24.9044C4.68544 26.2359 5.99093 27.3187 7.59624 27.3187ZM27.9718 10.4183L27.9733 24.9044H7.59624V10.4183H27.9718Z" fill="black"/>
+														</svg>
+														<label class="title_calendar">
+															<span>Departing</span>
+															<p>10 Jul</p>
+														</label>
+														</button>
+														
+													</div>
+														
+														</div>
+														
+														<div class="col-xl-2 col-lg-6 col-md-6 col-sm-6 col-xs-3">
+													<div class="calendar_two">
+														<button class="button_calendar_two">
+														<svg width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.507 14.0398H13.4178V16.4542H10.507V14.0398ZM10.507 18.8685H13.4178V21.2829H10.507V18.8685ZM16.3286 14.0398H19.2394V16.4542H16.3286V14.0398ZM16.3286 18.8685H19.2394V21.2829H16.3286V18.8685ZM22.1502 14.0398H25.061V16.4542H22.1502V14.0398ZM22.1502 18.8685H25.061V21.2829H22.1502V18.8685Z" fill="black"/>
+														<path d="M7.59624 27.3187H27.9718C29.5771 27.3187 30.8826 26.2359 30.8826 24.9044V8.00396C30.8826 6.67245 29.5771 5.58962 27.9718 5.58962H25.061V3.17528H22.1502V5.58962H13.4178V3.17528H10.507V5.58962H7.59624C5.99093 5.58962 4.68544 6.67245 4.68544 8.00396V24.9044C4.68544 26.2359 5.99093 27.3187 7.59624 27.3187ZM27.9718 10.4183L27.9733 24.9044H7.59624V10.4183H27.9718Z" fill="black"/>
+														</svg>
+														<label class="title_calendar">
+															<span>Returning</span>
+															<p>11 Jul</p>
+														</label>
+														</button>
+														
+													</div>
+														
+														</div>
+														
+													
+													<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+														<div class="btn_white_board">
+														<button>
+															Search
+														</button>
+														</div>
+													</div>
+													
+												
+												</div>
+												</div>
+											</div>
+											<!--Block-1-->
+											
+										<!--	Block-2-->
+											<div id="tab_02" class="tabs_block">
+												<div class="container">
+												<div class="row">
+													
+											<div class="col-xl-8 col-lg-8 col-md-7 col-sm-12 radio_block_one">
+												<input type="radio" id="contactChoice1" name="contact" value="email" class="circle">
+											<label for="contactChoice1">One-way</label>
+												
+											<input type="radio" id="contactChoice2" name="contact" value="phone" class="circle">
+											<label for="contactChoice2">Return</label>
+
+											<input type="radio" id="contactChoice3" name="contact" value="mail" class="circle">
+											<label for="contactChoice3">Multi-city</label>	
+											</div>
+												
+											<div class="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-xs-12 radio_block_two">
+											
+											<select class="js-example-responsive">
+											  <option selected="selected">1 traveler</option>
+											  <option>2 travellers</option>
+											  <option>3 travellers</option>
+											</select>
+												
+											
+											<select class="js-example-responsive">
+												  <option selected="selected">Economy</option>
+												  <option>Bussines</option>
+												  <option selected="selected">First class</option>
+												</select>
+												
+											</div>
+											
+											<div class="col-xl-3 col-lg-5 col-md-12 col-sm-12 col-xs-12">		
+											
+											<div class="search_block_selector_1">
+												
+													
+													<select class="single_three">
+														<option value="Ky">Kyiv</option>
+														<option value="Lv">Lviv</option>
+														<option value="Kh">Kharkiv</option>
+														<option value="Ke">Kherson</option>
+														<option value="Dy">Dnipro</option>
+													</select>
+													</div>
+													</div>
+													
+													<div class="col-xl-1 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+											<div class="search_block_button">
+													<button  class="button_search"></button>
+												</div>
+														
+													</div>
+													
+													<div class="col-xl-4 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+												<div class="search_block_selector_2">
+													<select class="single_four">
+														<option value="Ky">Kyiv</option>
+														<option value="Lv">Lviv</option>
+														<option value="Kh">Kharkiv</option>
+														<option value="Ke">Kherson</option>
+														<option value="Dy">Dnipro</option>
+													</select>
+													</div>
+													</div>	
+													<div class="col-xl-2 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+													<div class="calendar_one">
+														<button class="button_calendar_one">
+														<svg width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.507 14.0398H13.4178V16.4542H10.507V14.0398ZM10.507 18.8685H13.4178V21.2829H10.507V18.8685ZM16.3286 14.0398H19.2394V16.4542H16.3286V14.0398ZM16.3286 18.8685H19.2394V21.2829H16.3286V18.8685ZM22.1502 14.0398H25.061V16.4542H22.1502V14.0398ZM22.1502 18.8685H25.061V21.2829H22.1502V18.8685Z" fill="black"/>
+														<path d="M7.59624 27.3187H27.9718C29.5771 27.3187 30.8826 26.2359 30.8826 24.9044V8.00396C30.8826 6.67245 29.5771 5.58962 27.9718 5.58962H25.061V3.17528H22.1502V5.58962H13.4178V3.17528H10.507V5.58962H7.59624C5.99093 5.58962 4.68544 6.67245 4.68544 8.00396V24.9044C4.68544 26.2359 5.99093 27.3187 7.59624 27.3187ZM27.9718 10.4183L27.9733 24.9044H7.59624V10.4183H27.9718Z" fill="black"/>
+														</svg>
+														<label class="title_calendar">
+															<span>Departing</span>
+															<p>10 Jul</p>
+														</label>
+														</button>
+														
+													</div>
+														
+														</div>
+														
+														<div class="col-xl-2 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+													<div class="calendar_two">
+														<button class="button_calendar_two">
+														<svg width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.507 14.0398H13.4178V16.4542H10.507V14.0398ZM10.507 18.8685H13.4178V21.2829H10.507V18.8685ZM16.3286 14.0398H19.2394V16.4542H16.3286V14.0398ZM16.3286 18.8685H19.2394V21.2829H16.3286V18.8685ZM22.1502 14.0398H25.061V16.4542H22.1502V14.0398ZM22.1502 18.8685H25.061V21.2829H22.1502V18.8685Z" fill="black"/>
+														<path d="M7.59624 27.3187H27.9718C29.5771 27.3187 30.8826 26.2359 30.8826 24.9044V8.00396C30.8826 6.67245 29.5771 5.58962 27.9718 5.58962H25.061V3.17528H22.1502V5.58962H13.4178V3.17528H10.507V5.58962H7.59624C5.99093 5.58962 4.68544 6.67245 4.68544 8.00396V24.9044C4.68544 26.2359 5.99093 27.3187 7.59624 27.3187ZM27.9718 10.4183L27.9733 24.9044H7.59624V10.4183H27.9718Z" fill="black"/>
+														</svg>
+														<label class="title_calendar">
+															<span>Returning</span>
+															<p>11 Jul</p>
+														</label>
+														</button>
+														
+													</div>
+														
+														</div>
+														
+													
+													<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+														<div class="btn_white_board">
+														<button>
+															Search
+														</button>
+														</div>
+													</div>
+													
+												
+												</div>
+												</div>
+											</div>
+											<!--	Block-2-->
+											<!--Block-3-->
+											<div id="tab_03" class="tabs_block">
+												<div class="container">
+												<div class="row">
+												
+											<div class="col-xl-3 col-lg-5 col-md-12 col-sm-12 col-xs-12">		
+											
+											<div class="search_block_selector_3">
+												
+													
+													<select class="single_five">
+														<option value="Ky">Kyiv</option>
+														<option value="Lv">Lviv</option>
+														<option value="Kh">Kharkiv</option>
+														<option value="Ke">Kherson</option>
+														<option value="Dy">Dnipro</option>
+													</select>
+													</div>
+													</div>
+													
+													<div class="col-xl-1 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+											<div class="search_block_button">
+													<button  class="button_search"></button>
+												</div>
+														
+													</div>
+													
+													<div class="col-xl-4 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+												<div class="search_block_selector_4">
+													<select class="single_six">
+														<option value="Ky">Kyiv</option>
+														<option value="Lv">Lviv</option>
+														<option value="Kh">Kharkiv</option>
+														<option value="Ke">Kherson</option>
+														<option value="Dy">Dnipro</option>
+													</select>
+													</div>
+													</div>	
+													
+													<div class="col-xl-2 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+													<div class="calendar_one">
+														<button class="button_calendar_one">
+														<svg width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.507 14.0398H13.4178V16.4542H10.507V14.0398ZM10.507 18.8685H13.4178V21.2829H10.507V18.8685ZM16.3286 14.0398H19.2394V16.4542H16.3286V14.0398ZM16.3286 18.8685H19.2394V21.2829H16.3286V18.8685ZM22.1502 14.0398H25.061V16.4542H22.1502V14.0398ZM22.1502 18.8685H25.061V21.2829H22.1502V18.8685Z" fill="black"/>
+														<path d="M7.59624 27.3187H27.9718C29.5771 27.3187 30.8826 26.2359 30.8826 24.9044V8.00396C30.8826 6.67245 29.5771 5.58962 27.9718 5.58962H25.061V3.17528H22.1502V5.58962H13.4178V3.17528H10.507V5.58962H7.59624C5.99093 5.58962 4.68544 6.67245 4.68544 8.00396V24.9044C4.68544 26.2359 5.99093 27.3187 7.59624 27.3187ZM27.9718 10.4183L27.9733 24.9044H7.59624V10.4183H27.9718Z" fill="black"/>
+														</svg>
+														<label class="title_calendar">
+															<span>Departing</span>
+															<p>10 Jul</p>
+														</label>
+														</button>
+														
+													</div>
+														
+														</div>
+														
+														<div class="col-xl-2 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+													<div class="calendar_two">
+														<button class="button_calendar_two">
+														<svg width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.507 14.0398H13.4178V16.4542H10.507V14.0398ZM10.507 18.8685H13.4178V21.2829H10.507V18.8685ZM16.3286 14.0398H19.2394V16.4542H16.3286V14.0398ZM16.3286 18.8685H19.2394V21.2829H16.3286V18.8685ZM22.1502 14.0398H25.061V16.4542H22.1502V14.0398ZM22.1502 18.8685H25.061V21.2829H22.1502V18.8685Z" fill="black"/>
+														<path d="M7.59624 27.3187H27.9718C29.5771 27.3187 30.8826 26.2359 30.8826 24.9044V8.00396C30.8826 6.67245 29.5771 5.58962 27.9718 5.58962H25.061V3.17528H22.1502V5.58962H13.4178V3.17528H10.507V5.58962H7.59624C5.99093 5.58962 4.68544 6.67245 4.68544 8.00396V24.9044C4.68544 26.2359 5.99093 27.3187 7.59624 27.3187ZM27.9718 10.4183L27.9733 24.9044H7.59624V10.4183H27.9718Z" fill="black"/>
+														</svg>
+														<label class="title_calendar">
+															<span>Returning</span>
+															<p>11 Jul</p>
+														</label>
+														</button>
+														
+													</div>
+														
+														</div>	
+													
+													<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+														<div class="btn_white_board">
+														<button>
+															Search
+														</button>
+														</div>
+													</div>
+													
+												
+												</div>
+												</div>
+											</div>
+											<!--Block-3-->
+											<!--Block-4-->
+												<div id="tab_04" class="tabs_block">
+												<div class="container">
+												<div class="row">
+													
+											
+											<div class="col-xl-3 col-lg-5 col-md-12 col-sm-12 col-xs-12">		
+											
+											<div class="search_block_selector_1">
+											
+													<select class="going_one">
+														<option value="Ky">Kyiv</option>
+														<option value="Lv">Lviv</option>
+														<option value="Kh">Kharkiv</option>
+														<option value="Ke">Kherson</option>
+														<option value="Dy">Dnipro</option>
+													</select>
+													</div>
+													</div>
+													
+													<div class="col-xl-1 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+												<div class="search_block_button">
+													<button  class="button_search"></button>
+												</div>
+														
+													</div>
+													
+													<div class="col-xl-4 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+												<div class="search_block_selector_2">
+													<select class="going_two">
+														<option value="Ky">Kyiv</option>
+														<option value="Lv">Lviv</option>
+														<option value="Kh">Kharkiv</option>
+														<option value="Ke">Kherson</option>
+														<option value="Dy">Dnipro</option>
+													</select>
+													</div>
+													</div>	
+													<div class="col-xl-2 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+													<div class="calendar_one">
+														<button class="button_calendar_one">
+														<svg width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.507 14.0398H13.4178V16.4542H10.507V14.0398ZM10.507 18.8685H13.4178V21.2829H10.507V18.8685ZM16.3286 14.0398H19.2394V16.4542H16.3286V14.0398ZM16.3286 18.8685H19.2394V21.2829H16.3286V18.8685ZM22.1502 14.0398H25.061V16.4542H22.1502V14.0398ZM22.1502 18.8685H25.061V21.2829H22.1502V18.8685Z" fill="black"/>
+														<path d="M7.59624 27.3187H27.9718C29.5771 27.3187 30.8826 26.2359 30.8826 24.9044V8.00396C30.8826 6.67245 29.5771 5.58962 27.9718 5.58962H25.061V3.17528H22.1502V5.58962H13.4178V3.17528H10.507V5.58962H7.59624C5.99093 5.58962 4.68544 6.67245 4.68544 8.00396V24.9044C4.68544 26.2359 5.99093 27.3187 7.59624 27.3187ZM27.9718 10.4183L27.9733 24.9044H7.59624V10.4183H27.9718Z" fill="black"/>
+														</svg>
+														<label class="title_calendar">
+															<span>Departing</span>
+															<p>10 Jul</p>
+														</label>
+														</button>
+														
+													</div>
+														
+														</div>
+														
+														<div class="col-xl-2 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+													<div class="calendar_two">
+														<button class="button_calendar_two">
+														<svg width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.507 14.0398H13.4178V16.4542H10.507V14.0398ZM10.507 18.8685H13.4178V21.2829H10.507V18.8685ZM16.3286 14.0398H19.2394V16.4542H16.3286V14.0398ZM16.3286 18.8685H19.2394V21.2829H16.3286V18.8685ZM22.1502 14.0398H25.061V16.4542H22.1502V14.0398ZM22.1502 18.8685H25.061V21.2829H22.1502V18.8685Z" fill="black"/>
+														<path d="M7.59624 27.3187H27.9718C29.5771 27.3187 30.8826 26.2359 30.8826 24.9044V8.00396C30.8826 6.67245 29.5771 5.58962 27.9718 5.58962H25.061V3.17528H22.1502V5.58962H13.4178V3.17528H10.507V5.58962H7.59624C5.99093 5.58962 4.68544 6.67245 4.68544 8.00396V24.9044C4.68544 26.2359 5.99093 27.3187 7.59624 27.3187ZM27.9718 10.4183L27.9733 24.9044H7.59624V10.4183H27.9718Z" fill="black"/>
+														</svg>
+														<label class="title_calendar">
+															<span>Returning</span>
+															<p>11 Jul</p>
+														</label>
+														</button>
+														
+													</div>
+														
+														</div>
+														
+													
+													<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+														<div class="btn_white_board">
+														<button>
+															Search
+														</button>
+														</div>
+													</div>
+													
+												
+												</div>
+												</div>
+											</div>
+											<!--Block-4-->
+											<!--Block-5-->
+												<div id="tab_05" class="tabs_block">
+												<div class="container">
+												<div class="row">
+												
+											<div class="col-xl-3 col-lg-5 col-md-12 col-sm-12 col-xs-12">		
+											
+											<div class="search_block_selector_3">
+												
+													
+													<select class="single_five">
+														<option value="Ky">Kyiv</option>
+														<option value="Lv">Lviv</option>
+														<option value="Kh">Kharkiv</option>
+														<option value="Ke">Kherson</option>
+														<option value="Dy">Dnipro</option>
+													</select>
+													</div>
+													</div>
+													
+													<div class="col-xl-1 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+											<div class="search_block_button">
+													<button  class="button_search"></button>
+												</div>
+														
+													</div>
+													
+													<div class="col-xl-4 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+												<div class="search_block_selector_4">
+													<select class="single_six">
+														<option value="Ky">Kyiv</option>
+														<option value="Lv">Lviv</option>
+														<option value="Kh">Kharkiv</option>
+														<option value="Ke">Kherson</option>
+														<option value="Dy">Dnipro</option>
+													</select>
+													</div>
+													</div>	
+													
+													<div class="col-xl-2 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+													<div class="calendar_one">
+														<button class="button_calendar_one">
+														<svg width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.507 14.0398H13.4178V16.4542H10.507V14.0398ZM10.507 18.8685H13.4178V21.2829H10.507V18.8685ZM16.3286 14.0398H19.2394V16.4542H16.3286V14.0398ZM16.3286 18.8685H19.2394V21.2829H16.3286V18.8685ZM22.1502 14.0398H25.061V16.4542H22.1502V14.0398ZM22.1502 18.8685H25.061V21.2829H22.1502V18.8685Z" fill="black"/>
+														<path d="M7.59624 27.3187H27.9718C29.5771 27.3187 30.8826 26.2359 30.8826 24.9044V8.00396C30.8826 6.67245 29.5771 5.58962 27.9718 5.58962H25.061V3.17528H22.1502V5.58962H13.4178V3.17528H10.507V5.58962H7.59624C5.99093 5.58962 4.68544 6.67245 4.68544 8.00396V24.9044C4.68544 26.2359 5.99093 27.3187 7.59624 27.3187ZM27.9718 10.4183L27.9733 24.9044H7.59624V10.4183H27.9718Z" fill="black"/>
+														</svg>
+														<label class="title_calendar">
+															<span>Departing</span>
+															<p>10 Jul</p>
+														</label>
+														</button>
+														
+													</div>
+														
+														</div>
+														
+														<div class="col-xl-2 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+													<div class="calendar_two">
+														<button class="button_calendar_two">
+														<svg width="36" height="30" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M10.507 14.0398H13.4178V16.4542H10.507V14.0398ZM10.507 18.8685H13.4178V21.2829H10.507V18.8685ZM16.3286 14.0398H19.2394V16.4542H16.3286V14.0398ZM16.3286 18.8685H19.2394V21.2829H16.3286V18.8685ZM22.1502 14.0398H25.061V16.4542H22.1502V14.0398ZM22.1502 18.8685H25.061V21.2829H22.1502V18.8685Z" fill="black"/>
+														<path d="M7.59624 27.3187H27.9718C29.5771 27.3187 30.8826 26.2359 30.8826 24.9044V8.00396C30.8826 6.67245 29.5771 5.58962 27.9718 5.58962H25.061V3.17528H22.1502V5.58962H13.4178V3.17528H10.507V5.58962H7.59624C5.99093 5.58962 4.68544 6.67245 4.68544 8.00396V24.9044C4.68544 26.2359 5.99093 27.3187 7.59624 27.3187ZM27.9718 10.4183L27.9733 24.9044H7.59624V10.4183H27.9718Z" fill="black"/>
+														</svg>
+														<label class="title_calendar">
+															<span>Returning</span>
+															<p>11 Jul</p>
+														</label>
+														</button>
+														
+													</div>
+														
+														</div>	
+													
+													<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+														<div class="btn_white_board">
+														<button>
+															Search
+														</button>
+														</div>
+													</div>
+													
+												
+												</div>
+												</div>
+											</div>
+											<!--Block-5-->
+											</div>
+										
+									  </div>
+						</div>
+					</div>
+				</div>
+			</section>
+				
+			<section class="Popular_destinations">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+							<h2>Top Most Popular Destinations</h2>
+						<div class="table_pictures">
+						
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+							<a href="#">
+								<img src="img/img1.png" alt="Top Most Popular Destinations" title="Top Most Popular Destinations">
+							</a>
+							<div class="block_1_child">
+							<a href="#" class="picture_2">
+								<img src="img/img2.png" alt="Top Most Popular Destinations" title="Top Most Popular Destinations">
+							</a>
+							<a href="#">
+								<img src="img/img3.png" alt="Top Most Popular Destinations" title="Top Most Popular Destinations">
+							</a>
+							</div>
+							</div>
+							
+							
+						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-6">
+							<a href="#">
+								<img src="img/img4.png" alt="Top Most Popular Destinations" title="Top Most Popular Destinations">
+							</a>
+							</div>
+						<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3">
+							<a href="#">
+								<img src="img/img5.png" alt="Top Most Popular Destinations" title="Top Most Popular Destinations">
+							</a>
+							</div>
+							
+						</div>
+							
+							
+
+							</div>
+						</div>
+					</div>
+			</section>
+			
+			<section class="download_section">
+				<div class="container">
+					<div class="row">
+						
+							<div class="download_block">
+								<div class="download_title">
+								<h2>Download</h2>
+								<h2>Expedia App !</h2>
+								</div>
+								<div class="download_buttons">
+									<a href="#" class="button_google"><h2>Get it on 
+										<p>Google Play</p></h2></a>
+									<a href="#" class="button_apple"><h2>Download on the 
+										<p>App Store</p></h2></a>
+								</div>
+							</div>
+						
+					</div>
+				</div>	
+			</section>
+			</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-xl-2 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<a href="#" class="logo_footer">
+							<img src="img/logo.svg" alt="logo_footer" title="logo_footer">
+						</a>
+						<p>© 2021 Expedia, Inc., an Expedia Group company. All rights reserved.</p>
+					</div>
+					<div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+						<div class="footer_menu_1">
+							<h2>Company</h2>
+						<ul>
+							
+							<li>
+								<a href="#">About Us</a>
+							</li>
+							<li>
+								<a href="#">Jobs</a>
+							</li>
+							<li>
+								<a href="#">List your property</a>
+							</li>
+							<li>
+								<a href="#">Partnership</a>
+							</li>
+							<li>
+								<a href="#">Advertising</a>
+							</li>
+						</ul>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+						<div class="footer_menu_2">
+							<h2 class="info_footer">Explore</h2>
+						<ul>
+							
+							<li>
+								<a href="#">About Us</a>
+							</li>
+							<li>
+								<a href="#">Jobs</a>
+							</li>
+							<li>
+								<a href="#">List your property</a>
+							</li>
+							<li>
+								<a href="#">Partnership</a>
+							</li>
+							<li>
+								<a href="#">Advertising</a>
+							</li>
+						</ul>
+						</div>
+					</div>
+					
+					<div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+						<div class="footer_menu_3">
+							<h2 class="info_footer">Term and Policies</h2>
+						<ul>
+							
+							<li>
+								<a href="#">About Us</a>
+							</li>
+							<li>
+								<a href="#">Jobs</a>
+							</li>
+							<li>
+								<a href="#">List your property</a>
+							</li>
+							<li>
+								<a href="#">Partnership</a>
+							</li>
+							<li>
+								<a href="#">Advertising</a>
+							</li>
+						</ul>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+						<div class="footer_menu_4">
+							<h2 class="info_footer">Help</h2>
+						<ul>
+							
+							<li>
+								<a href="#">About Us</a>
+							</li>
+							<li>
+								<a href="#">Jobs</a>
+							</li>
+							<li>
+								<a href="#">List your property</a>
+							</li>
+							<li>
+								<a href="#">Partnership</a>
+							</li>
+							<li>
+								<a href="#">Advertising</a>
+							</li>
+						</ul>
+						</div>
+					</div>
+					<div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+						<div class="footer_menu_5">
+							<h2 class="info_footer">Get in touch</h2>
+						<ul>
+							
+							<li>
+								<a href="#">Question or feedback?</a>
+							</li>
+							<li>
+								<a href="#">We’d love to hear from you</a>
+							</li>
+							
+						</ul>
+						</div>
+						</div>
+						<div class="socials">
+							<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" class="insta">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M6.465 0.066C7.638 0.012 8.012 0 11 0C13.988 0 14.362 0.013 15.534 0.066C16.706 0.119 17.506 0.306 18.206 0.577C18.939 0.854 19.604 1.287 20.154 1.847C20.714 2.396 21.146 3.06 21.422 3.794C21.694 4.494 21.88 5.294 21.934 6.464C21.988 7.639 22 8.013 22 11C22 13.988 21.987 14.362 21.934 15.535C21.881 16.705 21.694 17.505 21.422 18.205C21.146 18.9391 20.7133 19.6042 20.154 20.154C19.604 20.714 18.939 21.146 18.206 21.422C17.506 21.694 16.706 21.88 15.536 21.934C14.362 21.988 13.988 22 11 22C8.012 22 7.638 21.987 6.465 21.934C5.295 21.881 4.495 21.694 3.795 21.422C3.06092 21.146 2.39582 20.7133 1.846 20.154C1.28638 19.6047 0.853315 18.9399 0.577 18.206C0.306 17.506 0.12 16.706 0.066 15.536C0.012 14.361 0 13.987 0 11C0 8.012 0.013 7.638 0.066 6.466C0.119 5.294 0.306 4.494 0.577 3.794C0.853723 3.06008 1.28712 2.39531 1.847 1.846C2.39604 1.2865 3.06047 0.853443 3.794 0.577C4.494 0.306 5.294 0.12 6.464 0.066H6.465ZM15.445 2.046C14.285 1.993 13.937 1.982 11 1.982C8.063 1.982 7.715 1.993 6.555 2.046C5.482 2.095 4.9 2.274 4.512 2.425C3.999 2.625 3.632 2.862 3.247 3.247C2.88205 3.60205 2.60118 4.03428 2.425 4.512C2.274 4.9 2.095 5.482 2.046 6.555C1.993 7.715 1.982 8.063 1.982 11C1.982 13.937 1.993 14.285 2.046 15.445C2.095 16.518 2.274 17.1 2.425 17.488C2.601 17.965 2.882 18.398 3.247 18.753C3.602 19.118 4.035 19.399 4.512 19.575C4.9 19.726 5.482 19.905 6.555 19.954C7.715 20.007 8.062 20.018 11 20.018C13.938 20.018 14.285 20.007 15.445 19.954C16.518 19.905 17.1 19.726 17.488 19.575C18.001 19.375 18.368 19.138 18.753 18.753C19.118 18.398 19.399 17.965 19.575 17.488C19.726 17.1 19.905 16.518 19.954 15.445C20.007 14.285 20.018 13.937 20.018 11C20.018 8.063 20.007 7.715 19.954 6.555C19.905 5.482 19.726 4.9 19.575 4.512C19.375 3.999 19.138 3.632 18.753 3.247C18.3979 2.88207 17.9657 2.60121 17.488 2.425C17.1 2.274 16.518 2.095 15.445 2.046ZM9.595 14.391C10.3797 14.7176 11.2534 14.7617 12.0669 14.5157C12.8805 14.2697 13.5834 13.7489 14.0556 13.0422C14.5278 12.3356 14.7401 11.4869 14.656 10.6411C14.572 9.79534 14.197 9.00497 13.595 8.405C13.2112 8.02148 12.7472 7.72781 12.2363 7.54515C11.7255 7.36248 11.1804 7.29536 10.6405 7.34862C10.1006 7.40187 9.57915 7.57418 9.1138 7.85313C8.64845 8.13208 8.25074 8.51074 7.9493 8.96185C7.64786 9.41296 7.45019 9.92529 7.37052 10.462C7.29084 10.9986 7.33115 11.5463 7.48854 12.0655C7.64593 12.5847 7.91648 13.0626 8.28072 13.4647C8.64496 13.8668 9.09382 14.1832 9.595 14.391ZM7.002 7.002C7.52702 6.47697 8.15032 6.0605 8.8363 5.77636C9.52228 5.49222 10.2575 5.34597 11 5.34597C11.7425 5.34597 12.4777 5.49222 13.1637 5.77636C13.8497 6.0605 14.473 6.47697 14.998 7.002C15.523 7.52702 15.9395 8.15032 16.2236 8.8363C16.5078 9.52228 16.654 10.2575 16.654 11C16.654 11.7425 16.5078 12.4777 16.2236 13.1637C15.9395 13.8497 15.523 14.473 14.998 14.998C13.9377 16.0583 12.4995 16.654 11 16.654C9.50046 16.654 8.06234 16.0583 7.002 14.998C5.94166 13.9377 5.34597 12.4995 5.34597 11C5.34597 9.50046 5.94166 8.06234 7.002 7.002ZM17.908 6.188C18.0381 6.06527 18.1423 5.91768 18.2143 5.75397C18.2863 5.59027 18.3248 5.41377 18.3274 5.23493C18.33 5.05609 18.2967 4.87855 18.2295 4.71281C18.1622 4.54707 18.0624 4.39651 17.936 4.27004C17.8095 4.14357 17.6589 4.04376 17.4932 3.97652C17.3275 3.90928 17.1499 3.87598 16.9711 3.87858C16.7922 3.88119 16.6157 3.91965 16.452 3.9917C16.2883 4.06374 16.1407 4.1679 16.018 4.298C15.7793 4.55103 15.6486 4.88712 15.6537 5.23493C15.6588 5.58274 15.7992 5.91488 16.0452 6.16084C16.2911 6.40681 16.6233 6.54723 16.9711 6.5523C17.3189 6.55737 17.655 6.42669 17.908 6.188Z" fill="white"/>
+							</svg>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="linkedin">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M1 2.838C1 2.35053 1.19365 1.88303 1.53834 1.53834C1.88303 1.19365 2.35053 1 2.838 1H21.16C21.4016 0.999608 21.6409 1.04687 21.8641 1.13907C22.0874 1.23127 22.2903 1.36661 22.4612 1.53734C22.6322 1.70807 22.7677 1.91083 22.8602 2.13401C22.9526 2.3572 23.0001 2.59643 23 2.838V21.16C23.0003 21.4016 22.9529 21.6409 22.8606 21.8642C22.7683 22.0875 22.6328 22.2904 22.462 22.4613C22.2912 22.6322 22.0884 22.7678 21.8651 22.8602C21.6419 22.9526 21.4026 23.0001 21.161 23H2.838C2.59655 23 2.35746 22.9524 2.1344 22.86C1.91134 22.7676 1.70867 22.6321 1.53798 22.4613C1.3673 22.2905 1.23193 22.0878 1.13962 21.8647C1.04731 21.6416 0.999869 21.4025 1 21.161V2.838ZM9.708 9.388H12.687V10.884C13.117 10.024 14.217 9.25 15.87 9.25C19.039 9.25 19.79 10.963 19.79 14.106V19.928H16.583V14.822C16.583 13.032 16.153 12.022 15.061 12.022C13.546 12.022 12.916 13.111 12.916 14.822V19.928H9.708V9.388ZM4.208 19.791H7.416V9.25H4.208V19.79V19.791ZM7.875 5.812C7.88105 6.08668 7.83217 6.35979 7.73124 6.61532C7.63031 6.87084 7.47935 7.10364 7.28723 7.30003C7.09511 7.49643 6.8657 7.65248 6.61246 7.75901C6.35921 7.86554 6.08724 7.92042 5.8125 7.92042C5.53776 7.92042 5.26579 7.86554 5.01255 7.75901C4.7593 7.65248 4.52989 7.49643 4.33777 7.30003C4.14565 7.10364 3.99469 6.87084 3.89376 6.61532C3.79283 6.35979 3.74395 6.08668 3.75 5.812C3.76187 5.27286 3.98439 4.75979 4.36989 4.38269C4.75539 4.00558 5.27322 3.79442 5.8125 3.79442C6.35178 3.79442 6.86961 4.00558 7.25512 4.38269C7.64062 4.75979 7.86313 5.27286 7.875 5.812Z" fill="white"/>
+							</svg>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="twitter">
+							<path d="M23.643 4.93695C22.808 5.30695 21.911 5.55696 20.968 5.66996C21.941 5.08775 22.669 4.17142 23.016 3.09195C22.1019 3.63494 21.1014 4.01715 20.058 4.22196C19.3564 3.47282 18.4271 2.97628 17.4143 2.80943C16.4016 2.64258 15.3621 2.81475 14.4572 3.29921C13.5524 3.78367 12.8328 4.55332 12.4102 5.48866C11.9875 6.424 11.8855 7.4727 12.12 8.47195C10.2677 8.37895 8.45564 7.8975 6.80144 7.05886C5.14723 6.22022 3.68785 5.04312 2.51801 3.60396C2.11801 4.29396 1.88801 5.09396 1.88801 5.94596C1.88757 6.71295 2.07644 7.4682 2.43789 8.14469C2.79934 8.82118 3.32217 9.39799 3.96001 9.82396C3.22029 9.80042 2.49688 9.60054 1.85001 9.24095V9.30095C1.84994 10.3767 2.22204 11.4193 2.90319 12.252C3.58434 13.0846 4.53258 13.6559 5.58701 13.869C4.9008 14.0547 4.18135 14.082 3.48301 13.949C3.78051 14.8746 4.36001 15.684 5.14038 16.2639C5.92075 16.8438 6.86293 17.1651 7.83501 17.183C6.18484 18.4784 4.1469 19.181 2.04901 19.178C1.67739 19.1781 1.30609 19.1564 0.937012 19.113C3.06649 20.4821 5.54535 21.2088 8.07701 21.206C16.647 21.206 21.332 14.108 21.332 7.95195C21.332 7.75196 21.327 7.54995 21.318 7.34995C22.2293 6.69093 23.0159 5.87485 23.641 4.93995L23.643 4.93695Z" fill="white"/>
+							</svg>
+
+						</div>
+						
+					
+				</div>
+			</div>
+		</footer>
+		</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Вхід в особистий кабінет</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+                        <form class="form">
+                           <div class="login"><input class="login" type="text" placeholder="Логін"></div>
+                            <div class="password"><input class="password"  type="text" placeholder="Пароль"></div>
+                            <div class="check"><input class="check_1" type="checkbox">Запам'ятати мене</div>
+   
+                        </form>
+       </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрити</button>
+        <button type="button" class="btn btn-primary">Вхід</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

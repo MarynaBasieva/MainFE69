@@ -1,0 +1,404 @@
+@charset "utf-8";
+
+/*font-family: 'sailec-bolduploaded_file';*/
+/*font-family: 'Titillium Web', sans-serif;*/
+html {
+    height: 100%;
+	}
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+    }
+.for_page {
+    flex: 1 0 auto;
+	}
+html body{
+	background: #fff;
+}
+img{
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}
+.header{
+	padding-top: 28px;
+	padding-bottom: 28px;
+}
+.logo{
+	display: block;
+	max-width: 120px;
+}
+
+.menu ul.sub-menu{
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+}
+.menu ul.sub-menu li a{
+	font-family: 'sailec-bolduploaded_file';
+	font-size: 16px;
+	line-height: 16px;
+	letter-spacing: 0.25px;
+    color: rgba(102, 102, 102, 0.85);
+	cursor: pointer;
+	text-decoration: none;
+	padding-right: 22px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	transition: all 0.3s ease;
+	
+}
+.menu ul.sub-menu li:last-child a{
+	padding-right: 0;
+}
+
+.menu ul.sub-menu li a:hover{
+	color: #1D6CEC;
+}
+.desc-baner1{
+	min-width: 545px;
+	padding: 57px 18px 30px 15px;
+}
+.desc-baner1 h1{
+	padding-top: 77px;
+	padding-bottom: 20px;
+	font-family: 'sailec-bolduploaded_file';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 58px;
+	letter-spacing: 0.25px;
+	color: #4A4A4A;
+}
+.desc-baner1 p{
+	padding-bottom: 94px;
+	font-family: 'Titillium Web', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 30px;
+	color: #434A54;
+}
+.baner-second{
+	padding-bottom: 30px;
+	/*min-width: 520px;*/
+}
+.desc-baner2{
+	padding: 86px 0;
+}
+.desc-baner2 h2{
+	padding: 75px 68px 15px 15px;
+	font-family: 'sailec-bolduploaded_file';
+	font-size: 36px;
+	line-height: 44px;
+	letter-spacing: 0.25px;
+	color: #4A4A4A;
+}
+.desc-baner2 p{
+	padding: 0 47px 28px 15px;
+	font-family: 'Titillium Web', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 30px;
+	color: #434A54;
+}
+.desc-baner2 .btn-view{
+	padding: 7px 1px;
+	display: block;
+	background: #fefefe;
+	width: 104px;
+	height: 26px;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: 'Titillium Web', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 10px;
+	text-align: center;
+	letter-spacing: 0.25px;
+	color: #1D6FF3;
+	margin: 0 400px 95px 16px;
+	transition: all 0.3s ease;
+}
+.desc-baner2 .btn-view:hover{
+	color: #fff;
+	background: #1D6FF3;
+}
+.baner-third{
+	padding-bottom: 50px;
+}
+.desc-baner3{
+	padding: 112px 0;
+}
+.desc-baner3 h2{
+	padding: 70px 87px 20px 15px;
+	font-family: 'sailec-bolduploaded_file';
+	font-size: 36px;
+	line-height: 44px;
+	letter-spacing: 0.25px;
+	color: #4A4A4A;
+}
+.desc-baner3 p{
+	padding: 0 30px 52px 15px;
+	font-family: 'Titillium Web', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 30px;
+	color: #434A54;
+}
+.desc-baner3 .btn-start{
+	padding: 7px 1px;
+	display: block;
+	background: #fefefe;
+	width: 109px;
+	height: 40px;
+	text-decoration: none;
+	cursor: pointer;
+	font-family: 'Titillium Web', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+	text-align: center;
+	letter-spacing: 0.25px;
+	color: #1D6FF3;
+	margin: 0 421px 88px 15px;
+	transition: all 0.3s ease;
+}
+.desc-baner3 .btn-start:hover{
+	color: #fff;
+	background: #1D6FF3;
+}
+.blog{
+	padding-bottom: 80px;
+}
+.heading-blog h2{
+	text-align: left;
+	padding-top: 29px;
+	padding-bottom: 12px;
+	font-family: 'sailec-bolduploaded_file';
+	font-size: 24px;
+	line-height: 29px;
+	letter-spacing: 0.25px;
+	color: #4A4A4A;
+}
+.blog-article{
+	padding-right: 30px;
+}
+.blog-article:nth-child(3),
+.blog-article:nth-child(6){
+	padding-right: 0;
+}
+.article-block{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 55px;
+}
+.text-blog{
+	margin: -50px auto;
+	z-index: 2;
+    background: #ffffff;
+	max-width: 280px;
+	padding: 20px;
+}
+.blog-title{
+	cursor: pointer;
+	position: relative;
+	font-family: 'sailec-bolduploaded_file';
+	font-size: 24px;
+	line-height: 31px;
+	letter-spacing: 0.25px;
+	color: #4A4A4A;
+	overflow: hidden;
+	max-height: 95px;
+	transition: all 0.3s linear;
+}
+.blog-title::before{
+	position: absolute;
+	content: "";
+	width: 30px;
+	height: 2px;
+	bottom: -10px;
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 0px;
+	transition: all 0.7s ease;
+}
+.blog-title:hover:before{
+	width: 233px;
+	background: #1D6CEC;
+}
+.blog-title:hover{
+	text-decoration: none;
+	color: #1D6CEC;
+}
+.text-desc-blog{
+	padding-top: 18px;
+	font-family: 'Titillium Web', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 26px;
+	color: #434A54;
+	max-height: 122px;
+	overflow: hidden;
+}
+.img-blog a{
+	display: block;
+	max-height: 186px;
+	overflow: hidden;
+	position: relative;
+}
+.img-blog a img{
+	transition: all 0.7s ease;
+}
+.img-blog a img:hover{
+	transform: scale(1.1);
+}
+.search-section{
+	background: #eee;
+	padding: 30px 0;
+}
+.desc-search{
+	padding-left: 15px;
+}
+.desc-search h2{
+	padding-top: 49px;
+	padding-bottom: 18px;
+	font-family: 'sailec-bolduploaded_file';
+	font-size: 36px;
+	line-height: 44px;
+	letter-spacing: 0.25px;
+	color: #4A4A4A;
+}
+.desc-search p{
+	padding-bottom: 52px;
+	font-family: 'Titillium Web', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 30px;
+	color: #434A54;
+
+}
+.form-search{
+	padding-top: 55px;
+	display: flex;
+	justify-content: flex-end;
+}
+.form-search .input-search{
+	font-family: 'Titillium Web', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 44px;
+	letter-spacing: 0.25px;
+	color: #979797;
+	width: 300px;
+	height: 42px;
+	outline: none;
+	padding-left: 8px;
+	border: none;
+}
+.form-search .btn-input{
+	display: block;
+	width: 121px;
+	height: 42px;
+	background: #1D6FF3;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-radius: 0px 4px 4px 0px;
+	padding: 1px 23px;
+	font-family: 'Titillium Web', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 44px;
+	letter-spacing: 0.25px;
+	color: #EEEEEE;
+	margin-right: 60px;
+	transition: all 0.3s ease;
+}
+.form-search .btn-input:hover{
+	background: #4a4a4a;
+	text-decoration: none;
+}
+.footer{
+	padding: 50px 0 50px 0;
+}
+.footer h2{
+	font-family: 'sailec-bolduploaded_file';
+	font-size: 14px;
+	line-height: 17px;
+	letter-spacing: 0.7px;
+	text-transform: uppercase;
+	color: #4A4A4A;
+	padding-bottom: 16px;
+}
+.works_footer,
+.blog_footer,
+.know_us_footer,
+.info_footer{
+	padding-left: 0;
+}
+.works li,
+.from-footer li,
+.know-us li,
+.academy li{
+	padding-bottom: 8px;
+	list-style: none;
+}
+.know-us li:last-child{
+	padding-bottom: 20px;
+}
+.works li a,
+.from-footer li a,
+.know-us li a,
+.academy li a{
+	font-family: 'Titillium Web', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.25px;
+	color: #637280;
+	transition: all 0.3s linear;
+}
+.works li a:hover,
+.from-footer li a:hover,
+.know-us li a:hover,
+.academy li a:hover{
+	color: #1D6FF3;
+	text-decoration: none;
+}
+.know_us_footer::after{
+	position: absolute;
+	content: "";
+	width: 30px;
+	height: 3px;
+	background: rgba(0, 0, 0, 0.1);
+	margin-bottom: 17px;
+}
+.networks{
+	display: inline-block;
+	padding-right: 10px;
+	transition: all 0.3s ease;
+}
+.networks:hover{
+	text-decoration: none;
+	transform: scale(1.8);
+}
+.responsive_menu_bar,
+.closed-menu{
+	display: none;
+}
+
+
+
+
+
+
+
