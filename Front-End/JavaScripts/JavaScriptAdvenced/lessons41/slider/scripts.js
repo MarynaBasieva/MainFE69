@@ -1,7 +1,7 @@
 const upBtn = document.querySelector( '.up-button' );
 const downBtn = document.querySelector( '.down-button' );
 const sidebar = document.querySelector( '.sidebar' );
-const container = document.querySelector( '.container' );
+const container = document.querySelector( '.slider' );
 const mainSlide = document.querySelector( '.main-slide' );
 const slidesCount = mainSlide.querySelectorAll( 'div' ).length;
 console.log( slidesCount );

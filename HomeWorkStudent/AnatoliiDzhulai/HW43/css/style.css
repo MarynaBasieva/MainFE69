@@ -1,0 +1,618 @@
+body {
+	font-size: 14px;
+}
+img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+.wrapper {
+	    background: url("../img/wrapper.jpg")0 0px / cover no-repeat;
+		cursor: default;
+}
+/*Section HEADER*/
+.header {
+	padding: 40px 0 117px 0;
+}
+.logo_block {
+	display: block;
+	width: auto;
+	height: auto;
+}
+.menu{
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 15px 0;
+}
+.main_menu {
+	display: block;
+}
+.sub_menu {
+	text-decoration: none;
+}
+.sub_menu a {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FFFFFF;
+	transition: 0.3s all ease;
+}
+.sub_menu a:hover {
+	text-decoration: none;
+	color: black;
+}
+ html .btn-sing {
+	padding: 16px 50px;
+	background: #1F4AA8;
+	border-radius: 39px;
+	 color: white;
+	 font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+}
+.btn-sing:hover {
+	background: #3296DB;
+	
+}
+.closed_menu,
+.responsive_menu_button {
+	display: none;
+	
+}
+/*Section HEADER*/
+
+/*Section BANER*/
+.baner {
+	padding-bottom: 94px;
+	
+}
+.baner h1 {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 72px;
+	line-height: 88px;
+	text-align: center;
+	color: #FFFFFF;
+}
+.baner p {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+	letter-spacing: 0.055em;
+	color: #FFFFFF;
+	padding-top: 35px;
+
+}
+.list_board {
+	
+}
+/*Section BANER*/
+/*STAYS*/
+.going_one,
+.going_two {
+	width: 300px;
+	height: 48px;
+	border-radius: 10px;
+	padding-left: 60px;
+	cursor: pointer;
+}
+/*STAYS*/
+/*Flight*/
+/*Section WHITE_BLOCK*/
+
+.white_board {
+	background-color: #222831;
+}
+.tabs {
+	position: relative;
+    content: "";
+    top: -47px;
+    background: white;
+    border-radius: 30px;
+    padding: 20px 45px;
+}
+.tabs_block {
+	display: none;
+	padding-bottom: 18px;
+	padding-top: 20px;
+	transition: 0.4s all ease;
+}
+.tabs_block:target {
+	display: block;
+	transition: 0.4s all ease;
+}
+.tabs_items {
+	border-bottom: 1px solid black;
+	display: flex;
+	justify-content: space-around;
+}
+
+.tabs_items a {
+	padding: 10px 0px;
+	position: relative;
+	
+}
+.tabs_item {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	color: #888AA2;
+	
+}
+.tabs_item:hover {
+	text-decoration: none;
+	color: black;
+}
+.tabs_items a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; 
+    background-color: rgb(230, 145, 34);
+    transition: ease 0.5s;
+}
+.tabs_items a:hover::after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; 
+    background-color: black;; 
+    transition: ease 0.5s;
+	
+}
+.js-example-responsive {
+	width: 30%;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+.radio_block_one {
+	margin-bottom: 17px;
+	cursor: pointer;
+}
+.radio_block_one .circle {
+    width: 25px;
+    height: 18px;
+
+}
+.radio_block_one label {
+	padding-right: 30px;
+	font-size: 23px;
+	cursor: pointer;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.button_search {
+    border-radius: 50%;
+    background: white;
+    width: 37px;
+    height: 37px;
+   margin-left: 30px;
+	border:1px solid black;
+	position: relative;
+	bottom: 5px;
+	
+	
+}
+.search_block_button {
+	margin: 10px;
+}
+.search_block_button button:before {
+	content: "";
+	position: absolute;
+  left:  10px;
+    top: 8px;
+     width: 21px;
+    height: 10px;
+
+  background: no-repeat url("../img/icons/strilka_vpravo.svg");
+}
+.search_block_button button:after {
+	content: "";
+	position: absolute;
+  left: 9px;
+  top: 19px;;
+      width: 21px;
+    height: 10px;
+
+  background: no-repeat url("../img/icons/strelka_vlivo.svg");
+}
+
+.single_one,
+.single_two,
+.single_three,
+.single_four,
+.single_five,
+.single_six {
+	width: 300px;
+	height: 48px;
+	border-radius: 10px;
+	padding-left: 60px;
+	cursor: pointer;
+}
+.search_block_selector_1 {
+	position: relative;
+}
+.search_block_selector_1:before {
+	content: "";
+	position: absolute;
+	top: 13px;
+	left: 10px;
+    width: 40px;
+    height: 30px;
+	background: no-repeat url("../img/icons/fly_away.svg");
+	cursor: pointer;
+}
+.search_block_selector_2 {
+	position: relative;
+}
+.search_block_selector_2:before {
+	content: "";
+	position: absolute;
+	top: 13px;
+	left: 10px;
+    width: 40px;
+    height: 30px;
+	background: no-repeat url("../img/icons/arive.svg");
+	cursor: pointer;
+}
+.search_block_selector_3 {
+	position: relative;
+}
+.search_block_selector_3:before {
+	content: "";
+	position: absolute;
+	top: 13px;
+	left: 10px;
+    width: 40px;
+    height: 30px;
+	background: no-repeat url("../img/car.svg");
+	cursor: pointer;
+}
+.search_block_selector_4 {
+	position: relative;
+}
+.search_block_selector_4:before {
+	content: "";
+	position: absolute;
+	top: 13px;
+	left: 10px;
+    width: 40px;
+    height: 30px;
+	background: no-repeat url("../img/car.svg");
+	cursor: pointer;
+}
+
+/*CALENDAR_ONE*/
+.calendar {
+	width: 130px;
+    height: 15px;
+    padding: 20px;
+}
+
+.calendar_one button {
+	width: 174px;
+	height: 48px;
+	display: flex;
+	border-radius: 10px;
+	background: white;
+	border: 1px solid black;
+	cursor: pointer;
+	
+}
+.calendar_one span {
+	cursor: pointer;
+}
+.calendar_one p {
+	cursor: pointer;
+}
+.calendar_one svg {
+	margin-top: 5px;
+}
+.title_calendar {
+	margin: 0 auto;
+}
+.calendar_two button {
+	width: 174px;
+	height: 48px;
+	display: flex;
+	border-radius: 10px;
+	background: white;
+	border: 1px solid black;
+	cursor: pointer;
+	
+}
+.calendar_two span {
+	cursor: pointer;
+}
+.calendar_two p {
+	cursor: pointer;
+}
+.calendar_two svg {
+	margin-top: 5px;
+}
+.btn_white_board {
+	text-align: center;
+	margin-top: 20px;
+}
+.btn_white_board button {
+	padding: 20px 116px;
+	background: #1F4AA8;
+	border-radius: 39px;
+	 color: white;
+	 font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	transition: 0.4s all ease;
+	border: none;
+}
+.btn_white_board button:hover {
+	background: #3296DB;
+	border: none;
+}
+/**CALENDAR_ONE/
+/*Flight*/
+/*Section WHITE_BLOCK*/
+
+/*POPULAR DESTINATIONS*/
+.Popular_destinations {
+	background-color: #222831;
+	color: white;
+	padding-top: 100px;
+	cursor: default;
+}
+.table_pictures {
+	display: flex;
+	padding-bottom: 100px;
+}
+.Popular_destinations h2 {
+	
+}
+.block_1 {
+	display: flex;
+}
+.block_1_child {
+	display: flex;
+	padding-top: 34px;
+}
+.picture_2 {
+	padding-right: 34px;
+}
+/*POPULAR DESTINATIONS*/
+/*Downoad block*/
+.download_section {
+	background-color: #222831;
+	cursor: default;
+}
+.download_block {
+	margin: 0 auto;
+	padding-bottom: 100px;
+}
+.download_title {
+	padding-bottom: 34px;
+	text-align: center;
+}
+.download_title h2 {
+	color: white;
+}
+.button_google {
+	display: block;
+	padding: 30px 70px;
+    background-color: black;
+    border-radius: 30px;
+	border: 1px solid white;
+	position: relative;
+	margin-right: 20px;
+	text-decoration: none;
+}
+.button_google h2 {
+	text-align: center;
+	padding-left: 50px;
+	color: white;
+}
+.download_buttons {
+	display: flex;
+}
+.button_google:before {
+	content: "";
+	position: absolute;
+	left: 40px;
+    top: 50px;
+    width: 50px;
+    height: 54px;
+	background: no-repeat url("../img/google.png");
+}
+.button_google:hover {
+	text-decoration: none;
+	cursor: pointer;
+	background-color:#062B5E;
+}
+.button_apple {
+	display: block;
+	padding: 30px 15px;
+    background-color: black;
+    border-radius: 30px;
+	border: 1px solid white;
+	position: relative;
+	text-decoration: none;
+	transition: 0.4s all ease;
+}
+.button_apple:before {
+	content: "";
+	position: absolute;
+	left: 15px;
+    top: 45px;
+    width: 50px;
+    height: 54px;
+	background: no-repeat url("../img/apple.png");
+	transition: 0.4s all ease;
+}
+.button_apple h2 {
+	text-align: center;
+	padding-left: 50px;
+	color: white;
+}
+.button_apple:hover {
+	text-decoration: none;
+	cursor: pointer;
+	background-color:#062B5E;
+}
+/*DOWNLOAD BLock*/
+
+
+/*Footer*/
+.footer {
+	background-color: #133B5C;
+	padding: 42px 0 50px 0;
+	color: white;
+	cursor: default;
+}
+.logo_footer {
+	display: block;
+	padding-bottom: 67px;
+}
+.footer ul {
+	font-size: 17px;
+    cursor: pointer;
+	line-height: 35px;
+	display: block;
+}
+.footer li {
+	list-style: none;
+
+}
+.footer a {
+	transition: 0.3s all ease;
+}
+.footer li a:hover {
+	text-decoration: none;
+	color: #EC7526;
+}
+.footer a {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	letter-spacing: 0.05em;
+	color: #FFFFFF;
+}
+.footer h2 {
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+.footer_menu_1 h2{
+	transition: 0.3s all ease;
+}
+.footer_menu_1 h2:hover{
+	color: gold;
+}
+.footer_menu_2 h2{
+	transition: 0.3s all ease;
+}
+.footer_menu_2 h2:hover{
+	color: gold;
+}
+.footer_menu_3 h2{
+	transition: 0.3s all ease;
+}
+.footer_menu_3 h2:hover{
+	color: gold;
+}
+.footer_menu_4 h2:hover{
+	color: gold;
+}
+.footer_menu_5 h2{
+	transition: 0.3s all ease;
+}
+.footer_menu_5 h2:hover{
+	color: gold;
+}
+
+.socials {
+	display: flex;
+	justify-content: space-between;
+	transition: 0.4s all ease;
+	padding-left: 65px;
+}
+.insta {
+	transition: 0.5s all ease;
+	margin-right: 10px;
+}
+.insta:hover {
+	transform: scale(1.4, 1.4);
+	cursor: pointer;
+}
+.linkedin {
+	transition: 0.5s all ease;
+	margin-right: 10px;
+}
+.linkedin:hover {
+	transform: scale(1.4, 1.4);
+	cursor: pointer;
+}
+.twitter {
+	transition: 0.5s all ease;
+	margin-right: 10px;
+}
+.twitter:hover {
+	transform: scale(1.4, 1.4);
+	cursor: pointer;
+}
+/*Footer*/
+/*MODAL*/
+.login {
+	outline: none;
+	margin-bottom: 10px;
+	width: 100%;
+	border-radius: 5px;
+	
+}
+.password {
+	outline: none;
+	width: 100%;
+	border-radius: 5px;
+}
+html .modal-content {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #7e7ee5;
+    background-clip: padding-box;
+   	border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+}
+.check_1{
+	margin-right: 10px;
+}
+/*MODAL*/
