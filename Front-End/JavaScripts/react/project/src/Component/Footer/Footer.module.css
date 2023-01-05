@@ -1,0 +1,21 @@
+/*Footer*/
+.footer{
+    background: #333;
+    padding: 60px 0;
+}
+ul.menu{
+    list-style: none;
+    display: flex;
+}
+ul.menu li a{
+    display: block;
+    font-size: 14px;
+    color: yellow;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+.container{
+    max-width: 1170px;
+    margin:0 auto;
+}
+/*Footer*/

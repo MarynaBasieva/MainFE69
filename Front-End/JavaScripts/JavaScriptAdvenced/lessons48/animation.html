@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>animation</title>
+</head>
+<style>
+	.anim{
+		width: 100px;
+		height: 100px;
+		background: #0E5DE2;
+	}
+</style>
+<body>
+	<div class="anim"></div>
+</body>
+	
+<script>
+	/*let animationCub = document.querySelector('.anim').animate([
+		{transform:"translate(1000px)"},
+		{transform:"translate(500px)"},
+		{transform:"translate(0px)"},
+	],1000);
+	animationCub.play();*/
+	
+	
+	/*let animationCub = document.querySelector('.anim').animate([
+		{transform:"translate(1000px)", opacity:0},
+		{transform:"translate(900px)"},
+		{transform:"translate(800px)"},
+		{transform:"translate(700px)"},
+		{transform:"translate(0px)",opacity:1},
+	],1000);
+	animationCub.play();*/
+	
+	
+	/*let animationCub = document.querySelector('.anim').animate([
+		{opacity:1},
+		{opacity:0},
+	],{duration:300,iterations:Infinity});
+	animationCub.play();*/
+	
+	
+	/*let animationCub = document.querySelector('.anim').animate([
+		{transform:"rotate(0deg)"},
+		{transform:"rotate(360deg)"},
+	],{duration:1000,iterations:3});
+	animationCub.play();*/
+	
+	
+	let animationCub = document.querySelector('.anim').animate([
+		{transform:"translate(1000px)"},
+		{transform:"translate(0px)"},
+	],{duration:1000,iterations:Infinity,direction:'alternate', easing:'ease'});
+	animationCub.play();
+</script>
+</html>
