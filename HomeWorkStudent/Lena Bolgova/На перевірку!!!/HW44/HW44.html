@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HW44</title>
+
+</head>
+<style>
+	.part1{
+		margin-bottom: 50px;
+	}
+    .button_open{
+       padding: 10px 30px;
+		background:rgb(48, 130, 138);
+		border: none;
+		border-radius: 4px;
+		text-decoration: none;
+		color: white;
+		letter-spacing: 1px;
+		cursor: pointer;
+		font-size: 16px;
+    }
+    .button_close{
+		padding: 10px 30px;
+		background:rgb(118, 48, 138);
+		border: none;
+		border-radius: 4px;
+		text-decoration: none;
+		color: white;
+		letter-spacing: 1px;
+		cursor: pointer;
+		font-size: 16px;
+    }
+    .text2{
+        display: none;
+    }
+    .square{
+        
+		width: 300px;
+		height: 300px;
+		background: rgb(113, 203, 16);
+	}
+</style>
+<body>
+    <div class="part1">
+    	<div class="text1">
+	       
+	        <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+	        <button class="button_open">More...</button>
+	    </div>
+	    <div class="text2">
+	        <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quod asperiores ad aliquam minus accusamus maiores ipsam sapiente mollitia ducimus temporibus et commodi repellendus voluptatem, unde inventore non cupiditate! Assumenda. Lorem ipsum dolor sit amet consectetur adipisicing elit. A deserunt adipisci possimus dolore tempora temporibus veritatis deleniti nisi esse debitis! Illum impedit est sequi minima maiores dolor officiis a. Autem.
+	
+			  </p>
+	        <button class="button_close">Less...</button>
+	    </div>
+    </div>
+    <div class="square"></div>
+	 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</body>
+
+<script>
+    /*---1) додати текст два параграфи після неї поставити кнопку детальніше
+По нажатю на кнопку відкривається ще два параграфа і з’являється кнопка закрити, детальніше зникає. Якщо нажати на кнопку закрити параграф з кнопкою закривається. І знову з’являється кнопка детальніше з параграфами---*/
+    $(document).ready(function(){
+			$(".button_open").on('click',function(){
+				$(".text2").show('slow'),
+				$(".button_open").hide('slow');
+			});
+			$(".button_close").on('click',function(){
+				$(".text2").hide('slow'),
+				$(".button_open").show('slow');
+			})
+    });
+    /*---2) Зробити анімацію на блок щоб був кавадрат, натискаєш на квадрат стає кругом, потім знов квадрат і потім знов круг---*/
+    $(".square").click(function(){
+				$(this).animate({borderRadius: "100%"}, 'slow'),
+				$(this).animate({borderRadius: "0%"}, 'slow'),
+				$(this).animate({borderRadius: "100%"}, 'slow')
+
+	});
+</script>
+	
+</html>
