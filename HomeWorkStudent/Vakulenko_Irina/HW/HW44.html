@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HW44</title>
+<meta name="viewport" content="width=device-width, intial-scale=1">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<style>
+	.btn1{
+		margin-top: 50px;
+	}
+    .btn1_1{
+			font-size: 15px;
+			width: 130px;
+			height: 40px;
+            background: rgb(64, 4, 82);
+			cursor: pointer;
+			transition: all 0.3s linear;
+			text-align: center;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+		}
+		.btn1_1:hover{
+			background: rgb(249, 89, 209);
+            color: black;
+		}
+		.btn2_2{
+			font-size: 15px;
+			width: 130px;
+			height: 40px;
+            background: rgb(64, 4, 82);
+			cursor: pointer;
+			transition: all 0.3s linear;
+			text-align: center;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+		}
+		.btn2_2:hover{
+			background: rgb(249, 89, 209);
+            color: black;
+		}
+		.btn2{
+			display: none;
+		}
+		p{
+			color: #000;
+			font-size: 20px;
+		}
+		.square{
+			width: 200px;
+			height: 200px;
+			background: rgb(85, 41, 146);
+			margin-top: 50px;
+		}
+</style>
+
+<body>
+    <div class="btn1">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ut totam atque n
+        obis maxime quisquam perspiciatis est dolore error ad unde velit quod excepturi 
+        fuga iure fugit, neque eum officia?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ut totam atque n
+        obis maxime quisquam perspiciatis est dolore error ad unde velit quod excepturi 
+        fuga iure fugit, neque eum officia?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ut totam atque n
+        obis maxime quisquam perspiciatis est dolore error ad unde velit quod excepturi 
+        fuga iure fugit, neque eum officia?</p>
+	
+	<button class="btn1_1">More</button>
+</div>
+	
+	<div class="btn2">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ut totam atque n
+            obis maxime quisquam perspiciatis est dolore error ad unde velit quod excepturi 
+            fuga iure fugit, neque eum officia?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ut totam atque n
+            obis maxime quisquam perspiciatis est dolore error ad unde velit quod excepturi 
+            fuga iure fugit, neque eum officia?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ut totam atque n
+            obis maxime quisquam perspiciatis est dolore error ad unde velit quod excepturi 
+            fuga iure fugit, neque eum officia?</p>
+		
+		<button class="btn2_2">Close</button>
+	</div>
+	<div class="square"></div>
+</body>
+<script>
+    jQuery(document).ready(function(){
+			jQuery(".btn1_1").on('click', function(){
+				jQuery(".btn2").show('slow'),
+				jQuery(".btn1_1").hide('slow');
+			});
+			jQuery(".btn2_2").on('click', function(){
+				jQuery(".btn2").hide('slow'),
+				jQuery(".btn1_1").show('slow');
+			});
+			jQuery(".square").click(function(){
+				jQuery(this).animate({borderRadius: "100%"}, 'slow'),
+				jQuery(this).animate({borderRadius: "0%"}, 'slow'),
+				jQuery(this).animate({borderRadius: "100%"}, 'slow');
+			});
+		});
+</script>
+</html>
