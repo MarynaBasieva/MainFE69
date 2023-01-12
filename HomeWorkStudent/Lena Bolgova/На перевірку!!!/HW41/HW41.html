@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HW41</title>
+</head>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.container{
+			max-width: 1200px;
+			padding: 0 15px 0 15px;
+			margin: 0 auto;
+		}
+		.nav{
+			background: #1f2228;
+			padding: 25px 0;
+			
+			
+		}
+		.nav ul{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			column-gap: 20px;
+			row-gap: 10px;
+			list-style: none;
+			
+		
+		}
+		
+	
+		.nav li a{
+			font-size: 20px;
+			cursor: pointer;
+			border: 1px solid rgb(46, 31, 31);
+			border-radius: 5px;
+			box-shadow: 0 3px 4px red;
+			display: inline-block;
+			padding: 5px 10px;
+			text-decoration: none;
+			color: white;
+			transition: all 0.5s ease;
+		}
+		
+		.nav li a:hover{
+			color: red;
+			box-shadow: 0 1px 2px red;
+			transform: translate(0,2px);
+			
+		}
+	
+		/* .showw{
+			color:#1b3650;
+			box-shadow: 0 1px 2px red;
+			transform: translate(0,2px);
+		} */
+	</style>
+
+<body>
+	<nav class="nav">
+		<div class="container">
+			<div class="content"></div>
+			<ul>
+				<li><a  href="https://dobri-ruky.com.ua/category/cats/">КОТИКИ</a></li>
+				<li><a href="https://dobri-ruky.com.ua/category/dogs/">ПЕСИКИ</a></li>
+				<li><a class="item-def" href="https://dobri-ruky.com.ua/">НОВИНИ</a></li>
+				<li><a href="https://dobri-ruky.com.ua/help/">ДОПОМОГА</a></li>
+			</ul>
+		</div>
+	</nav>
+</body>
+	<script>
+		let item = document.querySelector('.item-def');
+		// let content = document.querySelector('.content');
+		item.onclick = function(event) {
+			event.preventDefault();
+			item.style.color = "#1b3650";
+			item.style.transform = "translate(0,2px)";
+			item.style.boxShadow = "0 1px 2px red";
+			// item.classList.add('showw');
+		}
+	</script>
+</html>
