@@ -1,0 +1,15 @@
+1) npm i gulp -g - встановлення gulp
+2) npm init - настройка gulp
+3) npm i gulp --save-dev - встановити gulp на цьому проекті 
+4) Визов таски - gulp mytask
+5) Встановлення less - npm i gulp-less --save-dev
+6) Встановлюємо browser-sync -  npm i browser-sync --save-dev
+7) npm i -g bower -  підключаємо для оптимізації js  файлів
+8) bower install jquery magnific-popup - підключаємо бібліотеки
+8) npm install gulp-concat gulp-uglifyjs --save-dev - підключаємо два плагіна для мініфікайії файлів js
+9) sudo npm i gulp-cssnano gulp-rename --save-dev - підключаємо два плагіна для мініфікайії файлів css
+10) npm i del --save-dev - очіщення перед build
+11) npm install gulp-imagemin imagemin-pngquant --save-dev  -  для оптимізації картинок
+12) npm i gulp-autoprefixer --save-dev -  плагін для префіксів  css
+13) npm install gulp.spritesmith --save-dev -для спрайтів
+ 
